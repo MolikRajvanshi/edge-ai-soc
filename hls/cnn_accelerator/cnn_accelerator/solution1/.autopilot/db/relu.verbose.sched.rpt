@@ -1,0 +1,124 @@
+
+
+================================================================
+== Vitis HLS Report for 'relu'
+================================================================
+* Date:           Fri Aug 21 20:16:11 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        cnn_accelerator
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.51>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width" [src/relu.cpp:17]   --->   Operation 3 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height" [src/relu.cpp:17]   --->   Operation 4 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%cast = zext i32 %height_read" [src/relu.cpp:17]   --->   Operation 5 'zext' 'cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%cast1 = zext i32 %width_read" [src/relu.cpp:17]   --->   Operation 6 'zext' 'cast1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (8.51ns)   --->   "%bound = mul i64 %cast, i64 %cast1" [src/relu.cpp:17]   --->   Operation 7 'mul' 'bound' <Predicate = true> <Delay = 8.51> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln17 = call void @relu_Pipeline_RELU_ROW_RELU_COL, i64 %bound, i32 %width_read, i32 %feature_map_1_1, i32 %feature_map_1_0, i32 %feature_map_0_1, i32 %feature_map_0_0" [src/relu.cpp:17]   --->   Operation 8 'call' 'call_ln17' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %feature_map_0_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %feature_map_0_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %feature_map_1_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %feature_map_1_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln17 = call void @relu_Pipeline_RELU_ROW_RELU_COL, i64 %bound, i32 %width_read, i32 %feature_map_1_1, i32 %feature_map_1_0, i32 %feature_map_0_1, i32 %feature_map_0_0" [src/relu.cpp:17]   --->   Operation 13 'call' 'call_ln17' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln35 = ret" [src/relu.cpp:35]   --->   Operation 14 'ret' 'ret_ln35' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.51ns
+The critical path consists of the following:
+	wire read operation ('width_read', src/relu.cpp:17) on port 'width' (src/relu.cpp:17) [11]  (0 ns)
+	'mul' operation ('bound', src/relu.cpp:17) [15]  (8.51 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

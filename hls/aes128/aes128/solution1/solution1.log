@@ -1,0 +1,331 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.021 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 11.991 seconds; peak allocated memory: 1.380 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.038 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/aes128_top.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/aes128.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.884 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:135:24)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:138:53)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:138:25)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:137:47)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:137:34)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:136:42)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:136:29)
+INFO: [HLS 214-131] Inlining function 'xtime(unsigned char)' into 'mix_columns(unsigned char*)' (src/aes128.cpp:135:37)
+INFO: [HLS 214-131] Inlining function 'key_expansion(unsigned char*, unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:155:2)
+INFO: [HLS 214-131] Inlining function 'add_round_key(unsigned char*, unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:177:5)
+INFO: [HLS 214-131] Inlining function 'shift_rows(unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:176:5)
+INFO: [HLS 214-131] Inlining function 'sub_bytes(unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:175:5)
+INFO: [HLS 214-131] Inlining function 'add_round_key(unsigned char*, unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:172:9)
+INFO: [HLS 214-131] Inlining function 'mix_columns(unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:171:9)
+INFO: [HLS 214-131] Inlining function 'shift_rows(unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:170:9)
+INFO: [HLS 214-131] Inlining function 'sub_bytes(unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:169:2)
+INFO: [HLS 214-131] Inlining function 'add_round_key(unsigned char*, unsigned char*)' into 'aes128_encrypt(unsigned char*, unsigned char*, unsigned char*)' (src/aes128.cpp:165:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_85_1' is marked as complete unroll implied by the pipeline pragma (src/aes128.cpp:85:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_126_1' is marked as complete unroll implied by the pipeline pragma (src/aes128.cpp:126:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_74_1' is marked as complete unroll implied by the pipeline pragma (src/aes128.cpp:74:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_179_2' (src/aes128.cpp:179:23) in function 'aes128_encrypt' completely with a factor of 16 (src/aes128.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_74_1' (src/aes128.cpp:74:19) in function 'aes128_encrypt' completely with a factor of 16 (src/aes128.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_85_1' (src/aes128.cpp:85:19) in function 'aes128_encrypt' completely with a factor of 16 (src/aes128.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_126_1' (src/aes128.cpp:126:20) in function 'aes128_encrypt' completely with a factor of 4 (src/aes128.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_160_1' (src/aes128.cpp:160:20) in function 'aes128_encrypt' completely with a factor of 16 (src/aes128.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_32_1' (src/aes128.cpp:32:19) in function 'aes128_encrypt' completely with a factor of 16 (src/aes128.cpp:149:0)
+INFO: [HLS 214-248] Applying array_partition to 'round_keys': Complete partitioning on dimension 1. (src/aes128.cpp:152:10)
+INFO: [HLS 214-248] Applying array_partition to 'state': Complete partitioning on dimension 1. (src/aes128.cpp:157:13)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'plaintext' due to pipeline pragma (src/aes128_top.cpp:44:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'key' due to pipeline pragma (src/aes128_top.cpp:53:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'ciphertext' due to pipeline pragma (src/aes128_top.cpp:78:9)
+INFO: [HLS 214-248] Applying array_partition to 'plaintext': Cyclic partitioning with factor 2 on dimension 1. (src/aes128_top.cpp:38:10)
+INFO: [HLS 214-248] Applying array_partition to 'key': Cyclic partitioning with factor 2 on dimension 1. (src/aes128_top.cpp:39:13)
+INFO: [HLS 214-248] Applying array_partition to 'ciphertext': Cyclic partitioning with factor 2 on dimension 1. (src/aes128_top.cpp:40:13)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 32 in loop 'LOAD_DATA'(src/aes128_top.cpp:43:16) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/aes128_top.cpp:43:16)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 32 in loop 'LOAD_KEY'(src/aes128_top.cpp:52:15) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/aes128_top.cpp:52:15)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 32 in loop 'STORE_DATA'(src/aes128_top.cpp:77:17) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/aes128_top.cpp:77:17)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.393 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.407 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (src/aes128_top.cpp:69) in function 'aes128_top' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/aes128.cpp:39:9) to (src/aes128.cpp:62:31) in function 'aes128_encrypt'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'aes128_encrypt' (src/aes128.cpp:22:31)...78 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.566 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'plaintext' (src/aes128_top.cpp:46:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'plaintext.1' (src/aes128_top.cpp:47:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'plaintext' (src/aes128_top.cpp:48:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'plaintext.1' (src/aes128_top.cpp:49:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'key' (src/aes128_top.cpp:55:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'key.1' (src/aes128_top.cpp:56:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'key' (src/aes128_top.cpp:57:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'key.1' (src/aes128_top.cpp:58:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'ciphertext' (src/aes128_top.cpp:70:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'ciphertext_0' (src/aes128.cpp:181:16)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.597 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes128_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_top_Pipeline_LOAD_DATA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_DATA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'LOAD_DATA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.556 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_top_Pipeline_LOAD_KEY' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_KEY'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'LOAD_KEY'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_Pipeline_VITIS_LOOP_38_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_38_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.212 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'AES_ROUNDS_LOOP'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'AES_ROUNDS_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.572 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.552 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_top_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.459 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_top_Pipeline_STORE_DATA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DATA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DATA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_top_Pipeline_LOAD_DATA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_top_Pipeline_LOAD_DATA' pipeline 'LOAD_DATA' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_DATA/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_top_Pipeline_LOAD_DATA'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.534 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_top_Pipeline_LOAD_KEY' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_top_Pipeline_LOAD_KEY' pipeline 'LOAD_KEY' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_LOAD_KEY/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_top_Pipeline_LOAD_KEY'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.334 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_Pipeline_VITIS_LOOP_38_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_encrypt_Pipeline_VITIS_LOOP_38_2' pipeline 'VITIS_LOOP_38_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1578_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1698_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_Pipeline_VITIS_LOOP_38_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP' pipeline 'AES_ROUNDS_LOOP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1458_8_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 2.072 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.406 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_top_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_top_Pipeline_VITIS_LOOP_69_1' pipeline 'VITIS_LOOP_69_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_21_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_top_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.002 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_top_Pipeline_STORE_DATA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aes128_top_Pipeline_STORE_DATA' pipeline 'STORE_DATA' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aes128_top_Pipeline_STORE_DATA/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_top_Pipeline_STORE_DATA'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.255 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_top/data_in' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_top/key_in' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_top/data_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_top/encrypt' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes128_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'data_in', 'key_in', 'data_out', 'encrypt' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.307 seconds; current allocated memory: 1.407 GB.
+INFO: [RTMG 210-279] Implementing memory 'aes128_top_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_RCON_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'aes128_top_aes128_encrypt_SBOX_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_top_plaintext_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.602 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.233 seconds; current allocated memory: 1.407 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes128_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes128_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.29 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 4 seconds. Elapsed time: 32.387 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 15 seconds. Total CPU system time: 5 seconds. Total elapsed time: 36.161 seconds; peak allocated memory: 1.407 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file aes128/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 30.244 seconds; current allocated memory: 562.680 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 36.314 seconds; peak allocated memory: 1.471 GB.

@@ -1,0 +1,50 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "sha256_top",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/PC-CST-A3\/Desktop\/edge-ai-soc\/hls\/sha256\/sha256\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sha256_top"
+              }]
+          }
+        },
+        {
+          "functionName": "sha256_top",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/PC-CST-A3\/Desktop\/edge-ai-soc\/hls\/sha256\/sha256\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sha256_top"
+              }]
+          }
+        },
+        {
+          "functionName": "sha256_top",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/Users\/PC-CST-A3\/Desktop\/edge-ai-soc\/hls\/sha256\/sha256\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sha256_top"
+              }]
+          }
+        }
+      ]
+    }]}

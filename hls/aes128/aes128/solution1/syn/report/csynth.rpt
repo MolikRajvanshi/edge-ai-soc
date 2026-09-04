@@ -1,0 +1,232 @@
+
+
+================================================================
+== Synthesis Summary Report of 'aes128_top'
+================================================================
++ General Information: 
+    * Date:           Sun Aug 23 13:01:01 2026
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        aes128
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
+    |                   Modules                   | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |             |     |
+    |                   & Loops                   | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT     | URAM|
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
+    |+ aes128_top                                 |     -|  0.00|      114|  1.140e+03|         -|      115|     -|        no|  15 (5%)|   -|  3480 (3%)|  26108 (49%)|    -|
+    | + aes128_top_Pipeline_LOAD_DATA             |     -|  0.00|        7|     70.000|         -|        7|     -|        no|        -|   -|   47 (~0%)|     74 (~0%)|    -|
+    |  o LOAD_DATA                                |     -|  8.75|        5|     50.000|         3|        1|     4|       yes|        -|   -|          -|            -|    -|
+    | + aes128_top_Pipeline_LOAD_KEY              |     -|  0.00|        7|     70.000|         -|        7|     -|        no|        -|   -|   47 (~0%)|     74 (~0%)|    -|
+    |  o LOAD_KEY                                 |     -|  8.75|        5|     50.000|         3|        1|     4|       yes|        -|   -|          -|            -|    -|
+    | + aes128_top_Pipeline_VITIS_LOOP_69_1       |     -|  2.52|       18|    180.000|         -|       18|     -|        no|        -|   -|   15 (~0%)|     70 (~0%)|    -|
+    |  o VITIS_LOOP_69_1                          |     -|  8.75|       16|    160.000|         2|        1|    16|       yes|        -|   -|          -|            -|    -|
+    | + aes128_encrypt                            |     -|  1.05|       66|    660.000|         -|       66|     -|        no|  15 (5%)|   -|  1947 (1%)|  23151 (43%)|    -|
+    |  + aes128_encrypt_Pipeline_VITIS_LOOP_38_2  |     -|  1.05|       43|    430.000|         -|       43|     -|        no|        -|   -|  1380 (1%)|   8554 (16%)|    -|
+    |   o VITIS_LOOP_38_2                         |     -|  8.75|       41|    410.000|         3|        1|    40|       yes|        -|   -|          -|            -|    -|
+    |  + aes128_encrypt_Pipeline_AES_ROUNDS_LOOP  |     -|  1.73|       11|    110.000|         -|       11|     -|        no|        -|   -|  264 (~0%)|  13540 (25%)|    -|
+    |   o AES_ROUNDS_LOOP                         |     -|  8.75|        9|     90.000|         2|        1|     9|       yes|        -|   -|          -|            -|    -|
+    | + aes128_top_Pipeline_STORE_DATA            |     -|  0.00|        7|     70.000|         -|        7|     -|        no|        -|   -|   41 (~0%)|     72 (~0%)|    -|
+    |  o STORE_DATA                               |     -|  8.75|        5|     50.000|         3|        1|     4|       yes|        -|   -|          -|            -|    -|
+    +---------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_DATA | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 6             | 16     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | data_in_1  | 0x10   | 32    | W      | Data signal of data_in           |                                                                      |
+| s_axi_CTRL | data_in_2  | 0x14   | 32    | W      | Data signal of data_in           |                                                                      |
+| s_axi_CTRL | key_in_1   | 0x1c   | 32    | W      | Data signal of key_in            |                                                                      |
+| s_axi_CTRL | key_in_2   | 0x20   | 32    | W      | Data signal of key_in            |                                                                      |
+| s_axi_CTRL | data_out_1 | 0x28   | 32    | W      | Data signal of data_out          |                                                                      |
+| s_axi_CTRL | data_out_2 | 0x2c   | 32    | W      | Data signal of data_out          |                                                                      |
+| s_axi_CTRL | encrypt    | 0x34   | 32    | W      | Data signal of encrypt           |                                                                      |
++------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| data_in  | inout     | unsigned int* |
+| key_in   | inout     | unsigned int* |
+| data_out | inout     | unsigned int* |
+| encrypt  | in        | int           |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+----------+--------------------------------------+
+| Argument | HW Interface | HW Type   | HW Usage | HW Info                              |
++----------+--------------+-----------+----------+--------------------------------------+
+| data_in  | m_axi_DATA   | interface |          |                                      |
+| data_in  | s_axi_CTRL   | register  | offset   | name=data_in_1 offset=0x10 range=32  |
+| data_in  | s_axi_CTRL   | register  | offset   | name=data_in_2 offset=0x14 range=32  |
+| key_in   | m_axi_DATA   | interface |          |                                      |
+| key_in   | s_axi_CTRL   | register  | offset   | name=key_in_1 offset=0x1c range=32   |
+| key_in   | s_axi_CTRL   | register  | offset   | name=key_in_2 offset=0x20 range=32   |
+| data_out | m_axi_DATA   | interface |          |                                      |
+| data_out | s_axi_CTRL   | register  | offset   | name=data_out_1 offset=0x28 range=32 |
+| data_out | s_axi_CTRL   | register  | offset   | name=data_out_2 offset=0x2c range=32 |
+| encrypt  | s_axi_CTRL   | register  |          | name=encrypt offset=0x34 range=32    |
++----------+--------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+------------+-----------+--------+-------+--------------------------+
+| HW Interface | Loop       | Direction | Length | Width | Location                 |
++--------------+------------+-----------+--------+-------+--------------------------+
+| m_axi_DATA   | LOAD_DATA  | read      | 4      | 32    | src/aes128_top.cpp:43:16 |
+| m_axi_DATA   | LOAD_KEY   | read      | 4      | 32    | src/aes128_top.cpp:52:15 |
+| m_axi_DATA   | STORE_DATA | write     | 4      | 32    | src/aes128_top.cpp:77:17 |
++--------------+------------+-----------+--------+-------+--------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+------------+-------------------------------------------------------------------------------------------------------+------------+--------------------------+
+| HW Interface | Variable | Loop       | Problem                                                                                               | Resolution | Location                 |
++--------------+----------+------------+-------------------------------------------------------------------------------------------------------+------------+--------------------------+
+| m_axi_DATA   | data_out | STORE_DATA | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | src/aes128_top.cpp:77:17 |
+| m_axi_DATA   | key_in   | LOAD_KEY   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | src/aes128_top.cpp:52:15 |
+| m_axi_DATA   | data_in  | LOAD_DATA  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | src/aes128_top.cpp:43:16 |
++--------------+----------+------------+-------------------------------------------------------------------------------------------------------+------------+--------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                        | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++---------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + aes128_top                                | 0   |        |           |     |        |         |
+|  + aes128_top_Pipeline_LOAD_DATA            | 0   |        |           |     |        |         |
+|    add_ln43_fu_147_p2                       | -   |        | add_ln43  | add | fabric | 0       |
+|  + aes128_top_Pipeline_LOAD_KEY             | 0   |        |           |     |        |         |
+|    add_ln52_fu_147_p2                       | -   |        | add_ln52  | add | fabric | 0       |
+|  + aes128_top_Pipeline_VITIS_LOOP_69_1      | 0   |        |           |     |        |         |
+|    add_ln69_fu_108_p2                       | -   |        | add_ln69  | add | fabric | 0       |
+|  + aes128_encrypt                           | 0   |        |           |     |        |         |
+|   + aes128_encrypt_Pipeline_VITIS_LOOP_38_2 | 0   |        |           |     |        |         |
+|     add_ln42_fu_2424_p2                     | -   |        | add_ln42  | add | fabric | 0       |
+|     add_ln59_fu_2450_p2                     | -   |        | add_ln59  | add | fabric | 0       |
+|     tmp_fu_4339_p158                        | -   |        | add_ln62  | add | fabric | 0       |
+|     add_ln38_fu_2467_p2                     | -   |        | add_ln38  | add | fabric | 0       |
+|   + aes128_encrypt_Pipeline_AES_ROUNDS_LOOP | 0   |        |           |     |        |         |
+|     add_ln167_fu_6553_p2                    | -   |        | add_ln167 | add | fabric | 0       |
+|  + aes128_top_Pipeline_STORE_DATA           | 0   |        |           |     |        |         |
+|    add_ln77_fu_142_p2                       | -   |        | add_ln77  | add | fabric | 0       |
++---------------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| Name                                        | BRAM | URAM | Pragma | Variable     | Storage | Impl | Latency |
++---------------------------------------------+------+------+--------+--------------+---------+------+---------+
+| + aes128_top                                | 15   | 0    |        |              |         |      |         |
+|   plaintext_U                               | -    | -    |        | plaintext    | ram_t2p | auto | 1       |
+|   plaintext_1_U                             | -    | -    |        | plaintext_1  | ram_t2p | auto | 1       |
+|   key_U                                     | -    | -    |        | key          | ram_t2p | auto | 1       |
+|   key_1_U                                   | -    | -    |        | key_1        | ram_t2p | auto | 1       |
+|   ciphertext_U                              | -    | -    |        | ciphertext   | ram_t2p | auto | 1       |
+|   ciphertext_1_U                            | -    | -    |        | ciphertext_1 | ram_t2p | auto | 1       |
+|  + aes128_encrypt                           | 15   | 0    |        |              |         |      |         |
+|    SBOX_U                                   | 15   | -    |        | SBOX         | rom_np  | auto | 1       |
+|   + aes128_encrypt_Pipeline_VITIS_LOOP_38_2 | 0    | 0    |        |              |         |      |         |
+|     RCON_U                                  | -    | -    |        | RCON         | rom_1p  | auto | 1       |
++---------------------------------------------+------+------+--------+--------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------+--------------------------------------------------+
+| Type            | Options                                              | Location                                         |
++-----------------+------------------------------------------------------+--------------------------------------------------+
+| inline          |                                                      | src/aes128.cpp:21 in xtime                       |
+| inline          |                                                      | src/aes128.cpp:29 in key_expansion               |
+| unroll          |                                                      | src/aes128.cpp:33 in key_expansion               |
+| pipeline        | II=1                                                 | src/aes128.cpp:39 in key_expansion               |
+| inline          |                                                      | src/aes128.cpp:73 in add_round_key               |
+| unroll          |                                                      | src/aes128.cpp:75 in add_round_key               |
+| inline          |                                                      | src/aes128.cpp:84 in sub_bytes                   |
+| unroll          |                                                      | src/aes128.cpp:86 in sub_bytes                   |
+| inline          |                                                      | src/aes128.cpp:95 in shift_rows                  |
+| inline          |                                                      | src/aes128.cpp:125 in mix_columns                |
+| unroll          |                                                      | src/aes128.cpp:127 in mix_columns                |
+| inline          | off                                                  | src/aes128.cpp:150 in aes128_encrypt             |
+| array_partition | variable=round_keys complete                         | src/aes128.cpp:153 in aes128_encrypt, round_keys |
+| array_partition | variable=state complete                              | src/aes128.cpp:158 in aes128_encrypt, state      |
+| unroll          |                                                      | src/aes128.cpp:161 in aes128_encrypt             |
+| pipeline        | II=1                                                 | src/aes128.cpp:168 in aes128_encrypt             |
+| unroll          |                                                      | src/aes128.cpp:180 in aes128_encrypt             |
+| interface       | m_axi port=data_in offset=slave bundle=DATA depth=4  | src/aes128_top.cpp:26 in aes128_top, data_in     |
+| interface       | m_axi port=key_in offset=slave bundle=DATA depth=4   | src/aes128_top.cpp:27 in aes128_top, key_in      |
+| interface       | m_axi port=data_out offset=slave bundle=DATA depth=4 | src/aes128_top.cpp:28 in aes128_top, data_out    |
+| interface       | s_axilite port=data_in bundle=CTRL                   | src/aes128_top.cpp:29 in aes128_top, data_in     |
+| interface       | s_axilite port=key_in bundle=CTRL                    | src/aes128_top.cpp:30 in aes128_top, key_in      |
+| interface       | s_axilite port=data_out bundle=CTRL                  | src/aes128_top.cpp:31 in aes128_top, data_out    |
+| interface       | s_axilite port=encrypt bundle=CTRL                   | src/aes128_top.cpp:32 in aes128_top, encrypt     |
+| interface       | s_axilite port=return bundle=CTRL                    | src/aes128_top.cpp:33 in aes128_top, return      |
+| pipeline        | II=1                                                 | src/aes128_top.cpp:44 in aes128_top              |
+| pipeline        | II=1                                                 | src/aes128_top.cpp:53 in aes128_top              |
+| pipeline        | II=1                                                 | src/aes128_top.cpp:78 in aes128_top              |
++-----------------+------------------------------------------------------+--------------------------------------------------+
+
+* Inferred Pragmas
++--------------------------------+-----------------+------------------------------------------------+-----------------------------------+
+| Source Pragma                  | Inferred Pragma | Options                                        | Location                          |
++--------------------------------+-----------------+------------------------------------------------+-----------------------------------+
+| pipeline src/aes128_top.cpp:44 | array_partition | dim=1 type=cyclic factor=2 variable=plaintext  | variable plaintext in aes128_top  |
+| pipeline src/aes128_top.cpp:53 | array_partition | dim=1 type=cyclic factor=2 variable=key        | variable key in aes128_top        |
+| pipeline src/aes128_top.cpp:78 | array_partition | dim=1 type=cyclic factor=2 variable=ciphertext | variable ciphertext in aes128_top |
++--------------------------------+-----------------+------------------------------------------------+-----------------------------------+
+
+

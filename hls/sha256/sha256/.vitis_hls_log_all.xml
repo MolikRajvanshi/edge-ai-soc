@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.671+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.513+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.513+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.497+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.497+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.481+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.481+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.465+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.465+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.449+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.449+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.440+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.146+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:47.129+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'mux_647_32_1_1' is changed to 'mux_647_32_1_1_x' due to conflict." projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:46.077+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:50:9) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html" projectName="sha256" solutionName="solution1" date="2026-08-23T12:50:41.551+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

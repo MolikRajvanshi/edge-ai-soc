@@ -1,0 +1,25 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="accel_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="accel_top"/>
+            </pragma>
+        </directive>
+        <directive functionName="accel_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="accel_top"/>
+            </pragma>
+        </directive>
+        <directive functionName="accel_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="accel_top"/>
+            </pragma>
+        </directive>
+        <directive functionName="accel_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="accel_top"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

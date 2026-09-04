@@ -1,0 +1,259 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'aes128_encrypt'" level="0">
+<item name = "Date">Sun Aug 23 13:00:58 2026
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
+<item name = "Project">aes128</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.702 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371">aes128_encrypt_Pipeline_VITIS_LOOP_38_2, 43, 43, 0.430 us, 0.430 us, 43, 43, no</column>
+<column name="grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559">aes128_encrypt_Pipeline_AES_ROUNDS_LOOP, 11, 11, 0.110 us, 0.110 us, 11, 11, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 256, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, -, 1644, 22094, -</column>
+<column name="Memory">15, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 801, -</column>
+<column name="Register">-, -, 303, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">5, 0, 1, 43, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559">aes128_encrypt_Pipeline_AES_ROUNDS_LOOP, 0, 0, 264, 13540, 0</column>
+<column name="grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371">aes128_encrypt_Pipeline_VITIS_LOOP_38_2, 0, 0, 1380, 8554, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="SBOX_U">aes128_encrypt_SBOX_ROM_AUTO_1R, 15, 0, 0, 0, 256, 8, 1, 2048</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="state_10_fu_1749_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_11_fu_1753_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_12_fu_1757_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_13_fu_1762_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_14_fu_1767_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_15_fu_1772_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_16_fu_1777_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_17_fu_1782_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_18_fu_1787_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_19_fu_1792_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_20_fu_2373_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_21_fu_2379_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_22_fu_2385_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_23_fu_2391_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_28_fu_2473_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_29_fu_2480_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_30_fu_2487_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_31_fu_2494_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_32_fu_2545_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_33_fu_2552_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_34_fu_2559_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_35_fu_2566_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_36_fu_2617_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_37_fu_2624_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_38_fu_2631_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_39_fu_2638_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_40_fu_2657_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_41_fu_2664_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_42_fu_2671_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_43_fu_2678_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_8_fu_1741_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="state_9_fu_1745_p2">xor, 0, 0, 8, 8, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="SBOX_address0">37, 7, 8, 56</column>
+<column name="SBOX_address1">37, 7, 8, 56</column>
+<column name="SBOX_address2">37, 7, 8, 56</column>
+<column name="SBOX_address3">37, 7, 8, 56</column>
+<column name="SBOX_ce0">20, 4, 1, 4</column>
+<column name="SBOX_ce1">20, 4, 1, 4</column>
+<column name="SBOX_ce10">9, 2, 1, 2</column>
+<column name="SBOX_ce11">9, 2, 1, 2</column>
+<column name="SBOX_ce12">9, 2, 1, 2</column>
+<column name="SBOX_ce13">9, 2, 1, 2</column>
+<column name="SBOX_ce14">9, 2, 1, 2</column>
+<column name="SBOX_ce15">9, 2, 1, 2</column>
+<column name="SBOX_ce2">20, 4, 1, 4</column>
+<column name="SBOX_ce3">20, 4, 1, 4</column>
+<column name="SBOX_ce4">9, 2, 1, 2</column>
+<column name="SBOX_ce5">9, 2, 1, 2</column>
+<column name="SBOX_ce6">9, 2, 1, 2</column>
+<column name="SBOX_ce7">9, 2, 1, 2</column>
+<column name="SBOX_ce8">9, 2, 1, 2</column>
+<column name="SBOX_ce9">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">65, 14, 1, 14</column>
+<column name="ciphertext_0_address0">25, 5, 3, 15</column>
+<column name="ciphertext_0_address1">25, 5, 3, 15</column>
+<column name="ciphertext_0_d0">25, 5, 8, 40</column>
+<column name="ciphertext_0_d1">25, 5, 8, 40</column>
+<column name="ciphertext_1_address0">25, 5, 3, 15</column>
+<column name="ciphertext_1_address1">25, 5, 3, 15</column>
+<column name="ciphertext_1_d0">25, 5, 8, 40</column>
+<column name="ciphertext_1_d1">25, 5, 8, 40</column>
+<column name="key_0_address0">25, 5, 3, 15</column>
+<column name="key_0_address1">25, 5, 3, 15</column>
+<column name="key_1_address0">25, 5, 3, 15</column>
+<column name="key_1_address1">25, 5, 3, 15</column>
+<column name="plaintext_0_address0">25, 5, 3, 15</column>
+<column name="plaintext_0_address1">25, 5, 3, 15</column>
+<column name="plaintext_1_address0">25, 5, 3, 15</column>
+<column name="plaintext_1_address1">25, 5, 3, 15</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">13, 0, 13, 0</column>
+<column name="grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371_ap_start_reg">1, 0, 1, 0</column>
+<column name="plaintext_0_load_1_reg_3923">8, 0, 8, 0</column>
+<column name="plaintext_0_load_reg_3913">8, 0, 8, 0</column>
+<column name="plaintext_1_load_1_reg_3928">8, 0, 8, 0</column>
+<column name="plaintext_1_load_reg_3918">8, 0, 8, 0</column>
+<column name="round_keys_180_reg_3767">8, 0, 8, 0</column>
+<column name="round_keys_181_reg_3773">8, 0, 8, 0</column>
+<column name="round_keys_182_reg_3779">8, 0, 8, 0</column>
+<column name="round_keys_183_reg_3805">8, 0, 8, 0</column>
+<column name="round_keys_184_reg_3811">8, 0, 8, 0</column>
+<column name="round_keys_185_reg_3817">8, 0, 8, 0</column>
+<column name="round_keys_186_reg_3823">8, 0, 8, 0</column>
+<column name="round_keys_187_reg_3869">8, 0, 8, 0</column>
+<column name="round_keys_188_reg_3875">8, 0, 8, 0</column>
+<column name="round_keys_189_reg_3881">8, 0, 8, 0</column>
+<column name="round_keys_190_reg_3887">8, 0, 8, 0</column>
+<column name="round_keys_191_reg_3953">8, 0, 8, 0</column>
+<column name="round_keys_192_reg_3959">8, 0, 8, 0</column>
+<column name="round_keys_193_reg_3965">8, 0, 8, 0</column>
+<column name="round_keys_194_reg_3971">8, 0, 8, 0</column>
+<column name="round_keys_reg_3761">8, 0, 8, 0</column>
+<column name="state_10_reg_4007">8, 0, 8, 0</column>
+<column name="state_11_reg_4012">8, 0, 8, 0</column>
+<column name="state_12_reg_4017">8, 0, 8, 0</column>
+<column name="state_13_reg_4022">8, 0, 8, 0</column>
+<column name="state_14_reg_4027">8, 0, 8, 0</column>
+<column name="state_15_reg_4032">8, 0, 8, 0</column>
+<column name="state_16_reg_4057">8, 0, 8, 0</column>
+<column name="state_17_reg_4062">8, 0, 8, 0</column>
+<column name="state_18_reg_4067">8, 0, 8, 0</column>
+<column name="state_19_reg_4072">8, 0, 8, 0</column>
+<column name="state_20_reg_4509">8, 0, 8, 0</column>
+<column name="state_21_reg_4514">8, 0, 8, 0</column>
+<column name="state_22_reg_4519">8, 0, 8, 0</column>
+<column name="state_23_reg_4524">8, 0, 8, 0</column>
+<column name="state_8_reg_3997">8, 0, 8, 0</column>
+<column name="state_9_reg_4002">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, aes128_encrypt, return value</column>
+<column name="plaintext_0_address0">out, 3, ap_memory, plaintext_0, array</column>
+<column name="plaintext_0_ce0">out, 1, ap_memory, plaintext_0, array</column>
+<column name="plaintext_0_q0">in, 8, ap_memory, plaintext_0, array</column>
+<column name="plaintext_0_address1">out, 3, ap_memory, plaintext_0, array</column>
+<column name="plaintext_0_ce1">out, 1, ap_memory, plaintext_0, array</column>
+<column name="plaintext_0_q1">in, 8, ap_memory, plaintext_0, array</column>
+<column name="plaintext_1_address0">out, 3, ap_memory, plaintext_1, array</column>
+<column name="plaintext_1_ce0">out, 1, ap_memory, plaintext_1, array</column>
+<column name="plaintext_1_q0">in, 8, ap_memory, plaintext_1, array</column>
+<column name="plaintext_1_address1">out, 3, ap_memory, plaintext_1, array</column>
+<column name="plaintext_1_ce1">out, 1, ap_memory, plaintext_1, array</column>
+<column name="plaintext_1_q1">in, 8, ap_memory, plaintext_1, array</column>
+<column name="key_0_address0">out, 3, ap_memory, key_0, array</column>
+<column name="key_0_ce0">out, 1, ap_memory, key_0, array</column>
+<column name="key_0_q0">in, 8, ap_memory, key_0, array</column>
+<column name="key_0_address1">out, 3, ap_memory, key_0, array</column>
+<column name="key_0_ce1">out, 1, ap_memory, key_0, array</column>
+<column name="key_0_q1">in, 8, ap_memory, key_0, array</column>
+<column name="key_1_address0">out, 3, ap_memory, key_1, array</column>
+<column name="key_1_ce0">out, 1, ap_memory, key_1, array</column>
+<column name="key_1_q0">in, 8, ap_memory, key_1, array</column>
+<column name="key_1_address1">out, 3, ap_memory, key_1, array</column>
+<column name="key_1_ce1">out, 1, ap_memory, key_1, array</column>
+<column name="key_1_q1">in, 8, ap_memory, key_1, array</column>
+<column name="ciphertext_0_address0">out, 3, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_ce0">out, 1, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_we0">out, 1, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_d0">out, 8, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_address1">out, 3, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_ce1">out, 1, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_we1">out, 1, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_0_d1">out, 8, ap_memory, ciphertext_0, array</column>
+<column name="ciphertext_1_address0">out, 3, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_ce0">out, 1, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_we0">out, 1, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_d0">out, 8, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_address1">out, 3, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_ce1">out, 1, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_we1">out, 1, ap_memory, ciphertext_1, array</column>
+<column name="ciphertext_1_d1">out, 8, ap_memory, ciphertext_1, array</column>
+</table>
+</item>
+</section>
+</profile>

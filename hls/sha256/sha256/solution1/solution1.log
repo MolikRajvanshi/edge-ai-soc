@@ -1,0 +1,1501 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.455 seconds; current allocated memory: 552.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 13.456 seconds; peak allocated memory: 1.465 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.569 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:54:18)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'W' due to pipeline pragma (src/sha256.cpp:39:9)
+INFO: [HLS 214-248] Applying array_partition to 'W': Cyclic partitioning with factor 3 on dimension 1. (src/sha256.cpp:29:14)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'LOAD_BLOCK'(src/sha256_top.cpp:57:14) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:51:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:69:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:69:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.835 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.371 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.411 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:21)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 1.411 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:51:27) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:37:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:38:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:39:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:41:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:42:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:43:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:44:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'W' (src/sha256.cpp:34:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'W' (src/sha256.cpp:40:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:77:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:78:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:79:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:80:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:81:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:82:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:83:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:84:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.247 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.348 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_LOAD_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'LOAD_W'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+WARNING: [HLS 200-880] The II Violation in module 'sha256_process_block_Pipeline_EXPAND_W' (loop 'EXPAND_W'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('W_addr_4_write_ln40', src/sha256.cpp:40) of variable 'add_ln40_6', src/sha256.cpp:40 on array 'W' and 'load' operation ('W_load', src/sha256.cpp:40) on array 'W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 13, loop 'EXPAND_W'
+WARNING: [HLS 200-871] Estimated clock period (13.2743ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_EXPAND_W' consists of the following:	'load' operation ('W_load', src/sha256.cpp:40) on array 'W' [25]  (2.32 ns)
+	'mux' operation ('tmp_1', src/sha256.cpp:40) [28]  (1.71 ns)
+	'xor' operation ('xor_ln40_1', src/sha256.cpp:40) [38]  (0 ns)
+	'add' operation ('add_ln40_4', src/sha256.cpp:40) [86]  (2.55 ns)
+	'add' operation ('add_ln40_6', src/sha256.cpp:40) [87]  (4.37 ns)
+	'store' operation ('W_2_addr_4_write_ln40', src/sha256.cpp:40) of variable 'add_ln40_6', src/sha256.cpp:40 on array 'W_2' [104]  (2.32 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'COMPRESS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'COMPRESS'
+WARNING: [HLS 200-871] Estimated clock period (15.694ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_COMPRESS' consists of the following:	'load' operation ('g', src/sha256.cpp:61) on local variable 'h' [54]  (0 ns)
+	'and' operation ('and_ln61_1', src/sha256.cpp:61) [88]  (0 ns)
+	'xor' operation ('xor_ln61_3', src/sha256.cpp:61) [89]  (0.993 ns)
+	'add' operation ('add_ln61_2', src/sha256.cpp:61) [104]  (4.37 ns)
+	'add' operation ('T1', src/sha256.cpp:61) [105]  (4.37 ns)
+	'add' operation ('add_ln71', src/sha256.cpp:71) [122]  (0 ns)
+	'add' operation ('a', src/sha256.cpp:71) [123]  (4.37 ns)
+	'store' operation ('b_2_write_ln58', src/sha256.cpp:58) of variable 'a', src/sha256.cpp:71 on local variable 'b' [124]  (1.59 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.167 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.191 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (9.75925ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_top' consists of the following:	'getelementptr' operation ('DATA_addr_1', src/sha256_top.cpp:69) [105]  (0 ns)
+	bus request operation ('empty_32', src/sha256_top.cpp:69) on port 'DATA' (src/sha256_top.cpp:69) [106]  (7.3 ns)
+	blocking operation 2.46 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_LOAD_BLOCK' pipeline 'LOAD_BLOCK' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.342 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_LOAD_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_165_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_LOAD_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.233 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_EXPAND_W' pipeline 'EXPAND_W' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_8ns_13_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_37_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_3ns_7_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_COMPRESS' pipeline 'COMPRESS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_37_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_COMPRESS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.434 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.432 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.234 seconds; current allocated memory: 1.411 GB.
+INFO: [RTMG 210-279] Implementing memory 'sha256_top_sha256_process_block_Pipeline_COMPRESS_K_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_sha256_process_block_W_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.572 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.989 seconds; current allocated memory: 1.411 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 63.72 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 2 seconds. Elapsed time: 22.441 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 26.162 seconds; peak allocated memory: 1.411 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.01 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.338 seconds; peak allocated memory: 1.464 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 8.909 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-248] Applying array_partition to 'W': Cyclic partitioning with factor 4 on dimension 1. (src/sha256.cpp:26:11)
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:41:18)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'LOAD_BLOCK'(src/sha256_top.cpp:44:14) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:38:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:56:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:56:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.564 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 1.407 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:17)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 1.407 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:38:27) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:24:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:25:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:26:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:27:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:28:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:29:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:30:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:31:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'W' (src/sha256.cpp:32:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'W' (src/sha256.cpp:40:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:83:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:84:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:85:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:86:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:87:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:88:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:89:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:90:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.309 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_LOAD_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'LOAD_W'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+WARNING: [HLS 200-880] The II Violation in module 'sha256_process_block_Pipeline_EXPAND_W' (loop 'EXPAND_W'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('W_addr_4_write_ln40', src/sha256.cpp:40) of variable 'add_ln40_4', src/sha256.cpp:40 on array 'W' and 'load' operation ('W_load', src/sha256.cpp:38) on array 'W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'EXPAND_W'
+WARNING: [HLS 200-871] Estimated clock period (13.3936ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_EXPAND_W' consists of the following:	'load' operation ('W_load_1', src/sha256.cpp:39) on array 'W' [47]  (2.32 ns)
+	'mux' operation ('tmp_2', src/sha256.cpp:39) [51]  (1.83 ns)
+	'xor' operation ('xor_ln39', src/sha256.cpp:39) [60]  (0 ns)
+	'xor' operation ('s1', src/sha256.cpp:39) [61]  (0 ns)
+	'add' operation ('add_ln40_3', src/sha256.cpp:40) [87]  (2.55 ns)
+	'add' operation ('add_ln40_4', src/sha256.cpp:40) [88]  (4.37 ns)
+	'store' operation ('W_3_addr_4_write_ln40', src/sha256.cpp:40) of variable 'add_ln40_4', src/sha256.cpp:40 on array 'W_3' [106]  (2.32 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'W'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'COMPRESS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 4, loop 'COMPRESS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (11.2093ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_top' consists of the following:	'getelementptr' operation ('DATA_addr_1', src/sha256_top.cpp:56) [105]  (0 ns)
+	bus request operation ('empty_32', src/sha256_top.cpp:56) on port 'DATA' (src/sha256_top.cpp:56) [106]  (8.75 ns)
+	blocking operation 2.46 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.106 seconds; current allocated memory: 1.407 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_LOAD_BLOCK' pipeline 'LOAD_BLOCK' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.323 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_LOAD_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_165_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_LOAD_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.319 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_EXPAND_W' pipeline 'EXPAND_W' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_COMPRESS' pipeline 'COMPRESS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_COMPRESS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.405 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.414 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.274 seconds; current allocated memory: 1.407 GB.
+INFO: [RTMG 210-279] Implementing memory 'sha256_top_sha256_process_block_Pipeline_COMPRESS_K_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_sha256_process_block_W_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.509 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.057 seconds; current allocated memory: 1.407 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 74.66 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 3 seconds. Elapsed time: 21.097 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 24.865 seconds; peak allocated memory: 1.407 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.268 seconds; current allocated memory: 530.715 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 13.607 seconds; peak allocated memory: 1.464 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 939.020 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 10.721 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'LOAD_W' (src/sha256.cpp:32:10) in function 'sha256_process_block' completely with a factor of 16 (src/sha256.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to 'W': Complete partitioning on dimension 1. (src/sha256.cpp:28:11)
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:55:18)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'HASH_BLOCKS'(src/sha256_top.cpp:52:18) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:52:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:70:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:70:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.054 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.379 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.465 GB.
+INFO: [XFORM 203-510] Pipelining loop 'COMPRESS' (src/sha256.cpp:52) in function 'sha256_process_block' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:19)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.236 seconds; current allocated memory: 1.465 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:50:9) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:37:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:38:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:39:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:41:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:42:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:43:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:44:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:84:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:85:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:86:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:87:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:88:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:89:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:90:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:91:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.501 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'EXPAND_W'
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_EXPAND_W' consists of the following:	'alloca' operation ('t') [65]  (0 ns)
+	'load' operation ('t', src/sha256.cpp:42) on local variable 't' [133]  (0 ns)
+	'mux' operation ('tmp_3', src/sha256.cpp:42) [209]  (3.14 ns)
+	'add' operation ('add_ln42', src/sha256.cpp:42) [210]  (2.55 ns)
+	'add' operation ('add_ln42_1', src/sha256.cpp:42) [211]  (0 ns)
+	'add' operation ('W', src/sha256.cpp:42) [212]  (4.37 ns)
+	'store' operation ('W_2_write_ln42', src/sha256.cpp:42) of variable 'W', src/sha256.cpp:42 on local variable 'W' [219]  (0 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'COMPRESS'.
+WARNING: [HLS 200-880] The II Violation in module 'sha256_process_block_Pipeline_COMPRESS' (loop 'COMPRESS'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'add' operation ('T1', src/sha256.cpp:68) and 'xor' operation ('s1', src/sha256.cpp:63).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'COMPRESS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.228 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block' consists of the following:	wire read operation ('block') on port 'block_read_92' [19]  (0 ns)
+	'call' operation ('_ln0') to 'sha256_process_block_Pipeline_EXPAND_W' [92]  (10.1 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (11.2148ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_top' consists of the following:	'getelementptr' operation ('DATA_addr_1', src/sha256_top.cpp:70) [108]  (0 ns)
+	bus request operation ('empty_24', src/sha256_top.cpp:70) on port 'DATA' (src/sha256_top.cpp:70) [109]  (8.75 ns)
+	blocking operation 2.46 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.465 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_LOAD_BLOCK' pipeline 'LOAD_BLOCK' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_COMPRESS' pipeline 'COMPRESS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_COMPRESS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.614 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.404 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.375 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.225 seconds; current allocated memory: 1.465 GB.
+INFO: [RTMG 210-279] Implementing memory 'sha256_top_sha256_process_block_Pipeline_COMPRESS_K_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.33 seconds; current allocated memory: 1.465 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.019 seconds; current allocated memory: 1.465 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 89.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 2 seconds. Elapsed time: 23.625 seconds; current allocated memory: 568.953 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 30.414 seconds; peak allocated memory: 1.465 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.746 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'LOAD_W' (src/sha256.cpp:33:10) in function 'sha256_process_block' completely with a factor of 16 (src/sha256.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL1K': Complete partitioning on dimension 1. (src/sha256.h:47:0)
+INFO: [HLS 214-248] Applying array_partition to 'W': Complete partitioning on dimension 1. (src/sha256.cpp:28:11)
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:55:18)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'HASH_BLOCKS'(src/sha256_top.cpp:52:18) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:52:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:70:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:70:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.666 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 1.411 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:19)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.202 seconds; current allocated memory: 1.411 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:50:9) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:37:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:38:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:39:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:41:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:42:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:43:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:44:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:94:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:95:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:96:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:97:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:98:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:99:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:100:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:101:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'EXPAND_W'
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_EXPAND_W' consists of the following:	'alloca' operation ('t') [65]  (0 ns)
+	'load' operation ('t', src/sha256.cpp:45) on local variable 't' [133]  (0 ns)
+	'mux' operation ('tmp_3', src/sha256.cpp:44) [209]  (3.14 ns)
+	'add' operation ('add_ln45', src/sha256.cpp:45) [210]  (2.55 ns)
+	'add' operation ('add_ln45_1', src/sha256.cpp:45) [211]  (0 ns)
+	'add' operation ('W', src/sha256.cpp:45) [212]  (4.37 ns)
+	'store' operation ('W_1_write_ln45', src/sha256.cpp:45) of variable 'W', src/sha256.cpp:45 on local variable 'W' [216]  (0 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block' consists of the following:	wire read operation ('block') on port 'block_read_77' [27]  (0 ns)
+	'call' operation ('_ln0') to 'sha256_process_block_Pipeline_EXPAND_W' [92]  (10.1 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (11.2148ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_top' consists of the following:	'getelementptr' operation ('DATA_addr_1', src/sha256_top.cpp:70) [107]  (0 ns)
+	bus request operation ('empty_24', src/sha256_top.cpp:70) on port 'DATA' (src/sha256_top.cpp:70) [108]  (8.75 ns)
+	blocking operation 2.46 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.411 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_LOAD_BLOCK' pipeline 'LOAD_BLOCK' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'mux_647_32_1_1' is changed to 'mux_647_32_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.638 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.63 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 1.411 GB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.125 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.945 seconds; current allocated memory: 1.411 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 89.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 17.683 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 3 seconds. Total elapsed time: 21.437 seconds; peak allocated memory: 1.411 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 5.354 seconds; current allocated memory: 571.582 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 12.331 seconds; peak allocated memory: 1.464 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.608 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'LOAD_W' (src/sha256.cpp:33:10) in function 'sha256_process_block' completely with a factor of 16 (src/sha256.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL1K': Complete partitioning on dimension 1. (src/sha256.h:47:0)
+INFO: [HLS 214-248] Applying array_partition to 'W': Complete partitioning on dimension 1. (src/sha256.cpp:28:11)
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:55:18)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'HASH_BLOCKS'(src/sha256_top.cpp:52:18) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:52:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:70:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:70:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.149 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.386 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.462 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:19)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.462 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:50:9) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:37:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:38:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:39:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:41:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:42:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:43:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:44:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:94:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:95:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:96:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:97:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:98:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:99:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:100:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:101:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.384 seconds; current allocated memory: 1.462 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'EXPAND_W'
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block_Pipeline_EXPAND_W' consists of the following:	'alloca' operation ('t') [65]  (0 ns)
+	'load' operation ('t', src/sha256.cpp:45) on local variable 't' [133]  (0 ns)
+	'mux' operation ('tmp_2', src/sha256.cpp:43) [208]  (3.14 ns)
+	'add' operation ('add_ln45', src/sha256.cpp:45) [210]  (2.55 ns)
+	'add' operation ('add_ln45_1', src/sha256.cpp:45) [211]  (0 ns)
+	'add' operation ('W', src/sha256.cpp:45) [212]  (4.37 ns)
+	'store' operation ('W_7_write_ln45', src/sha256.cpp:45) of variable 'W', src/sha256.cpp:45 on local variable 'W' [234]  (0 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 1.462 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (10.059ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_process_block' consists of the following:	wire read operation ('block') on port 'block_read_77' [27]  (0 ns)
+	'call' operation ('_ln0') to 'sha256_process_block_Pipeline_EXPAND_W' [92]  (10.1 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.462 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 1.462 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (11.2148ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [HLS 200-1016] The critical path in module 'sha256_top' consists of the following:	'getelementptr' operation ('DATA_addr_1', src/sha256_top.cpp:70) [107]  (0 ns)
+	bus request operation ('empty_24', src/sha256_top.cpp:70) on port 'DATA' (src/sha256_top.cpp:70) [108]  (8.75 ns)
+	blocking operation 2.46 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.462 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_LOAD_BLOCK' pipeline 'LOAD_BLOCK' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_LOAD_BLOCK/m_axi_DATA_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.279 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'mux_647_32_1_1' is changed to 'mux_647_32_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.634 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 1.462 GB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.178 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.003 seconds; current allocated memory: 1.462 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 89.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 2 seconds. Elapsed time: 21.91 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 26.12 seconds; peak allocated memory: 1.462 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.58 seconds; current allocated memory: 618.016 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 13.33 seconds; peak allocated memory: 1.468 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] Analyzing design file 'src/sha256.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/sha256_top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.831 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'LOAD_W' (src/sha256.cpp:33:10) in function 'sha256_process_block' completely with a factor of 16 (src/sha256.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL1K': Complete partitioning on dimension 1. (src/sha256.h:42:0)
+INFO: [HLS 214-248] Applying array_partition to 'W': Complete partitioning on dimension 1. (src/sha256.cpp:28:11)
+INFO: [HLS 214-248] Applying array_partition to 'block': Complete partitioning on dimension 1. (src/sha256_top.cpp:55:18)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 32 in loop 'STORE_DIGEST'(src/sha256_top.cpp:70:19) has been inferred on bundle 'DATA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/sha256_top.cpp:70:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.01 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.481 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.378 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_process_block' (src/sha256.cpp:19)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.378 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'HASH_BLOCKS' (src/sha256_top.cpp:50:9) in function 'sha256_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:37:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:38:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:39:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:41:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:42:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:43:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256_top.cpp:44:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:97:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:98:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:99:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:100:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:101:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:102:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:103:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'H' (src/sha256.cpp:104:10)
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 16 on port 'DATA' (src/sha256_top.cpp:60:13). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.374 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_BLOCK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_BLOCK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.413 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_W'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'EXPAND_W'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'COMPRESS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 4, loop 'COMPRESS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_DIGEST'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_DIGEST'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_LOAD_BLOCK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_LOAD_BLOCK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_EXPAND_W' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_EXPAND_W' pipeline 'EXPAND_W' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_EXPAND_W'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block_Pipeline_COMPRESS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_process_block_Pipeline_COMPRESS' pipeline 'COMPRESS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] RTL name 'mux_647_32_1_1' is changed to 'mux_647_32_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_647_32_1_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block_Pipeline_COMPRESS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.413 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_process_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_process_block'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.584 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top_Pipeline_STORE_DIGEST' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sha256_top_Pipeline_STORE_DIGEST' pipeline 'STORE_DIGEST' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sha256_top_Pipeline_STORE_DIGEST/m_axi_DATA_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top_Pipeline_STORE_DIGEST'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.813 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/DATA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/message' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/digest' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256_top/msg_len_words' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'message', 'digest', 'msg_len_words' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 1.378 GB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_top_H_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.95 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.041 seconds; current allocated memory: 1.378 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.29 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 25.153 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 4 seconds. Total elapsed time: 29.984 seconds; peak allocated memory: 1.378 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: source ./sha256/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name sha256_top sha256_top 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file sha256/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 30.179 seconds; current allocated memory: 587.941 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 35.488 seconds; peak allocated memory: 1.473 GB.

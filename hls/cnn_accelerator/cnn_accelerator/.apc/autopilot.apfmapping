@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="accel_top.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\src\accel_top.cpp"/>
+    <originFiles name="accel_top.h" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\src\accel_top.h"/>
+    <originFiles name="conv_engine.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\src\conv_engine.cpp"/>
+    <originFiles name="maxpool.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\src\maxpool.cpp"/>
+    <originFiles name="relu.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\src\relu.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_accel.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\testbench\tb_accel.cpp"/>
+    <originFiles name="test_data.h" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\cnn_accelerator\testbench\test_data.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

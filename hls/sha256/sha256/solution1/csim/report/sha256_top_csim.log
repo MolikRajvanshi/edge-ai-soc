@@ -1,0 +1,36 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench/tb_sha256.cpp in debug mode
+   Compiling ../../../../src/sha256.cpp in debug mode
+   Compiling ../../../../src/sha256_top.cpp in debug mode
+   Generating csim.exe
+
+╔══════════════════════════════════════════╗
+║  SHA-256 Engine — HLS C Testbench        ║
+║  NIST FIPS 180-4 Known Answer Tests      ║
+╚══════════════════════════════════════════╝
+
+========================================
+ Test: SHA-256("abc")
+========================================
+  Message: "abc" (3 bytes)
+  Padded:  16 words (64 bytes)
+  Expected: ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+  Got     : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+  RESULT: PASS
+
+========================================
+ Test: SHA-256("")
+========================================
+  Message: "" (0 bytes)
+  Padded:  16 words
+  Expected: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Got     : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  RESULT: PASS
+
+╔══════════════════════════════════════════╗
+║  ALL SHA-256 TESTS PASSED!               ║
+╚══════════════════════════════════════════╝
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

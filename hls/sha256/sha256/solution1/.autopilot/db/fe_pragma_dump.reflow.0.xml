@@ -1,0 +1,19 @@
+<pragmas>
+<pragma file="src/sha256_top.cpp" line="71" pragmaType="pipeline" parentfunction="sha256_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/sha256_top.cpp" line="59" pragmaType="pipeline" parentfunction="sha256_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/sha256_top.cpp" line="26" pragmaType="interface" parentfunction="sha256_top" mode="m_axi" port="message" bundle="DATA" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="src/sha256_top.cpp" line="27" pragmaType="interface" parentfunction="sha256_top" mode="m_axi" port="digest" bundle="DATA" offset="slave" name="" depth="8" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="src/sha256_top.cpp" line="28" pragmaType="interface" parentfunction="sha256_top" mode="s_axilite" port="message" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/sha256_top.cpp" line="29" pragmaType="interface" parentfunction="sha256_top" mode="s_axilite" port="digest" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/sha256_top.cpp" line="30" pragmaType="interface" parentfunction="sha256_top" mode="s_axilite" port="msg_len_words" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/sha256_top.cpp" line="31" pragmaType="interface" parentfunction="sha256_top" mode="s_axilite" port="" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/sha256_top.cpp" line="56" pragmaType="array_partition" parentfunction="sha256_top" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="src/sha256.cpp" line="22" pragmaType="inline" parentfunction="sha256_process_block" off="1" region="0" recursive="0"/>
+<pragma file="src/sha256.cpp" line="67" pragmaType="pipeline" parentfunction="sha256_process_block" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/sha256.cpp" line="40" pragmaType="pipeline" parentfunction="sha256_process_block" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/sha256.cpp" line="34" pragmaType="unroll" parentfunction="sha256_process_block" factor="-1" skip_exit_check="0"/>
+<pragma file="src/sha256.cpp" line="29" pragmaType="array_partition" parentfunction="sha256_process_block" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="src/sha256.cpp" line="30" pragmaType="array_partition" parentfunction="sha256_process_block" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="src/sha256.cpp" line="41" pragmaType="latency" parentfunction="sha256_process_block" min="2" max="2"/>
+<pragma file="src/sha256.cpp" line="68" pragmaType="latency" parentfunction="sha256_process_block" min="2" max="2"/>
+</pragmas>

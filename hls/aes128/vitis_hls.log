@@ -1,0 +1,44 @@
+INFO: [HLS 200-10] Running 'D:/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'PC-CST-A3' on host 'pc-cst-a3' (Windows NT_amd64 version 6.2) on Sun Aug 23 13:02:39 +0530 2026
+INFO: [HLS 200-10] In directory 'C:/Users/PC-CST-A3/Desktop/edge-ai-soc/hls/aes128'
+Sourcing Tcl script 'C:/Users/PC-CST-A3/Desktop/edge-ai-soc/hls/aes128/aes128/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/PC-CST-A3/Desktop/edge-ai-soc/hls/aes128/aes128/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project aes128 
+INFO: [HLS 200-10] Opening project 'C:/Users/PC-CST-A3/Desktop/edge-ai-soc/hls/aes128/aes128'.
+INFO: [HLS 200-1510] Running: set_top aes128_top 
+INFO: [HLS 200-1510] Running: add_files src/aes128.cpp 
+INFO: [HLS 200-10] Adding design file 'src/aes128.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/aes128.h 
+INFO: [HLS 200-10] Adding design file 'src/aes128.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/aes128_top.cpp 
+INFO: [HLS 200-10] Adding design file 'src/aes128_top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench/tb_aes128.cpp 
+INFO: [HLS 200-10] Adding test bench file 'testbench/tb_aes128.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/PC-CST-A3/Desktop/edge-ai-soc/hls/aes128/aes128/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1.25ns 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1551.805 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 23 13:03:13 2026...
+INFO: [HLS 200-802] Generated output file aes128/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 30.244 seconds; current allocated memory: 562.680 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 36.314 seconds; peak allocated memory: 1.471 GB.

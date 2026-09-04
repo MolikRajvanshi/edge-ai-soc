@@ -1,0 +1,36 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench/tb_aes128.cpp in debug mode
+   Compiling ../../../../src/aes128_top.cpp in debug mode
+   Compiling ../../../../src/aes128.cpp in debug mode
+   Generating csim.exe
+
+╔══════════════════════════════════════════╗
+║  AES-128 Engine — HLS C Testbench        ║
+║  NIST FIPS 197 Known Answer Tests        ║
+╚══════════════════════════════════════════╝
+
+========================================
+ Test: AES-128 NIST FIPS 197 Appendix B
+========================================
+  Key      : 2b7e1516 28aed2a6 abf71588 09cf4f3c
+  Plaintext: 3243f6a8 885a308d 313198a2 e0370734
+  Expected : 3925841d 02dc09fb dc118597 196a0b32
+  Got      : 3925841d 02dc09fb dc118597 196a0b32
+  RESULT: PASS
+
+========================================
+ Test: AES-128 Zero Key
+========================================
+  Key      : 00000000 00000000 00000000 00000000
+  Plaintext: 00000000 00000000 00000000 00000000
+  Expected : 66e94bd4 ef8a2c3b 884cfa59 ca342b2e
+  Got      : 66e94bd4 ef8a2c3b 884cfa59 ca342b2e
+  RESULT: PASS
+
+╔══════════════════════════════════════════╗
+║  ALL AES-128 TESTS PASSED!               ║
+╚══════════════════════════════════════════╝
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

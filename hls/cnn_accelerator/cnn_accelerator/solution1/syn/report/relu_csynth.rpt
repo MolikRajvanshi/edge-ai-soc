@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'relu'
+================================================================
+* Date:           Fri Aug 21 20:16:15 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        cnn_accelerator
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                           |                                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                  Instance                 |              Module             |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_relu_Pipeline_RELU_ROW_RELU_COL_fu_36  |relu_Pipeline_RELU_ROW_RELU_COL  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    3|     203|    378|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     14|    -|
+|Register         |        -|    -|      67|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    3|     270|    392|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |                  Instance                 |              Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |mul_32ns_32ns_64_1_1_U69                   |mul_32ns_32ns_64_1_1             |        0|   3|    0|   20|    0|
+    |grp_relu_Pipeline_RELU_ROW_RELU_COL_fu_36  |relu_Pipeline_RELU_ROW_RELU_COL  |        0|   0|  203|  358|    0|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |Total                                      |                                 |        0|   3|  203|  378|    0|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  14|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  14|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |                          Name                          | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                               |   2|   0|    2|          0|
+    |bound_reg_71                                            |  64|   0|   64|          0|
+    |grp_relu_Pipeline_RELU_ROW_RELU_COL_fu_36_ap_start_reg  |   1|   0|    1|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                   |  67|   0|   67|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|             relu|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|             relu|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|             relu|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|             relu|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|             relu|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|             relu|  return value|
+|feature_map_0_0_address0  |  out|    8|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_ce0       |  out|    1|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_q0        |   in|   32|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_address1  |  out|    8|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_ce1       |  out|    1|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_we1       |  out|    1|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_0_d1        |  out|   32|   ap_memory|  feature_map_0_0|         array|
+|feature_map_0_1_address0  |  out|    8|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_ce0       |  out|    1|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_q0        |   in|   32|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_address1  |  out|    8|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_ce1       |  out|    1|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_we1       |  out|    1|   ap_memory|  feature_map_0_1|         array|
+|feature_map_0_1_d1        |  out|   32|   ap_memory|  feature_map_0_1|         array|
+|feature_map_1_0_address0  |  out|    8|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_ce0       |  out|    1|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_q0        |   in|   32|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_address1  |  out|    8|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_ce1       |  out|    1|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_we1       |  out|    1|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_0_d1        |  out|   32|   ap_memory|  feature_map_1_0|         array|
+|feature_map_1_1_address0  |  out|    8|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_ce0       |  out|    1|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_q0        |   in|   32|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_address1  |  out|    8|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_ce1       |  out|    1|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_we1       |  out|    1|   ap_memory|  feature_map_1_1|         array|
+|feature_map_1_1_d1        |  out|   32|   ap_memory|  feature_map_1_1|         array|
+|height                    |   in|   32|     ap_none|           height|        scalar|
+|width                     |   in|   32|     ap_none|            width|        scalar|
++--------------------------+-----+-----+------------+-----------------+--------------+
+

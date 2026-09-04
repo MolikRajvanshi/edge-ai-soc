@@ -1,0 +1,50 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench/tb_accel.cpp in debug mode
+   Compiling ../../../../src/relu.cpp in debug mode
+   Compiling ../../../../src/maxpool.cpp in debug mode
+   Compiling ../../../../src/conv_engine.cpp in debug mode
+   Compiling ../../../../src/accel_top.cpp in debug mode
+   Generating csim.exe
+
+╔══════════════════════════════════════════╗
+║  CNN Accelerator — HLS C Testbench       ║
+║  Edge AI Inference SoC                   ║
+╚══════════════════════════════════════════╝
+
+========================================
+ Test: 3x3 Conv, 1ch, 4x4, ReLU ON
+========================================
+  Input:  1 ch × 4 × 4
+  Kernel: 3 × 3, stride=1, pad=0
+  Output: 1 ch × 2 × 2
+  ReLU: ON, Pool: OFF
+
+  Results:
+  Index      Expected   Got        Status    
+  -----      --------   ---        ------    
+  0          0          0          OK        
+  1          7          7          OK        
+  2          0          0          OK        
+  3          0          0          OK        
+
+  ----------------------------------------
+  RESULT: PASS (4/4 outputs matched)
+  ----------------------------------------
+
+========================================
+ Test: Multi-channel (2ch) — Smoke Test
+========================================
+  Multi-channel output:
+    output[0] = 0
+    output[1] = 6
+    output[2] = 0
+    output[3] = 0
+  RESULT: Smoke test completed (no crash)
+
+╔══════════════════════════════════════════╗
+║  ALL TESTS PASSED!                       ║
+╚══════════════════════════════════════════╝
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

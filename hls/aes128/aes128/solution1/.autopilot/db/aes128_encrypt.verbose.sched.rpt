@@ -1,0 +1,796 @@
+
+
+================================================================
+== Vitis HLS Report for 'aes128_encrypt'
+================================================================
+* Date:           Sun Aug 23 13:00:52 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        aes128
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.702 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_loc31 = alloca i64 1"   --->   Operation 14 'alloca' 'p_loc31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_loc30 = alloca i64 1"   --->   Operation 15 'alloca' 'p_loc30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_loc29 = alloca i64 1"   --->   Operation 16 'alloca' 'p_loc29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_loc28 = alloca i64 1"   --->   Operation 17 'alloca' 'p_loc28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_loc27 = alloca i64 1"   --->   Operation 18 'alloca' 'p_loc27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_loc26 = alloca i64 1"   --->   Operation 19 'alloca' 'p_loc26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_loc25 = alloca i64 1"   --->   Operation 20 'alloca' 'p_loc25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_loc24 = alloca i64 1"   --->   Operation 21 'alloca' 'p_loc24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_loc23 = alloca i64 1"   --->   Operation 22 'alloca' 'p_loc23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_loc22 = alloca i64 1"   --->   Operation 23 'alloca' 'p_loc22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_loc21 = alloca i64 1"   --->   Operation 24 'alloca' 'p_loc21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_loc20 = alloca i64 1"   --->   Operation 25 'alloca' 'p_loc20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_loc19 = alloca i64 1"   --->   Operation 26 'alloca' 'p_loc19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_loc18 = alloca i64 1"   --->   Operation 27 'alloca' 'p_loc18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_loc17 = alloca i64 1"   --->   Operation 28 'alloca' 'p_loc17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 29 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%round_keys_16_loc = alloca i64 1"   --->   Operation 30 'alloca' 'round_keys_16_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%round_keys_17_loc = alloca i64 1"   --->   Operation 31 'alloca' 'round_keys_17_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%round_keys_18_loc = alloca i64 1"   --->   Operation 32 'alloca' 'round_keys_18_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%round_keys_19_loc = alloca i64 1"   --->   Operation 33 'alloca' 'round_keys_19_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%round_keys_20_loc = alloca i64 1"   --->   Operation 34 'alloca' 'round_keys_20_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%round_keys_21_loc = alloca i64 1"   --->   Operation 35 'alloca' 'round_keys_21_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%round_keys_22_loc = alloca i64 1"   --->   Operation 36 'alloca' 'round_keys_22_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%round_keys_23_loc = alloca i64 1"   --->   Operation 37 'alloca' 'round_keys_23_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%round_keys_24_loc = alloca i64 1"   --->   Operation 38 'alloca' 'round_keys_24_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%round_keys_25_loc = alloca i64 1"   --->   Operation 39 'alloca' 'round_keys_25_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%round_keys_26_loc = alloca i64 1"   --->   Operation 40 'alloca' 'round_keys_26_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%round_keys_27_loc = alloca i64 1"   --->   Operation 41 'alloca' 'round_keys_27_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%round_keys_28_loc = alloca i64 1"   --->   Operation 42 'alloca' 'round_keys_28_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%round_keys_29_loc = alloca i64 1"   --->   Operation 43 'alloca' 'round_keys_29_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%round_keys_30_loc = alloca i64 1"   --->   Operation 44 'alloca' 'round_keys_30_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%round_keys_31_loc = alloca i64 1"   --->   Operation 45 'alloca' 'round_keys_31_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%round_keys_32_loc = alloca i64 1"   --->   Operation 46 'alloca' 'round_keys_32_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%round_keys_33_loc = alloca i64 1"   --->   Operation 47 'alloca' 'round_keys_33_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%round_keys_34_loc = alloca i64 1"   --->   Operation 48 'alloca' 'round_keys_34_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%round_keys_35_loc = alloca i64 1"   --->   Operation 49 'alloca' 'round_keys_35_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%round_keys_36_loc = alloca i64 1"   --->   Operation 50 'alloca' 'round_keys_36_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%round_keys_37_loc = alloca i64 1"   --->   Operation 51 'alloca' 'round_keys_37_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%round_keys_38_loc = alloca i64 1"   --->   Operation 52 'alloca' 'round_keys_38_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%round_keys_39_loc = alloca i64 1"   --->   Operation 53 'alloca' 'round_keys_39_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%round_keys_40_loc = alloca i64 1"   --->   Operation 54 'alloca' 'round_keys_40_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%round_keys_41_loc = alloca i64 1"   --->   Operation 55 'alloca' 'round_keys_41_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%round_keys_42_loc = alloca i64 1"   --->   Operation 56 'alloca' 'round_keys_42_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%round_keys_43_loc = alloca i64 1"   --->   Operation 57 'alloca' 'round_keys_43_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%round_keys_44_loc = alloca i64 1"   --->   Operation 58 'alloca' 'round_keys_44_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%round_keys_45_loc = alloca i64 1"   --->   Operation 59 'alloca' 'round_keys_45_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%round_keys_46_loc = alloca i64 1"   --->   Operation 60 'alloca' 'round_keys_46_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%round_keys_47_loc = alloca i64 1"   --->   Operation 61 'alloca' 'round_keys_47_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%round_keys_48_loc = alloca i64 1"   --->   Operation 62 'alloca' 'round_keys_48_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%round_keys_49_loc = alloca i64 1"   --->   Operation 63 'alloca' 'round_keys_49_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%round_keys_50_loc = alloca i64 1"   --->   Operation 64 'alloca' 'round_keys_50_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%round_keys_51_loc = alloca i64 1"   --->   Operation 65 'alloca' 'round_keys_51_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%round_keys_52_loc = alloca i64 1"   --->   Operation 66 'alloca' 'round_keys_52_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%round_keys_53_loc = alloca i64 1"   --->   Operation 67 'alloca' 'round_keys_53_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%round_keys_54_loc = alloca i64 1"   --->   Operation 68 'alloca' 'round_keys_54_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%round_keys_55_loc = alloca i64 1"   --->   Operation 69 'alloca' 'round_keys_55_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%round_keys_56_loc = alloca i64 1"   --->   Operation 70 'alloca' 'round_keys_56_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%round_keys_57_loc = alloca i64 1"   --->   Operation 71 'alloca' 'round_keys_57_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%round_keys_58_loc = alloca i64 1"   --->   Operation 72 'alloca' 'round_keys_58_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%round_keys_59_loc = alloca i64 1"   --->   Operation 73 'alloca' 'round_keys_59_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%round_keys_60_loc = alloca i64 1"   --->   Operation 74 'alloca' 'round_keys_60_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%round_keys_61_loc = alloca i64 1"   --->   Operation 75 'alloca' 'round_keys_61_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%round_keys_62_loc = alloca i64 1"   --->   Operation 76 'alloca' 'round_keys_62_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%round_keys_63_loc = alloca i64 1"   --->   Operation 77 'alloca' 'round_keys_63_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%round_keys_64_loc = alloca i64 1"   --->   Operation 78 'alloca' 'round_keys_64_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%round_keys_65_loc = alloca i64 1"   --->   Operation 79 'alloca' 'round_keys_65_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%round_keys_66_loc = alloca i64 1"   --->   Operation 80 'alloca' 'round_keys_66_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%round_keys_67_loc = alloca i64 1"   --->   Operation 81 'alloca' 'round_keys_67_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%round_keys_68_loc = alloca i64 1"   --->   Operation 82 'alloca' 'round_keys_68_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%round_keys_69_loc = alloca i64 1"   --->   Operation 83 'alloca' 'round_keys_69_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%round_keys_70_loc = alloca i64 1"   --->   Operation 84 'alloca' 'round_keys_70_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%round_keys_71_loc = alloca i64 1"   --->   Operation 85 'alloca' 'round_keys_71_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%round_keys_72_loc = alloca i64 1"   --->   Operation 86 'alloca' 'round_keys_72_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%round_keys_73_loc = alloca i64 1"   --->   Operation 87 'alloca' 'round_keys_73_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%round_keys_74_loc = alloca i64 1"   --->   Operation 88 'alloca' 'round_keys_74_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%round_keys_75_loc = alloca i64 1"   --->   Operation 89 'alloca' 'round_keys_75_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%round_keys_76_loc = alloca i64 1"   --->   Operation 90 'alloca' 'round_keys_76_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%round_keys_77_loc = alloca i64 1"   --->   Operation 91 'alloca' 'round_keys_77_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%round_keys_78_loc = alloca i64 1"   --->   Operation 92 'alloca' 'round_keys_78_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%round_keys_79_loc = alloca i64 1"   --->   Operation 93 'alloca' 'round_keys_79_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%round_keys_80_loc = alloca i64 1"   --->   Operation 94 'alloca' 'round_keys_80_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%round_keys_81_loc = alloca i64 1"   --->   Operation 95 'alloca' 'round_keys_81_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%round_keys_82_loc = alloca i64 1"   --->   Operation 96 'alloca' 'round_keys_82_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%round_keys_83_loc = alloca i64 1"   --->   Operation 97 'alloca' 'round_keys_83_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%round_keys_84_loc = alloca i64 1"   --->   Operation 98 'alloca' 'round_keys_84_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%round_keys_85_loc = alloca i64 1"   --->   Operation 99 'alloca' 'round_keys_85_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%round_keys_86_loc = alloca i64 1"   --->   Operation 100 'alloca' 'round_keys_86_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%round_keys_87_loc = alloca i64 1"   --->   Operation 101 'alloca' 'round_keys_87_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%round_keys_88_loc = alloca i64 1"   --->   Operation 102 'alloca' 'round_keys_88_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%round_keys_89_loc = alloca i64 1"   --->   Operation 103 'alloca' 'round_keys_89_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%round_keys_90_loc = alloca i64 1"   --->   Operation 104 'alloca' 'round_keys_90_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%round_keys_91_loc = alloca i64 1"   --->   Operation 105 'alloca' 'round_keys_91_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%round_keys_92_loc = alloca i64 1"   --->   Operation 106 'alloca' 'round_keys_92_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%round_keys_93_loc = alloca i64 1"   --->   Operation 107 'alloca' 'round_keys_93_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%round_keys_94_loc = alloca i64 1"   --->   Operation 108 'alloca' 'round_keys_94_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%round_keys_95_loc = alloca i64 1"   --->   Operation 109 'alloca' 'round_keys_95_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%round_keys_96_loc = alloca i64 1"   --->   Operation 110 'alloca' 'round_keys_96_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%round_keys_97_loc = alloca i64 1"   --->   Operation 111 'alloca' 'round_keys_97_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%round_keys_98_loc = alloca i64 1"   --->   Operation 112 'alloca' 'round_keys_98_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%round_keys_99_loc = alloca i64 1"   --->   Operation 113 'alloca' 'round_keys_99_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%round_keys_100_loc = alloca i64 1"   --->   Operation 114 'alloca' 'round_keys_100_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%round_keys_101_loc = alloca i64 1"   --->   Operation 115 'alloca' 'round_keys_101_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%round_keys_102_loc = alloca i64 1"   --->   Operation 116 'alloca' 'round_keys_102_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%round_keys_103_loc = alloca i64 1"   --->   Operation 117 'alloca' 'round_keys_103_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%round_keys_104_loc = alloca i64 1"   --->   Operation 118 'alloca' 'round_keys_104_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%round_keys_105_loc = alloca i64 1"   --->   Operation 119 'alloca' 'round_keys_105_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%round_keys_106_loc = alloca i64 1"   --->   Operation 120 'alloca' 'round_keys_106_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%round_keys_107_loc = alloca i64 1"   --->   Operation 121 'alloca' 'round_keys_107_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%round_keys_108_loc = alloca i64 1"   --->   Operation 122 'alloca' 'round_keys_108_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%round_keys_109_loc = alloca i64 1"   --->   Operation 123 'alloca' 'round_keys_109_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%round_keys_110_loc = alloca i64 1"   --->   Operation 124 'alloca' 'round_keys_110_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%round_keys_111_loc = alloca i64 1"   --->   Operation 125 'alloca' 'round_keys_111_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%round_keys_112_loc = alloca i64 1"   --->   Operation 126 'alloca' 'round_keys_112_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%round_keys_113_loc = alloca i64 1"   --->   Operation 127 'alloca' 'round_keys_113_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%round_keys_114_loc = alloca i64 1"   --->   Operation 128 'alloca' 'round_keys_114_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%round_keys_115_loc = alloca i64 1"   --->   Operation 129 'alloca' 'round_keys_115_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%round_keys_116_loc = alloca i64 1"   --->   Operation 130 'alloca' 'round_keys_116_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%round_keys_117_loc = alloca i64 1"   --->   Operation 131 'alloca' 'round_keys_117_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%round_keys_118_loc = alloca i64 1"   --->   Operation 132 'alloca' 'round_keys_118_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%round_keys_119_loc = alloca i64 1"   --->   Operation 133 'alloca' 'round_keys_119_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%round_keys_120_loc = alloca i64 1"   --->   Operation 134 'alloca' 'round_keys_120_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%round_keys_121_loc = alloca i64 1"   --->   Operation 135 'alloca' 'round_keys_121_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%round_keys_122_loc = alloca i64 1"   --->   Operation 136 'alloca' 'round_keys_122_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%round_keys_123_loc = alloca i64 1"   --->   Operation 137 'alloca' 'round_keys_123_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%round_keys_124_loc = alloca i64 1"   --->   Operation 138 'alloca' 'round_keys_124_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%round_keys_125_loc = alloca i64 1"   --->   Operation 139 'alloca' 'round_keys_125_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%round_keys_126_loc = alloca i64 1"   --->   Operation 140 'alloca' 'round_keys_126_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%round_keys_127_loc = alloca i64 1"   --->   Operation 141 'alloca' 'round_keys_127_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%round_keys_128_loc = alloca i64 1"   --->   Operation 142 'alloca' 'round_keys_128_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%round_keys_129_loc = alloca i64 1"   --->   Operation 143 'alloca' 'round_keys_129_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%round_keys_130_loc = alloca i64 1"   --->   Operation 144 'alloca' 'round_keys_130_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%round_keys_131_loc = alloca i64 1"   --->   Operation 145 'alloca' 'round_keys_131_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%round_keys_132_loc = alloca i64 1"   --->   Operation 146 'alloca' 'round_keys_132_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%round_keys_133_loc = alloca i64 1"   --->   Operation 147 'alloca' 'round_keys_133_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%round_keys_134_loc = alloca i64 1"   --->   Operation 148 'alloca' 'round_keys_134_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%round_keys_135_loc = alloca i64 1"   --->   Operation 149 'alloca' 'round_keys_135_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%round_keys_136_loc = alloca i64 1"   --->   Operation 150 'alloca' 'round_keys_136_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%round_keys_137_loc = alloca i64 1"   --->   Operation 151 'alloca' 'round_keys_137_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%round_keys_138_loc = alloca i64 1"   --->   Operation 152 'alloca' 'round_keys_138_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%round_keys_139_loc = alloca i64 1"   --->   Operation 153 'alloca' 'round_keys_139_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%round_keys_140_loc = alloca i64 1"   --->   Operation 154 'alloca' 'round_keys_140_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%round_keys_141_loc = alloca i64 1"   --->   Operation 155 'alloca' 'round_keys_141_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%round_keys_142_loc = alloca i64 1"   --->   Operation 156 'alloca' 'round_keys_142_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%round_keys_143_loc = alloca i64 1"   --->   Operation 157 'alloca' 'round_keys_143_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%round_keys_144_loc = alloca i64 1"   --->   Operation 158 'alloca' 'round_keys_144_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%round_keys_145_loc = alloca i64 1"   --->   Operation 159 'alloca' 'round_keys_145_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%round_keys_146_loc = alloca i64 1"   --->   Operation 160 'alloca' 'round_keys_146_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%round_keys_147_loc = alloca i64 1"   --->   Operation 161 'alloca' 'round_keys_147_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%round_keys_148_loc = alloca i64 1"   --->   Operation 162 'alloca' 'round_keys_148_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%round_keys_149_loc = alloca i64 1"   --->   Operation 163 'alloca' 'round_keys_149_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%round_keys_150_loc = alloca i64 1"   --->   Operation 164 'alloca' 'round_keys_150_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%round_keys_151_loc = alloca i64 1"   --->   Operation 165 'alloca' 'round_keys_151_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%round_keys_152_loc = alloca i64 1"   --->   Operation 166 'alloca' 'round_keys_152_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%round_keys_153_loc = alloca i64 1"   --->   Operation 167 'alloca' 'round_keys_153_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%round_keys_154_loc = alloca i64 1"   --->   Operation 168 'alloca' 'round_keys_154_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%round_keys_155_loc = alloca i64 1"   --->   Operation 169 'alloca' 'round_keys_155_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%round_keys_156_loc = alloca i64 1"   --->   Operation 170 'alloca' 'round_keys_156_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%round_keys_157_loc = alloca i64 1"   --->   Operation 171 'alloca' 'round_keys_157_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%round_keys_158_loc = alloca i64 1"   --->   Operation 172 'alloca' 'round_keys_158_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%round_keys_159_loc = alloca i64 1"   --->   Operation 173 'alloca' 'round_keys_159_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%round_keys_160_loc = alloca i64 1"   --->   Operation 174 'alloca' 'round_keys_160_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%round_keys_161_loc = alloca i64 1"   --->   Operation 175 'alloca' 'round_keys_161_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%round_keys_162_loc = alloca i64 1"   --->   Operation 176 'alloca' 'round_keys_162_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%round_keys_163_loc = alloca i64 1"   --->   Operation 177 'alloca' 'round_keys_163_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%round_keys_164_loc = alloca i64 1"   --->   Operation 178 'alloca' 'round_keys_164_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%round_keys_165_loc = alloca i64 1"   --->   Operation 179 'alloca' 'round_keys_165_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%round_keys_166_loc = alloca i64 1"   --->   Operation 180 'alloca' 'round_keys_166_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%round_keys_167_loc = alloca i64 1"   --->   Operation 181 'alloca' 'round_keys_167_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%round_keys_168_loc = alloca i64 1"   --->   Operation 182 'alloca' 'round_keys_168_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%round_keys_169_loc = alloca i64 1"   --->   Operation 183 'alloca' 'round_keys_169_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%round_keys_170_loc = alloca i64 1"   --->   Operation 184 'alloca' 'round_keys_170_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%round_keys_171_loc = alloca i64 1"   --->   Operation 185 'alloca' 'round_keys_171_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%round_keys_172_loc = alloca i64 1"   --->   Operation 186 'alloca' 'round_keys_172_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%round_keys_173_loc = alloca i64 1"   --->   Operation 187 'alloca' 'round_keys_173_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%round_keys_174_loc = alloca i64 1"   --->   Operation 188 'alloca' 'round_keys_174_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%round_keys_175_loc = alloca i64 1"   --->   Operation 189 'alloca' 'round_keys_175_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%key_0_addr = getelementptr i8 %key_0, i64 0, i64 0" [src/aes128.cpp:146]   --->   Operation 190 'getelementptr' 'key_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [2/2] (2.32ns)   --->   "%round_keys = load i3 %key_0_addr" [src/aes128.cpp:34]   --->   Operation 191 'load' 'round_keys' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%key_1_addr = getelementptr i8 %key_1, i64 0, i64 0" [src/aes128.cpp:34]   --->   Operation 192 'getelementptr' 'key_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [2/2] (2.32ns)   --->   "%round_keys_180 = load i3 %key_1_addr" [src/aes128.cpp:34]   --->   Operation 193 'load' 'round_keys_180' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%key_0_addr_1 = getelementptr i8 %key_0, i64 0, i64 1" [src/aes128.cpp:34]   --->   Operation 194 'getelementptr' 'key_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [2/2] (2.32ns)   --->   "%round_keys_181 = load i3 %key_0_addr_1" [src/aes128.cpp:34]   --->   Operation 195 'load' 'round_keys_181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%key_1_addr_1 = getelementptr i8 %key_1, i64 0, i64 1" [src/aes128.cpp:34]   --->   Operation 196 'getelementptr' 'key_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [2/2] (2.32ns)   --->   "%round_keys_182 = load i3 %key_1_addr_1" [src/aes128.cpp:34]   --->   Operation 197 'load' 'round_keys_182' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 198 [1/2] (2.32ns)   --->   "%round_keys = load i3 %key_0_addr" [src/aes128.cpp:34]   --->   Operation 198 'load' 'round_keys' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 199 [1/2] (2.32ns)   --->   "%round_keys_180 = load i3 %key_1_addr" [src/aes128.cpp:34]   --->   Operation 199 'load' 'round_keys_180' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 200 [1/2] (2.32ns)   --->   "%round_keys_181 = load i3 %key_0_addr_1" [src/aes128.cpp:34]   --->   Operation 200 'load' 'round_keys_181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 201 [1/2] (2.32ns)   --->   "%round_keys_182 = load i3 %key_1_addr_1" [src/aes128.cpp:34]   --->   Operation 201 'load' 'round_keys_182' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 202 [1/1] (0.00ns)   --->   "%key_0_addr_2 = getelementptr i8 %key_0, i64 0, i64 2" [src/aes128.cpp:34]   --->   Operation 202 'getelementptr' 'key_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 203 [2/2] (2.32ns)   --->   "%round_keys_183 = load i3 %key_0_addr_2" [src/aes128.cpp:34]   --->   Operation 203 'load' 'round_keys_183' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%key_1_addr_2 = getelementptr i8 %key_1, i64 0, i64 2" [src/aes128.cpp:34]   --->   Operation 204 'getelementptr' 'key_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 205 [2/2] (2.32ns)   --->   "%round_keys_184 = load i3 %key_1_addr_2" [src/aes128.cpp:34]   --->   Operation 205 'load' 'round_keys_184' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 206 [1/1] (0.00ns)   --->   "%key_0_addr_3 = getelementptr i8 %key_0, i64 0, i64 3" [src/aes128.cpp:34]   --->   Operation 206 'getelementptr' 'key_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 207 [2/2] (2.32ns)   --->   "%round_keys_185 = load i3 %key_0_addr_3" [src/aes128.cpp:34]   --->   Operation 207 'load' 'round_keys_185' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 208 [1/1] (0.00ns)   --->   "%key_1_addr_3 = getelementptr i8 %key_1, i64 0, i64 3" [src/aes128.cpp:34]   --->   Operation 208 'getelementptr' 'key_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 209 [2/2] (2.32ns)   --->   "%round_keys_186 = load i3 %key_1_addr_3" [src/aes128.cpp:34]   --->   Operation 209 'load' 'round_keys_186' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 210 [1/2] (2.32ns)   --->   "%round_keys_183 = load i3 %key_0_addr_2" [src/aes128.cpp:34]   --->   Operation 210 'load' 'round_keys_183' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 211 [1/2] (2.32ns)   --->   "%round_keys_184 = load i3 %key_1_addr_2" [src/aes128.cpp:34]   --->   Operation 211 'load' 'round_keys_184' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 212 [1/2] (2.32ns)   --->   "%round_keys_185 = load i3 %key_0_addr_3" [src/aes128.cpp:34]   --->   Operation 212 'load' 'round_keys_185' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 213 [1/2] (2.32ns)   --->   "%round_keys_186 = load i3 %key_1_addr_3" [src/aes128.cpp:34]   --->   Operation 213 'load' 'round_keys_186' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 214 [1/1] (0.00ns)   --->   "%key_0_addr_4 = getelementptr i8 %key_0, i64 0, i64 4" [src/aes128.cpp:34]   --->   Operation 214 'getelementptr' 'key_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 215 [2/2] (2.32ns)   --->   "%round_keys_187 = load i3 %key_0_addr_4" [src/aes128.cpp:34]   --->   Operation 215 'load' 'round_keys_187' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 216 [1/1] (0.00ns)   --->   "%key_1_addr_4 = getelementptr i8 %key_1, i64 0, i64 4" [src/aes128.cpp:34]   --->   Operation 216 'getelementptr' 'key_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 217 [2/2] (2.32ns)   --->   "%round_keys_188 = load i3 %key_1_addr_4" [src/aes128.cpp:34]   --->   Operation 217 'load' 'round_keys_188' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 218 [1/1] (0.00ns)   --->   "%key_0_addr_5 = getelementptr i8 %key_0, i64 0, i64 5" [src/aes128.cpp:34]   --->   Operation 218 'getelementptr' 'key_0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 219 [2/2] (2.32ns)   --->   "%round_keys_189 = load i3 %key_0_addr_5" [src/aes128.cpp:34]   --->   Operation 219 'load' 'round_keys_189' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 220 [1/1] (0.00ns)   --->   "%key_1_addr_5 = getelementptr i8 %key_1, i64 0, i64 5" [src/aes128.cpp:34]   --->   Operation 220 'getelementptr' 'key_1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 221 [2/2] (2.32ns)   --->   "%round_keys_190 = load i3 %key_1_addr_5" [src/aes128.cpp:34]   --->   Operation 221 'load' 'round_keys_190' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 222 [1/1] (0.00ns)   --->   "%plaintext_0_addr = getelementptr i8 %plaintext_0, i64 0, i64 0" [src/aes128.cpp:146]   --->   Operation 222 'getelementptr' 'plaintext_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 223 [2/2] (2.32ns)   --->   "%plaintext_0_load = load i3 %plaintext_0_addr" [src/aes128.cpp:162]   --->   Operation 223 'load' 'plaintext_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 224 [1/1] (0.00ns)   --->   "%plaintext_1_addr = getelementptr i8 %plaintext_1, i64 0, i64 0" [src/aes128.cpp:162]   --->   Operation 224 'getelementptr' 'plaintext_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 225 [2/2] (2.32ns)   --->   "%plaintext_1_load = load i3 %plaintext_1_addr" [src/aes128.cpp:162]   --->   Operation 225 'load' 'plaintext_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 226 [1/1] (0.00ns)   --->   "%plaintext_0_addr_1 = getelementptr i8 %plaintext_0, i64 0, i64 1" [src/aes128.cpp:162]   --->   Operation 226 'getelementptr' 'plaintext_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 227 [2/2] (2.32ns)   --->   "%plaintext_0_load_1 = load i3 %plaintext_0_addr_1" [src/aes128.cpp:162]   --->   Operation 227 'load' 'plaintext_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 228 [1/1] (0.00ns)   --->   "%plaintext_1_addr_1 = getelementptr i8 %plaintext_1, i64 0, i64 1" [src/aes128.cpp:162]   --->   Operation 228 'getelementptr' 'plaintext_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 229 [2/2] (2.32ns)   --->   "%plaintext_1_load_1 = load i3 %plaintext_1_addr_1" [src/aes128.cpp:162]   --->   Operation 229 'load' 'plaintext_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 230 [1/2] (2.32ns)   --->   "%round_keys_187 = load i3 %key_0_addr_4" [src/aes128.cpp:34]   --->   Operation 230 'load' 'round_keys_187' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 231 [1/2] (2.32ns)   --->   "%round_keys_188 = load i3 %key_1_addr_4" [src/aes128.cpp:34]   --->   Operation 231 'load' 'round_keys_188' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 232 [1/2] (2.32ns)   --->   "%round_keys_189 = load i3 %key_0_addr_5" [src/aes128.cpp:34]   --->   Operation 232 'load' 'round_keys_189' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 233 [1/2] (2.32ns)   --->   "%round_keys_190 = load i3 %key_1_addr_5" [src/aes128.cpp:34]   --->   Operation 233 'load' 'round_keys_190' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 234 [1/1] (0.00ns)   --->   "%key_0_addr_6 = getelementptr i8 %key_0, i64 0, i64 6" [src/aes128.cpp:34]   --->   Operation 234 'getelementptr' 'key_0_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 235 [2/2] (2.32ns)   --->   "%round_keys_191 = load i3 %key_0_addr_6" [src/aes128.cpp:34]   --->   Operation 235 'load' 'round_keys_191' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 236 [1/1] (0.00ns)   --->   "%key_1_addr_6 = getelementptr i8 %key_1, i64 0, i64 6" [src/aes128.cpp:34]   --->   Operation 236 'getelementptr' 'key_1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 237 [2/2] (2.32ns)   --->   "%round_keys_192 = load i3 %key_1_addr_6" [src/aes128.cpp:34]   --->   Operation 237 'load' 'round_keys_192' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 238 [1/1] (0.00ns)   --->   "%key_0_addr_7 = getelementptr i8 %key_0, i64 0, i64 7" [src/aes128.cpp:34]   --->   Operation 238 'getelementptr' 'key_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 239 [2/2] (2.32ns)   --->   "%round_keys_193 = load i3 %key_0_addr_7" [src/aes128.cpp:34]   --->   Operation 239 'load' 'round_keys_193' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 240 [1/1] (0.00ns)   --->   "%key_1_addr_7 = getelementptr i8 %key_1, i64 0, i64 7" [src/aes128.cpp:34]   --->   Operation 240 'getelementptr' 'key_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 241 [2/2] (2.32ns)   --->   "%round_keys_194 = load i3 %key_1_addr_7" [src/aes128.cpp:34]   --->   Operation 241 'load' 'round_keys_194' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 242 [1/2] (2.32ns)   --->   "%plaintext_0_load = load i3 %plaintext_0_addr" [src/aes128.cpp:162]   --->   Operation 242 'load' 'plaintext_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 243 [1/2] (2.32ns)   --->   "%plaintext_1_load = load i3 %plaintext_1_addr" [src/aes128.cpp:162]   --->   Operation 243 'load' 'plaintext_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 244 [1/2] (2.32ns)   --->   "%plaintext_0_load_1 = load i3 %plaintext_0_addr_1" [src/aes128.cpp:162]   --->   Operation 244 'load' 'plaintext_0_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 245 [1/2] (2.32ns)   --->   "%plaintext_1_load_1 = load i3 %plaintext_1_addr_1" [src/aes128.cpp:162]   --->   Operation 245 'load' 'plaintext_1_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 246 [1/1] (0.00ns)   --->   "%plaintext_0_addr_2 = getelementptr i8 %plaintext_0, i64 0, i64 2" [src/aes128.cpp:162]   --->   Operation 246 'getelementptr' 'plaintext_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 247 [2/2] (2.32ns)   --->   "%plaintext_0_load_2 = load i3 %plaintext_0_addr_2" [src/aes128.cpp:162]   --->   Operation 247 'load' 'plaintext_0_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 248 [1/1] (0.00ns)   --->   "%plaintext_1_addr_2 = getelementptr i8 %plaintext_1, i64 0, i64 2" [src/aes128.cpp:162]   --->   Operation 248 'getelementptr' 'plaintext_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 249 [2/2] (2.32ns)   --->   "%plaintext_1_load_2 = load i3 %plaintext_1_addr_2" [src/aes128.cpp:162]   --->   Operation 249 'load' 'plaintext_1_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 250 [1/1] (0.00ns)   --->   "%plaintext_0_addr_3 = getelementptr i8 %plaintext_0, i64 0, i64 3" [src/aes128.cpp:162]   --->   Operation 250 'getelementptr' 'plaintext_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 251 [2/2] (2.32ns)   --->   "%plaintext_0_load_3 = load i3 %plaintext_0_addr_3" [src/aes128.cpp:162]   --->   Operation 251 'load' 'plaintext_0_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 252 [1/1] (0.00ns)   --->   "%plaintext_1_addr_3 = getelementptr i8 %plaintext_1, i64 0, i64 3" [src/aes128.cpp:162]   --->   Operation 252 'getelementptr' 'plaintext_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 253 [2/2] (2.32ns)   --->   "%plaintext_1_load_3 = load i3 %plaintext_1_addr_3" [src/aes128.cpp:162]   --->   Operation 253 'load' 'plaintext_1_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 5 <SV = 4> <Delay = 3.31>
+ST_5 : Operation 254 [1/2] (2.32ns)   --->   "%round_keys_191 = load i3 %key_0_addr_6" [src/aes128.cpp:34]   --->   Operation 254 'load' 'round_keys_191' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 255 [1/2] (2.32ns)   --->   "%round_keys_192 = load i3 %key_1_addr_6" [src/aes128.cpp:34]   --->   Operation 255 'load' 'round_keys_192' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 256 [1/2] (2.32ns)   --->   "%round_keys_193 = load i3 %key_0_addr_7" [src/aes128.cpp:34]   --->   Operation 256 'load' 'round_keys_193' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 257 [1/2] (2.32ns)   --->   "%round_keys_194 = load i3 %key_1_addr_7" [src/aes128.cpp:34]   --->   Operation 257 'load' 'round_keys_194' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 258 [2/2] (0.00ns)   --->   "%call_ln34 = call void @aes128_encrypt_Pipeline_VITIS_LOOP_38_2, i8 %round_keys_182, i8 %round_keys_186, i8 %round_keys_190, i8 %round_keys_194, i8 %round_keys_181, i8 %round_keys_185, i8 %round_keys_189, i8 %round_keys_193, i8 %round_keys_180, i8 %round_keys_184, i8 %round_keys_188, i8 %round_keys_192, i8 %round_keys_191, i8 %round_keys, i8 %round_keys_183, i8 %round_keys_187, i8 %round_keys_175_loc, i8 %round_keys_174_loc, i8 %round_keys_173_loc, i8 %round_keys_172_loc, i8 %round_keys_171_loc, i8 %round_keys_170_loc, i8 %round_keys_169_loc, i8 %round_keys_168_loc, i8 %round_keys_167_loc, i8 %round_keys_166_loc, i8 %round_keys_165_loc, i8 %round_keys_164_loc, i8 %round_keys_163_loc, i8 %round_keys_162_loc, i8 %round_keys_161_loc, i8 %round_keys_160_loc, i8 %round_keys_159_loc, i8 %round_keys_158_loc, i8 %round_keys_157_loc, i8 %round_keys_156_loc, i8 %round_keys_155_loc, i8 %round_keys_154_loc, i8 %round_keys_153_loc, i8 %round_keys_152_loc, i8 %round_keys_151_loc, i8 %round_keys_150_loc, i8 %round_keys_149_loc, i8 %round_keys_148_loc, i8 %round_keys_147_loc, i8 %round_keys_146_loc, i8 %round_keys_145_loc, i8 %round_keys_144_loc, i8 %round_keys_143_loc, i8 %round_keys_142_loc, i8 %round_keys_141_loc, i8 %round_keys_140_loc, i8 %round_keys_139_loc, i8 %round_keys_138_loc, i8 %round_keys_137_loc, i8 %round_keys_136_loc, i8 %round_keys_135_loc, i8 %round_keys_134_loc, i8 %round_keys_133_loc, i8 %round_keys_132_loc, i8 %round_keys_131_loc, i8 %round_keys_130_loc, i8 %round_keys_129_loc, i8 %round_keys_128_loc, i8 %round_keys_127_loc, i8 %round_keys_126_loc, i8 %round_keys_125_loc, i8 %round_keys_124_loc, i8 %round_keys_123_loc, i8 %round_keys_122_loc, i8 %round_keys_121_loc, i8 %round_keys_120_loc, i8 %round_keys_119_loc, i8 %round_keys_118_loc, i8 %round_keys_117_loc, i8 %round_keys_116_loc, i8 %round_keys_115_loc, i8 %round_keys_114_loc, i8 %round_keys_113_loc, i8 %round_keys_112_loc, i8 %round_keys_111_loc, i8 %round_keys_110_loc, i8 %round_keys_109_loc, i8 %round_keys_108_loc, i8 %round_keys_107_loc, i8 %round_keys_106_loc, i8 %round_keys_105_loc, i8 %round_keys_104_loc, i8 %round_keys_103_loc, i8 %round_keys_102_loc, i8 %round_keys_101_loc, i8 %round_keys_100_loc, i8 %round_keys_99_loc, i8 %round_keys_98_loc, i8 %round_keys_97_loc, i8 %round_keys_96_loc, i8 %round_keys_95_loc, i8 %round_keys_94_loc, i8 %round_keys_93_loc, i8 %round_keys_92_loc, i8 %round_keys_91_loc, i8 %round_keys_90_loc, i8 %round_keys_89_loc, i8 %round_keys_88_loc, i8 %round_keys_87_loc, i8 %round_keys_86_loc, i8 %round_keys_85_loc, i8 %round_keys_84_loc, i8 %round_keys_83_loc, i8 %round_keys_82_loc, i8 %round_keys_81_loc, i8 %round_keys_80_loc, i8 %round_keys_79_loc, i8 %round_keys_78_loc, i8 %round_keys_77_loc, i8 %round_keys_76_loc, i8 %round_keys_75_loc, i8 %round_keys_74_loc, i8 %round_keys_73_loc, i8 %round_keys_72_loc, i8 %round_keys_71_loc, i8 %round_keys_70_loc, i8 %round_keys_69_loc, i8 %round_keys_68_loc, i8 %round_keys_67_loc, i8 %round_keys_66_loc, i8 %round_keys_65_loc, i8 %round_keys_64_loc, i8 %round_keys_63_loc, i8 %round_keys_62_loc, i8 %round_keys_61_loc, i8 %round_keys_60_loc, i8 %round_keys_59_loc, i8 %round_keys_58_loc, i8 %round_keys_57_loc, i8 %round_keys_56_loc, i8 %round_keys_55_loc, i8 %round_keys_54_loc, i8 %round_keys_53_loc, i8 %round_keys_52_loc, i8 %round_keys_51_loc, i8 %round_keys_50_loc, i8 %round_keys_49_loc, i8 %round_keys_48_loc, i8 %round_keys_47_loc, i8 %round_keys_46_loc, i8 %round_keys_45_loc, i8 %round_keys_44_loc, i8 %round_keys_43_loc, i8 %round_keys_42_loc, i8 %round_keys_41_loc, i8 %round_keys_40_loc, i8 %round_keys_39_loc, i8 %round_keys_38_loc, i8 %round_keys_37_loc, i8 %round_keys_36_loc, i8 %round_keys_35_loc, i8 %round_keys_34_loc, i8 %round_keys_33_loc, i8 %round_keys_32_loc, i8 %round_keys_31_loc, i8 %round_keys_30_loc, i8 %round_keys_29_loc, i8 %round_keys_28_loc, i8 %round_keys_27_loc, i8 %round_keys_26_loc, i8 %round_keys_25_loc, i8 %round_keys_24_loc, i8 %round_keys_23_loc, i8 %round_keys_22_loc, i8 %round_keys_21_loc, i8 %round_keys_20_loc, i8 %round_keys_19_loc, i8 %round_keys_18_loc, i8 %round_keys_17_loc, i8 %round_keys_16_loc, i8 %SBOX, i8 %RCON" [src/aes128.cpp:34]   --->   Operation 258 'call' 'call_ln34' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 259 [1/2] (2.32ns)   --->   "%plaintext_0_load_2 = load i3 %plaintext_0_addr_2" [src/aes128.cpp:162]   --->   Operation 259 'load' 'plaintext_0_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 260 [1/2] (2.32ns)   --->   "%plaintext_1_load_2 = load i3 %plaintext_1_addr_2" [src/aes128.cpp:162]   --->   Operation 260 'load' 'plaintext_1_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 261 [1/2] (2.32ns)   --->   "%plaintext_0_load_3 = load i3 %plaintext_0_addr_3" [src/aes128.cpp:162]   --->   Operation 261 'load' 'plaintext_0_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 262 [1/2] (2.32ns)   --->   "%plaintext_1_load_3 = load i3 %plaintext_1_addr_3" [src/aes128.cpp:162]   --->   Operation 262 'load' 'plaintext_1_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 263 [1/1] (0.00ns)   --->   "%plaintext_0_addr_4 = getelementptr i8 %plaintext_0, i64 0, i64 4" [src/aes128.cpp:162]   --->   Operation 263 'getelementptr' 'plaintext_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 264 [2/2] (2.32ns)   --->   "%state = load i3 %plaintext_0_addr_4" [src/aes128.cpp:162]   --->   Operation 264 'load' 'state' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 265 [1/1] (0.00ns)   --->   "%plaintext_1_addr_4 = getelementptr i8 %plaintext_1, i64 0, i64 4" [src/aes128.cpp:162]   --->   Operation 265 'getelementptr' 'plaintext_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 266 [2/2] (2.32ns)   --->   "%state_1 = load i3 %plaintext_1_addr_4" [src/aes128.cpp:162]   --->   Operation 266 'load' 'state_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 267 [1/1] (0.00ns)   --->   "%plaintext_0_addr_5 = getelementptr i8 %plaintext_0, i64 0, i64 5" [src/aes128.cpp:162]   --->   Operation 267 'getelementptr' 'plaintext_0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 268 [2/2] (2.32ns)   --->   "%state_2 = load i3 %plaintext_0_addr_5" [src/aes128.cpp:162]   --->   Operation 268 'load' 'state_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 269 [1/1] (0.00ns)   --->   "%plaintext_1_addr_5 = getelementptr i8 %plaintext_1, i64 0, i64 5" [src/aes128.cpp:162]   --->   Operation 269 'getelementptr' 'plaintext_1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 270 [2/2] (2.32ns)   --->   "%state_3 = load i3 %plaintext_1_addr_5" [src/aes128.cpp:162]   --->   Operation 270 'load' 'state_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 271 [1/1] (0.99ns)   --->   "%state_8 = xor i8 %plaintext_0_load, i8 %round_keys" [src/aes128.cpp:76]   --->   Operation 271 'xor' 'state_8' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 272 [1/1] (0.99ns)   --->   "%state_9 = xor i8 %plaintext_1_load, i8 %round_keys_180" [src/aes128.cpp:76]   --->   Operation 272 'xor' 'state_9' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 273 [1/1] (0.99ns)   --->   "%state_10 = xor i8 %plaintext_0_load_1, i8 %round_keys_181" [src/aes128.cpp:76]   --->   Operation 273 'xor' 'state_10' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 274 [1/1] (0.99ns)   --->   "%state_11 = xor i8 %plaintext_1_load_1, i8 %round_keys_182" [src/aes128.cpp:76]   --->   Operation 274 'xor' 'state_11' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 275 [1/1] (0.99ns)   --->   "%state_12 = xor i8 %plaintext_0_load_2, i8 %round_keys_183" [src/aes128.cpp:76]   --->   Operation 275 'xor' 'state_12' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 276 [1/1] (0.99ns)   --->   "%state_13 = xor i8 %plaintext_1_load_2, i8 %round_keys_184" [src/aes128.cpp:76]   --->   Operation 276 'xor' 'state_13' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 277 [1/1] (0.99ns)   --->   "%state_14 = xor i8 %plaintext_0_load_3, i8 %round_keys_185" [src/aes128.cpp:76]   --->   Operation 277 'xor' 'state_14' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 278 [1/1] (0.99ns)   --->   "%state_15 = xor i8 %plaintext_1_load_3, i8 %round_keys_186" [src/aes128.cpp:76]   --->   Operation 278 'xor' 'state_15' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.31>
+ST_6 : Operation 279 [1/2] (0.00ns)   --->   "%call_ln34 = call void @aes128_encrypt_Pipeline_VITIS_LOOP_38_2, i8 %round_keys_182, i8 %round_keys_186, i8 %round_keys_190, i8 %round_keys_194, i8 %round_keys_181, i8 %round_keys_185, i8 %round_keys_189, i8 %round_keys_193, i8 %round_keys_180, i8 %round_keys_184, i8 %round_keys_188, i8 %round_keys_192, i8 %round_keys_191, i8 %round_keys, i8 %round_keys_183, i8 %round_keys_187, i8 %round_keys_175_loc, i8 %round_keys_174_loc, i8 %round_keys_173_loc, i8 %round_keys_172_loc, i8 %round_keys_171_loc, i8 %round_keys_170_loc, i8 %round_keys_169_loc, i8 %round_keys_168_loc, i8 %round_keys_167_loc, i8 %round_keys_166_loc, i8 %round_keys_165_loc, i8 %round_keys_164_loc, i8 %round_keys_163_loc, i8 %round_keys_162_loc, i8 %round_keys_161_loc, i8 %round_keys_160_loc, i8 %round_keys_159_loc, i8 %round_keys_158_loc, i8 %round_keys_157_loc, i8 %round_keys_156_loc, i8 %round_keys_155_loc, i8 %round_keys_154_loc, i8 %round_keys_153_loc, i8 %round_keys_152_loc, i8 %round_keys_151_loc, i8 %round_keys_150_loc, i8 %round_keys_149_loc, i8 %round_keys_148_loc, i8 %round_keys_147_loc, i8 %round_keys_146_loc, i8 %round_keys_145_loc, i8 %round_keys_144_loc, i8 %round_keys_143_loc, i8 %round_keys_142_loc, i8 %round_keys_141_loc, i8 %round_keys_140_loc, i8 %round_keys_139_loc, i8 %round_keys_138_loc, i8 %round_keys_137_loc, i8 %round_keys_136_loc, i8 %round_keys_135_loc, i8 %round_keys_134_loc, i8 %round_keys_133_loc, i8 %round_keys_132_loc, i8 %round_keys_131_loc, i8 %round_keys_130_loc, i8 %round_keys_129_loc, i8 %round_keys_128_loc, i8 %round_keys_127_loc, i8 %round_keys_126_loc, i8 %round_keys_125_loc, i8 %round_keys_124_loc, i8 %round_keys_123_loc, i8 %round_keys_122_loc, i8 %round_keys_121_loc, i8 %round_keys_120_loc, i8 %round_keys_119_loc, i8 %round_keys_118_loc, i8 %round_keys_117_loc, i8 %round_keys_116_loc, i8 %round_keys_115_loc, i8 %round_keys_114_loc, i8 %round_keys_113_loc, i8 %round_keys_112_loc, i8 %round_keys_111_loc, i8 %round_keys_110_loc, i8 %round_keys_109_loc, i8 %round_keys_108_loc, i8 %round_keys_107_loc, i8 %round_keys_106_loc, i8 %round_keys_105_loc, i8 %round_keys_104_loc, i8 %round_keys_103_loc, i8 %round_keys_102_loc, i8 %round_keys_101_loc, i8 %round_keys_100_loc, i8 %round_keys_99_loc, i8 %round_keys_98_loc, i8 %round_keys_97_loc, i8 %round_keys_96_loc, i8 %round_keys_95_loc, i8 %round_keys_94_loc, i8 %round_keys_93_loc, i8 %round_keys_92_loc, i8 %round_keys_91_loc, i8 %round_keys_90_loc, i8 %round_keys_89_loc, i8 %round_keys_88_loc, i8 %round_keys_87_loc, i8 %round_keys_86_loc, i8 %round_keys_85_loc, i8 %round_keys_84_loc, i8 %round_keys_83_loc, i8 %round_keys_82_loc, i8 %round_keys_81_loc, i8 %round_keys_80_loc, i8 %round_keys_79_loc, i8 %round_keys_78_loc, i8 %round_keys_77_loc, i8 %round_keys_76_loc, i8 %round_keys_75_loc, i8 %round_keys_74_loc, i8 %round_keys_73_loc, i8 %round_keys_72_loc, i8 %round_keys_71_loc, i8 %round_keys_70_loc, i8 %round_keys_69_loc, i8 %round_keys_68_loc, i8 %round_keys_67_loc, i8 %round_keys_66_loc, i8 %round_keys_65_loc, i8 %round_keys_64_loc, i8 %round_keys_63_loc, i8 %round_keys_62_loc, i8 %round_keys_61_loc, i8 %round_keys_60_loc, i8 %round_keys_59_loc, i8 %round_keys_58_loc, i8 %round_keys_57_loc, i8 %round_keys_56_loc, i8 %round_keys_55_loc, i8 %round_keys_54_loc, i8 %round_keys_53_loc, i8 %round_keys_52_loc, i8 %round_keys_51_loc, i8 %round_keys_50_loc, i8 %round_keys_49_loc, i8 %round_keys_48_loc, i8 %round_keys_47_loc, i8 %round_keys_46_loc, i8 %round_keys_45_loc, i8 %round_keys_44_loc, i8 %round_keys_43_loc, i8 %round_keys_42_loc, i8 %round_keys_41_loc, i8 %round_keys_40_loc, i8 %round_keys_39_loc, i8 %round_keys_38_loc, i8 %round_keys_37_loc, i8 %round_keys_36_loc, i8 %round_keys_35_loc, i8 %round_keys_34_loc, i8 %round_keys_33_loc, i8 %round_keys_32_loc, i8 %round_keys_31_loc, i8 %round_keys_30_loc, i8 %round_keys_29_loc, i8 %round_keys_28_loc, i8 %round_keys_27_loc, i8 %round_keys_26_loc, i8 %round_keys_25_loc, i8 %round_keys_24_loc, i8 %round_keys_23_loc, i8 %round_keys_22_loc, i8 %round_keys_21_loc, i8 %round_keys_20_loc, i8 %round_keys_19_loc, i8 %round_keys_18_loc, i8 %round_keys_17_loc, i8 %round_keys_16_loc, i8 %SBOX, i8 %RCON" [src/aes128.cpp:34]   --->   Operation 279 'call' 'call_ln34' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 280 [1/2] (2.32ns)   --->   "%state = load i3 %plaintext_0_addr_4" [src/aes128.cpp:162]   --->   Operation 280 'load' 'state' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 281 [1/2] (2.32ns)   --->   "%state_1 = load i3 %plaintext_1_addr_4" [src/aes128.cpp:162]   --->   Operation 281 'load' 'state_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 282 [1/2] (2.32ns)   --->   "%state_2 = load i3 %plaintext_0_addr_5" [src/aes128.cpp:162]   --->   Operation 282 'load' 'state_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 283 [1/2] (2.32ns)   --->   "%state_3 = load i3 %plaintext_1_addr_5" [src/aes128.cpp:162]   --->   Operation 283 'load' 'state_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 284 [1/1] (0.00ns)   --->   "%plaintext_0_addr_6 = getelementptr i8 %plaintext_0, i64 0, i64 6" [src/aes128.cpp:162]   --->   Operation 284 'getelementptr' 'plaintext_0_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 285 [2/2] (2.32ns)   --->   "%state_4 = load i3 %plaintext_0_addr_6" [src/aes128.cpp:162]   --->   Operation 285 'load' 'state_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 286 [1/1] (0.00ns)   --->   "%plaintext_1_addr_6 = getelementptr i8 %plaintext_1, i64 0, i64 6" [src/aes128.cpp:162]   --->   Operation 286 'getelementptr' 'plaintext_1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 287 [2/2] (2.32ns)   --->   "%state_5 = load i3 %plaintext_1_addr_6" [src/aes128.cpp:162]   --->   Operation 287 'load' 'state_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 288 [1/1] (0.00ns)   --->   "%plaintext_0_addr_7 = getelementptr i8 %plaintext_0, i64 0, i64 7" [src/aes128.cpp:162]   --->   Operation 288 'getelementptr' 'plaintext_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 289 [2/2] (2.32ns)   --->   "%state_6 = load i3 %plaintext_0_addr_7" [src/aes128.cpp:162]   --->   Operation 289 'load' 'state_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 290 [1/1] (0.00ns)   --->   "%plaintext_1_addr_7 = getelementptr i8 %plaintext_1, i64 0, i64 7" [src/aes128.cpp:162]   --->   Operation 290 'getelementptr' 'plaintext_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 291 [2/2] (2.32ns)   --->   "%state_7 = load i3 %plaintext_1_addr_7" [src/aes128.cpp:162]   --->   Operation 291 'load' 'state_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 292 [1/1] (0.99ns)   --->   "%state_16 = xor i8 %state, i8 %round_keys_187" [src/aes128.cpp:76]   --->   Operation 292 'xor' 'state_16' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 293 [1/1] (0.99ns)   --->   "%state_17 = xor i8 %state_1, i8 %round_keys_188" [src/aes128.cpp:76]   --->   Operation 293 'xor' 'state_17' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 294 [1/1] (0.99ns)   --->   "%state_18 = xor i8 %state_2, i8 %round_keys_189" [src/aes128.cpp:76]   --->   Operation 294 'xor' 'state_18' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 295 [1/1] (0.99ns)   --->   "%state_19 = xor i8 %state_3, i8 %round_keys_190" [src/aes128.cpp:76]   --->   Operation 295 'xor' 'state_19' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.90>
+ST_7 : Operation 296 [1/1] (0.00ns)   --->   "%round_keys_159_loc_load = load i8 %round_keys_159_loc"   --->   Operation 296 'load' 'round_keys_159_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 297 [1/1] (0.00ns)   --->   "%round_keys_158_loc_load = load i8 %round_keys_158_loc"   --->   Operation 297 'load' 'round_keys_158_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 298 [1/1] (0.00ns)   --->   "%round_keys_157_loc_load = load i8 %round_keys_157_loc"   --->   Operation 298 'load' 'round_keys_157_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 299 [1/1] (0.00ns)   --->   "%round_keys_156_loc_load = load i8 %round_keys_156_loc"   --->   Operation 299 'load' 'round_keys_156_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 300 [1/1] (0.00ns)   --->   "%round_keys_155_loc_load = load i8 %round_keys_155_loc"   --->   Operation 300 'load' 'round_keys_155_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 301 [1/1] (0.00ns)   --->   "%round_keys_154_loc_load = load i8 %round_keys_154_loc"   --->   Operation 301 'load' 'round_keys_154_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 302 [1/1] (0.00ns)   --->   "%round_keys_153_loc_load = load i8 %round_keys_153_loc"   --->   Operation 302 'load' 'round_keys_153_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 303 [1/1] (0.00ns)   --->   "%round_keys_152_loc_load = load i8 %round_keys_152_loc"   --->   Operation 303 'load' 'round_keys_152_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 304 [1/1] (0.00ns)   --->   "%round_keys_151_loc_load = load i8 %round_keys_151_loc"   --->   Operation 304 'load' 'round_keys_151_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 305 [1/1] (0.00ns)   --->   "%round_keys_150_loc_load = load i8 %round_keys_150_loc"   --->   Operation 305 'load' 'round_keys_150_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 306 [1/1] (0.00ns)   --->   "%round_keys_149_loc_load = load i8 %round_keys_149_loc"   --->   Operation 306 'load' 'round_keys_149_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 307 [1/1] (0.00ns)   --->   "%round_keys_148_loc_load = load i8 %round_keys_148_loc"   --->   Operation 307 'load' 'round_keys_148_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 308 [1/1] (0.00ns)   --->   "%round_keys_147_loc_load = load i8 %round_keys_147_loc"   --->   Operation 308 'load' 'round_keys_147_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 309 [1/1] (0.00ns)   --->   "%round_keys_146_loc_load = load i8 %round_keys_146_loc"   --->   Operation 309 'load' 'round_keys_146_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 310 [1/1] (0.00ns)   --->   "%round_keys_145_loc_load = load i8 %round_keys_145_loc"   --->   Operation 310 'load' 'round_keys_145_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 311 [1/1] (0.00ns)   --->   "%round_keys_144_loc_load = load i8 %round_keys_144_loc"   --->   Operation 311 'load' 'round_keys_144_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 312 [1/1] (0.00ns)   --->   "%round_keys_143_loc_load = load i8 %round_keys_143_loc"   --->   Operation 312 'load' 'round_keys_143_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 313 [1/1] (0.00ns)   --->   "%round_keys_142_loc_load = load i8 %round_keys_142_loc"   --->   Operation 313 'load' 'round_keys_142_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 314 [1/1] (0.00ns)   --->   "%round_keys_141_loc_load = load i8 %round_keys_141_loc"   --->   Operation 314 'load' 'round_keys_141_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 315 [1/1] (0.00ns)   --->   "%round_keys_140_loc_load = load i8 %round_keys_140_loc"   --->   Operation 315 'load' 'round_keys_140_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 316 [1/1] (0.00ns)   --->   "%round_keys_139_loc_load = load i8 %round_keys_139_loc"   --->   Operation 316 'load' 'round_keys_139_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 317 [1/1] (0.00ns)   --->   "%round_keys_138_loc_load = load i8 %round_keys_138_loc"   --->   Operation 317 'load' 'round_keys_138_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 318 [1/1] (0.00ns)   --->   "%round_keys_137_loc_load = load i8 %round_keys_137_loc"   --->   Operation 318 'load' 'round_keys_137_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 319 [1/1] (0.00ns)   --->   "%round_keys_136_loc_load = load i8 %round_keys_136_loc"   --->   Operation 319 'load' 'round_keys_136_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 320 [1/1] (0.00ns)   --->   "%round_keys_135_loc_load = load i8 %round_keys_135_loc"   --->   Operation 320 'load' 'round_keys_135_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 321 [1/1] (0.00ns)   --->   "%round_keys_134_loc_load = load i8 %round_keys_134_loc"   --->   Operation 321 'load' 'round_keys_134_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 322 [1/1] (0.00ns)   --->   "%round_keys_133_loc_load = load i8 %round_keys_133_loc"   --->   Operation 322 'load' 'round_keys_133_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 323 [1/1] (0.00ns)   --->   "%round_keys_132_loc_load = load i8 %round_keys_132_loc"   --->   Operation 323 'load' 'round_keys_132_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 324 [1/1] (0.00ns)   --->   "%round_keys_131_loc_load = load i8 %round_keys_131_loc"   --->   Operation 324 'load' 'round_keys_131_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 325 [1/1] (0.00ns)   --->   "%round_keys_130_loc_load = load i8 %round_keys_130_loc"   --->   Operation 325 'load' 'round_keys_130_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 326 [1/1] (0.00ns)   --->   "%round_keys_129_loc_load = load i8 %round_keys_129_loc"   --->   Operation 326 'load' 'round_keys_129_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 327 [1/1] (0.00ns)   --->   "%round_keys_128_loc_load = load i8 %round_keys_128_loc"   --->   Operation 327 'load' 'round_keys_128_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 328 [1/1] (0.00ns)   --->   "%round_keys_127_loc_load = load i8 %round_keys_127_loc"   --->   Operation 328 'load' 'round_keys_127_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 329 [1/1] (0.00ns)   --->   "%round_keys_126_loc_load = load i8 %round_keys_126_loc"   --->   Operation 329 'load' 'round_keys_126_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 330 [1/1] (0.00ns)   --->   "%round_keys_125_loc_load = load i8 %round_keys_125_loc"   --->   Operation 330 'load' 'round_keys_125_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 331 [1/1] (0.00ns)   --->   "%round_keys_124_loc_load = load i8 %round_keys_124_loc"   --->   Operation 331 'load' 'round_keys_124_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 332 [1/1] (0.00ns)   --->   "%round_keys_123_loc_load = load i8 %round_keys_123_loc"   --->   Operation 332 'load' 'round_keys_123_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 333 [1/1] (0.00ns)   --->   "%round_keys_122_loc_load = load i8 %round_keys_122_loc"   --->   Operation 333 'load' 'round_keys_122_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 334 [1/1] (0.00ns)   --->   "%round_keys_121_loc_load = load i8 %round_keys_121_loc"   --->   Operation 334 'load' 'round_keys_121_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 335 [1/1] (0.00ns)   --->   "%round_keys_120_loc_load = load i8 %round_keys_120_loc"   --->   Operation 335 'load' 'round_keys_120_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 336 [1/1] (0.00ns)   --->   "%round_keys_119_loc_load = load i8 %round_keys_119_loc"   --->   Operation 336 'load' 'round_keys_119_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 337 [1/1] (0.00ns)   --->   "%round_keys_118_loc_load = load i8 %round_keys_118_loc"   --->   Operation 337 'load' 'round_keys_118_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 338 [1/1] (0.00ns)   --->   "%round_keys_117_loc_load = load i8 %round_keys_117_loc"   --->   Operation 338 'load' 'round_keys_117_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 339 [1/1] (0.00ns)   --->   "%round_keys_116_loc_load = load i8 %round_keys_116_loc"   --->   Operation 339 'load' 'round_keys_116_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 340 [1/1] (0.00ns)   --->   "%round_keys_115_loc_load = load i8 %round_keys_115_loc"   --->   Operation 340 'load' 'round_keys_115_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 341 [1/1] (0.00ns)   --->   "%round_keys_114_loc_load = load i8 %round_keys_114_loc"   --->   Operation 341 'load' 'round_keys_114_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 342 [1/1] (0.00ns)   --->   "%round_keys_113_loc_load = load i8 %round_keys_113_loc"   --->   Operation 342 'load' 'round_keys_113_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 343 [1/1] (0.00ns)   --->   "%round_keys_112_loc_load = load i8 %round_keys_112_loc"   --->   Operation 343 'load' 'round_keys_112_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 344 [1/1] (0.00ns)   --->   "%round_keys_111_loc_load = load i8 %round_keys_111_loc"   --->   Operation 344 'load' 'round_keys_111_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 345 [1/1] (0.00ns)   --->   "%round_keys_110_loc_load = load i8 %round_keys_110_loc"   --->   Operation 345 'load' 'round_keys_110_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 346 [1/1] (0.00ns)   --->   "%round_keys_109_loc_load = load i8 %round_keys_109_loc"   --->   Operation 346 'load' 'round_keys_109_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 347 [1/1] (0.00ns)   --->   "%round_keys_108_loc_load = load i8 %round_keys_108_loc"   --->   Operation 347 'load' 'round_keys_108_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 348 [1/1] (0.00ns)   --->   "%round_keys_107_loc_load = load i8 %round_keys_107_loc"   --->   Operation 348 'load' 'round_keys_107_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 349 [1/1] (0.00ns)   --->   "%round_keys_106_loc_load = load i8 %round_keys_106_loc"   --->   Operation 349 'load' 'round_keys_106_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 350 [1/1] (0.00ns)   --->   "%round_keys_105_loc_load = load i8 %round_keys_105_loc"   --->   Operation 350 'load' 'round_keys_105_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 351 [1/1] (0.00ns)   --->   "%round_keys_104_loc_load = load i8 %round_keys_104_loc"   --->   Operation 351 'load' 'round_keys_104_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 352 [1/1] (0.00ns)   --->   "%round_keys_103_loc_load = load i8 %round_keys_103_loc"   --->   Operation 352 'load' 'round_keys_103_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 353 [1/1] (0.00ns)   --->   "%round_keys_102_loc_load = load i8 %round_keys_102_loc"   --->   Operation 353 'load' 'round_keys_102_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 354 [1/1] (0.00ns)   --->   "%round_keys_101_loc_load = load i8 %round_keys_101_loc"   --->   Operation 354 'load' 'round_keys_101_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 355 [1/1] (0.00ns)   --->   "%round_keys_100_loc_load = load i8 %round_keys_100_loc"   --->   Operation 355 'load' 'round_keys_100_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 356 [1/1] (0.00ns)   --->   "%round_keys_99_loc_load = load i8 %round_keys_99_loc"   --->   Operation 356 'load' 'round_keys_99_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 357 [1/1] (0.00ns)   --->   "%round_keys_98_loc_load = load i8 %round_keys_98_loc"   --->   Operation 357 'load' 'round_keys_98_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 358 [1/1] (0.00ns)   --->   "%round_keys_97_loc_load = load i8 %round_keys_97_loc"   --->   Operation 358 'load' 'round_keys_97_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 359 [1/1] (0.00ns)   --->   "%round_keys_96_loc_load = load i8 %round_keys_96_loc"   --->   Operation 359 'load' 'round_keys_96_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 360 [1/1] (0.00ns)   --->   "%round_keys_95_loc_load = load i8 %round_keys_95_loc"   --->   Operation 360 'load' 'round_keys_95_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 361 [1/1] (0.00ns)   --->   "%round_keys_94_loc_load = load i8 %round_keys_94_loc"   --->   Operation 361 'load' 'round_keys_94_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 362 [1/1] (0.00ns)   --->   "%round_keys_93_loc_load = load i8 %round_keys_93_loc"   --->   Operation 362 'load' 'round_keys_93_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 363 [1/1] (0.00ns)   --->   "%round_keys_92_loc_load = load i8 %round_keys_92_loc"   --->   Operation 363 'load' 'round_keys_92_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 364 [1/1] (0.00ns)   --->   "%round_keys_91_loc_load = load i8 %round_keys_91_loc"   --->   Operation 364 'load' 'round_keys_91_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 365 [1/1] (0.00ns)   --->   "%round_keys_90_loc_load = load i8 %round_keys_90_loc"   --->   Operation 365 'load' 'round_keys_90_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 366 [1/1] (0.00ns)   --->   "%round_keys_89_loc_load = load i8 %round_keys_89_loc"   --->   Operation 366 'load' 'round_keys_89_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 367 [1/1] (0.00ns)   --->   "%round_keys_88_loc_load = load i8 %round_keys_88_loc"   --->   Operation 367 'load' 'round_keys_88_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 368 [1/1] (0.00ns)   --->   "%round_keys_87_loc_load = load i8 %round_keys_87_loc"   --->   Operation 368 'load' 'round_keys_87_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 369 [1/1] (0.00ns)   --->   "%round_keys_86_loc_load = load i8 %round_keys_86_loc"   --->   Operation 369 'load' 'round_keys_86_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 370 [1/1] (0.00ns)   --->   "%round_keys_85_loc_load = load i8 %round_keys_85_loc"   --->   Operation 370 'load' 'round_keys_85_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 371 [1/1] (0.00ns)   --->   "%round_keys_84_loc_load = load i8 %round_keys_84_loc"   --->   Operation 371 'load' 'round_keys_84_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 372 [1/1] (0.00ns)   --->   "%round_keys_83_loc_load = load i8 %round_keys_83_loc"   --->   Operation 372 'load' 'round_keys_83_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 373 [1/1] (0.00ns)   --->   "%round_keys_82_loc_load = load i8 %round_keys_82_loc"   --->   Operation 373 'load' 'round_keys_82_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 374 [1/1] (0.00ns)   --->   "%round_keys_81_loc_load = load i8 %round_keys_81_loc"   --->   Operation 374 'load' 'round_keys_81_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 375 [1/1] (0.00ns)   --->   "%round_keys_80_loc_load = load i8 %round_keys_80_loc"   --->   Operation 375 'load' 'round_keys_80_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 376 [1/1] (0.00ns)   --->   "%round_keys_79_loc_load = load i8 %round_keys_79_loc"   --->   Operation 376 'load' 'round_keys_79_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 377 [1/1] (0.00ns)   --->   "%round_keys_78_loc_load = load i8 %round_keys_78_loc"   --->   Operation 377 'load' 'round_keys_78_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 378 [1/1] (0.00ns)   --->   "%round_keys_77_loc_load = load i8 %round_keys_77_loc"   --->   Operation 378 'load' 'round_keys_77_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 379 [1/1] (0.00ns)   --->   "%round_keys_76_loc_load = load i8 %round_keys_76_loc"   --->   Operation 379 'load' 'round_keys_76_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 380 [1/1] (0.00ns)   --->   "%round_keys_75_loc_load = load i8 %round_keys_75_loc"   --->   Operation 380 'load' 'round_keys_75_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 381 [1/1] (0.00ns)   --->   "%round_keys_74_loc_load = load i8 %round_keys_74_loc"   --->   Operation 381 'load' 'round_keys_74_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 382 [1/1] (0.00ns)   --->   "%round_keys_73_loc_load = load i8 %round_keys_73_loc"   --->   Operation 382 'load' 'round_keys_73_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 383 [1/1] (0.00ns)   --->   "%round_keys_72_loc_load = load i8 %round_keys_72_loc"   --->   Operation 383 'load' 'round_keys_72_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 384 [1/1] (0.00ns)   --->   "%round_keys_71_loc_load = load i8 %round_keys_71_loc"   --->   Operation 384 'load' 'round_keys_71_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 385 [1/1] (0.00ns)   --->   "%round_keys_70_loc_load = load i8 %round_keys_70_loc"   --->   Operation 385 'load' 'round_keys_70_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 386 [1/1] (0.00ns)   --->   "%round_keys_69_loc_load = load i8 %round_keys_69_loc"   --->   Operation 386 'load' 'round_keys_69_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 387 [1/1] (0.00ns)   --->   "%round_keys_68_loc_load = load i8 %round_keys_68_loc"   --->   Operation 387 'load' 'round_keys_68_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 388 [1/1] (0.00ns)   --->   "%round_keys_67_loc_load = load i8 %round_keys_67_loc"   --->   Operation 388 'load' 'round_keys_67_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 389 [1/1] (0.00ns)   --->   "%round_keys_66_loc_load = load i8 %round_keys_66_loc"   --->   Operation 389 'load' 'round_keys_66_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 390 [1/1] (0.00ns)   --->   "%round_keys_65_loc_load = load i8 %round_keys_65_loc"   --->   Operation 390 'load' 'round_keys_65_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 391 [1/1] (0.00ns)   --->   "%round_keys_64_loc_load = load i8 %round_keys_64_loc"   --->   Operation 391 'load' 'round_keys_64_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 392 [1/1] (0.00ns)   --->   "%round_keys_63_loc_load = load i8 %round_keys_63_loc"   --->   Operation 392 'load' 'round_keys_63_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 393 [1/1] (0.00ns)   --->   "%round_keys_62_loc_load = load i8 %round_keys_62_loc"   --->   Operation 393 'load' 'round_keys_62_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 394 [1/1] (0.00ns)   --->   "%round_keys_61_loc_load = load i8 %round_keys_61_loc"   --->   Operation 394 'load' 'round_keys_61_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 395 [1/1] (0.00ns)   --->   "%round_keys_60_loc_load = load i8 %round_keys_60_loc"   --->   Operation 395 'load' 'round_keys_60_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 396 [1/1] (0.00ns)   --->   "%round_keys_59_loc_load = load i8 %round_keys_59_loc"   --->   Operation 396 'load' 'round_keys_59_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 397 [1/1] (0.00ns)   --->   "%round_keys_58_loc_load = load i8 %round_keys_58_loc"   --->   Operation 397 'load' 'round_keys_58_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 398 [1/1] (0.00ns)   --->   "%round_keys_57_loc_load = load i8 %round_keys_57_loc"   --->   Operation 398 'load' 'round_keys_57_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 399 [1/1] (0.00ns)   --->   "%round_keys_56_loc_load = load i8 %round_keys_56_loc"   --->   Operation 399 'load' 'round_keys_56_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 400 [1/1] (0.00ns)   --->   "%round_keys_55_loc_load = load i8 %round_keys_55_loc"   --->   Operation 400 'load' 'round_keys_55_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 401 [1/1] (0.00ns)   --->   "%round_keys_54_loc_load = load i8 %round_keys_54_loc"   --->   Operation 401 'load' 'round_keys_54_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 402 [1/1] (0.00ns)   --->   "%round_keys_53_loc_load = load i8 %round_keys_53_loc"   --->   Operation 402 'load' 'round_keys_53_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 403 [1/1] (0.00ns)   --->   "%round_keys_52_loc_load = load i8 %round_keys_52_loc"   --->   Operation 403 'load' 'round_keys_52_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 404 [1/1] (0.00ns)   --->   "%round_keys_51_loc_load = load i8 %round_keys_51_loc"   --->   Operation 404 'load' 'round_keys_51_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 405 [1/1] (0.00ns)   --->   "%round_keys_50_loc_load = load i8 %round_keys_50_loc"   --->   Operation 405 'load' 'round_keys_50_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 406 [1/1] (0.00ns)   --->   "%round_keys_49_loc_load = load i8 %round_keys_49_loc"   --->   Operation 406 'load' 'round_keys_49_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 407 [1/1] (0.00ns)   --->   "%round_keys_48_loc_load = load i8 %round_keys_48_loc"   --->   Operation 407 'load' 'round_keys_48_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 408 [1/1] (0.00ns)   --->   "%round_keys_47_loc_load = load i8 %round_keys_47_loc"   --->   Operation 408 'load' 'round_keys_47_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 409 [1/1] (0.00ns)   --->   "%round_keys_46_loc_load = load i8 %round_keys_46_loc"   --->   Operation 409 'load' 'round_keys_46_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 410 [1/1] (0.00ns)   --->   "%round_keys_45_loc_load = load i8 %round_keys_45_loc"   --->   Operation 410 'load' 'round_keys_45_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 411 [1/1] (0.00ns)   --->   "%round_keys_44_loc_load = load i8 %round_keys_44_loc"   --->   Operation 411 'load' 'round_keys_44_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 412 [1/1] (0.00ns)   --->   "%round_keys_43_loc_load = load i8 %round_keys_43_loc"   --->   Operation 412 'load' 'round_keys_43_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 413 [1/1] (0.00ns)   --->   "%round_keys_42_loc_load = load i8 %round_keys_42_loc"   --->   Operation 413 'load' 'round_keys_42_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 414 [1/1] (0.00ns)   --->   "%round_keys_41_loc_load = load i8 %round_keys_41_loc"   --->   Operation 414 'load' 'round_keys_41_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 415 [1/1] (0.00ns)   --->   "%round_keys_40_loc_load = load i8 %round_keys_40_loc"   --->   Operation 415 'load' 'round_keys_40_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 416 [1/1] (0.00ns)   --->   "%round_keys_39_loc_load = load i8 %round_keys_39_loc"   --->   Operation 416 'load' 'round_keys_39_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 417 [1/1] (0.00ns)   --->   "%round_keys_38_loc_load = load i8 %round_keys_38_loc"   --->   Operation 417 'load' 'round_keys_38_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 418 [1/1] (0.00ns)   --->   "%round_keys_37_loc_load = load i8 %round_keys_37_loc"   --->   Operation 418 'load' 'round_keys_37_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 419 [1/1] (0.00ns)   --->   "%round_keys_36_loc_load = load i8 %round_keys_36_loc"   --->   Operation 419 'load' 'round_keys_36_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 420 [1/1] (0.00ns)   --->   "%round_keys_35_loc_load = load i8 %round_keys_35_loc"   --->   Operation 420 'load' 'round_keys_35_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 421 [1/1] (0.00ns)   --->   "%round_keys_34_loc_load = load i8 %round_keys_34_loc"   --->   Operation 421 'load' 'round_keys_34_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 422 [1/1] (0.00ns)   --->   "%round_keys_33_loc_load = load i8 %round_keys_33_loc"   --->   Operation 422 'load' 'round_keys_33_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 423 [1/1] (0.00ns)   --->   "%round_keys_32_loc_load = load i8 %round_keys_32_loc"   --->   Operation 423 'load' 'round_keys_32_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 424 [1/1] (0.00ns)   --->   "%round_keys_31_loc_load = load i8 %round_keys_31_loc"   --->   Operation 424 'load' 'round_keys_31_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 425 [1/1] (0.00ns)   --->   "%round_keys_30_loc_load = load i8 %round_keys_30_loc"   --->   Operation 425 'load' 'round_keys_30_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 426 [1/1] (0.00ns)   --->   "%round_keys_29_loc_load = load i8 %round_keys_29_loc"   --->   Operation 426 'load' 'round_keys_29_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 427 [1/1] (0.00ns)   --->   "%round_keys_28_loc_load = load i8 %round_keys_28_loc"   --->   Operation 427 'load' 'round_keys_28_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 428 [1/1] (0.00ns)   --->   "%round_keys_27_loc_load = load i8 %round_keys_27_loc"   --->   Operation 428 'load' 'round_keys_27_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 429 [1/1] (0.00ns)   --->   "%round_keys_26_loc_load = load i8 %round_keys_26_loc"   --->   Operation 429 'load' 'round_keys_26_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 430 [1/1] (0.00ns)   --->   "%round_keys_25_loc_load = load i8 %round_keys_25_loc"   --->   Operation 430 'load' 'round_keys_25_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 431 [1/1] (0.00ns)   --->   "%round_keys_24_loc_load = load i8 %round_keys_24_loc"   --->   Operation 431 'load' 'round_keys_24_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 432 [1/1] (0.00ns)   --->   "%round_keys_23_loc_load = load i8 %round_keys_23_loc"   --->   Operation 432 'load' 'round_keys_23_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 433 [1/1] (0.00ns)   --->   "%round_keys_22_loc_load = load i8 %round_keys_22_loc"   --->   Operation 433 'load' 'round_keys_22_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 434 [1/1] (0.00ns)   --->   "%round_keys_21_loc_load = load i8 %round_keys_21_loc"   --->   Operation 434 'load' 'round_keys_21_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 435 [1/1] (0.00ns)   --->   "%round_keys_20_loc_load = load i8 %round_keys_20_loc"   --->   Operation 435 'load' 'round_keys_20_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 436 [1/1] (0.00ns)   --->   "%round_keys_19_loc_load = load i8 %round_keys_19_loc"   --->   Operation 436 'load' 'round_keys_19_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 437 [1/1] (0.00ns)   --->   "%round_keys_18_loc_load = load i8 %round_keys_18_loc"   --->   Operation 437 'load' 'round_keys_18_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 438 [1/1] (0.00ns)   --->   "%round_keys_17_loc_load = load i8 %round_keys_17_loc"   --->   Operation 438 'load' 'round_keys_17_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 439 [1/1] (0.00ns)   --->   "%round_keys_16_loc_load = load i8 %round_keys_16_loc"   --->   Operation 439 'load' 'round_keys_16_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 440 [1/2] (2.32ns)   --->   "%state_4 = load i3 %plaintext_0_addr_6" [src/aes128.cpp:162]   --->   Operation 440 'load' 'state_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 441 [1/2] (2.32ns)   --->   "%state_5 = load i3 %plaintext_1_addr_6" [src/aes128.cpp:162]   --->   Operation 441 'load' 'state_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 442 [1/2] (2.32ns)   --->   "%state_6 = load i3 %plaintext_0_addr_7" [src/aes128.cpp:162]   --->   Operation 442 'load' 'state_6' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 443 [1/2] (2.32ns)   --->   "%state_7 = load i3 %plaintext_1_addr_7" [src/aes128.cpp:162]   --->   Operation 443 'load' 'state_7' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 444 [1/1] (0.99ns)   --->   "%state_20 = xor i8 %state_4, i8 %round_keys_191" [src/aes128.cpp:76]   --->   Operation 444 'xor' 'state_20' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 445 [1/1] (0.99ns)   --->   "%state_21 = xor i8 %state_5, i8 %round_keys_192" [src/aes128.cpp:76]   --->   Operation 445 'xor' 'state_21' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 446 [1/1] (0.99ns)   --->   "%state_22 = xor i8 %state_6, i8 %round_keys_193" [src/aes128.cpp:76]   --->   Operation 446 'xor' 'state_22' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 447 [1/1] (0.99ns)   --->   "%state_23 = xor i8 %state_7, i8 %round_keys_194" [src/aes128.cpp:76]   --->   Operation 447 'xor' 'state_23' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 448 [2/2] (1.58ns)   --->   "%call_ln76 = call void @aes128_encrypt_Pipeline_AES_ROUNDS_LOOP, i8 %state_23, i8 %state_22, i8 %state_21, i8 %state_20, i8 %state_19, i8 %state_18, i8 %state_17, i8 %state_16, i8 %state_15, i8 %state_14, i8 %state_13, i8 %state_12, i8 %state_11, i8 %state_10, i8 %state_9, i8 %state_8, i8 %round_keys_16_loc_load, i8 %round_keys_32_loc_load, i8 %round_keys_48_loc_load, i8 %round_keys_64_loc_load, i8 %round_keys_80_loc_load, i8 %round_keys_96_loc_load, i8 %round_keys_112_loc_load, i8 %round_keys_128_loc_load, i8 %round_keys_144_loc_load, i8 %round_keys_17_loc_load, i8 %round_keys_33_loc_load, i8 %round_keys_49_loc_load, i8 %round_keys_65_loc_load, i8 %round_keys_81_loc_load, i8 %round_keys_97_loc_load, i8 %round_keys_113_loc_load, i8 %round_keys_129_loc_load, i8 %round_keys_145_loc_load, i8 %round_keys_18_loc_load, i8 %round_keys_34_loc_load, i8 %round_keys_50_loc_load, i8 %round_keys_66_loc_load, i8 %round_keys_82_loc_load, i8 %round_keys_98_loc_load, i8 %round_keys_114_loc_load, i8 %round_keys_130_loc_load, i8 %round_keys_146_loc_load, i8 %round_keys_19_loc_load, i8 %round_keys_35_loc_load, i8 %round_keys_51_loc_load, i8 %round_keys_67_loc_load, i8 %round_keys_83_loc_load, i8 %round_keys_99_loc_load, i8 %round_keys_115_loc_load, i8 %round_keys_131_loc_load, i8 %round_keys_147_loc_load, i8 %round_keys_20_loc_load, i8 %round_keys_36_loc_load, i8 %round_keys_52_loc_load, i8 %round_keys_68_loc_load, i8 %round_keys_84_loc_load, i8 %round_keys_100_loc_load, i8 %round_keys_116_loc_load, i8 %round_keys_132_loc_load, i8 %round_keys_148_loc_load, i8 %round_keys_21_loc_load, i8 %round_keys_37_loc_load, i8 %round_keys_53_loc_load, i8 %round_keys_69_loc_load, i8 %round_keys_85_loc_load, i8 %round_keys_101_loc_load, i8 %round_keys_117_loc_load, i8 %round_keys_133_loc_load, i8 %round_keys_149_loc_load, i8 %round_keys_22_loc_load, i8 %round_keys_38_loc_load, i8 %round_keys_54_loc_load, i8 %round_keys_70_loc_load, i8 %round_keys_86_loc_load, i8 %round_keys_102_loc_load, i8 %round_keys_118_loc_load, i8 %round_keys_134_loc_load, i8 %round_keys_150_loc_load, i8 %round_keys_23_loc_load, i8 %round_keys_39_loc_load, i8 %round_keys_55_loc_load, i8 %round_keys_71_loc_load, i8 %round_keys_87_loc_load, i8 %round_keys_103_loc_load, i8 %round_keys_119_loc_load, i8 %round_keys_135_loc_load, i8 %round_keys_151_loc_load, i8 %round_keys_24_loc_load, i8 %round_keys_40_loc_load, i8 %round_keys_56_loc_load, i8 %round_keys_72_loc_load, i8 %round_keys_88_loc_load, i8 %round_keys_104_loc_load, i8 %round_keys_120_loc_load, i8 %round_keys_136_loc_load, i8 %round_keys_152_loc_load, i8 %round_keys_25_loc_load, i8 %round_keys_41_loc_load, i8 %round_keys_57_loc_load, i8 %round_keys_73_loc_load, i8 %round_keys_89_loc_load, i8 %round_keys_105_loc_load, i8 %round_keys_121_loc_load, i8 %round_keys_137_loc_load, i8 %round_keys_153_loc_load, i8 %round_keys_26_loc_load, i8 %round_keys_42_loc_load, i8 %round_keys_58_loc_load, i8 %round_keys_74_loc_load, i8 %round_keys_90_loc_load, i8 %round_keys_106_loc_load, i8 %round_keys_122_loc_load, i8 %round_keys_138_loc_load, i8 %round_keys_154_loc_load, i8 %round_keys_27_loc_load, i8 %round_keys_43_loc_load, i8 %round_keys_59_loc_load, i8 %round_keys_75_loc_load, i8 %round_keys_91_loc_load, i8 %round_keys_107_loc_load, i8 %round_keys_123_loc_load, i8 %round_keys_139_loc_load, i8 %round_keys_155_loc_load, i8 %round_keys_28_loc_load, i8 %round_keys_44_loc_load, i8 %round_keys_60_loc_load, i8 %round_keys_76_loc_load, i8 %round_keys_92_loc_load, i8 %round_keys_108_loc_load, i8 %round_keys_124_loc_load, i8 %round_keys_140_loc_load, i8 %round_keys_156_loc_load, i8 %round_keys_29_loc_load, i8 %round_keys_45_loc_load, i8 %round_keys_61_loc_load, i8 %round_keys_77_loc_load, i8 %round_keys_93_loc_load, i8 %round_keys_109_loc_load, i8 %round_keys_125_loc_load, i8 %round_keys_141_loc_load, i8 %round_keys_157_loc_load, i8 %round_keys_30_loc_load, i8 %round_keys_46_loc_load, i8 %round_keys_62_loc_load, i8 %round_keys_78_loc_load, i8 %round_keys_94_loc_load, i8 %round_keys_110_loc_load, i8 %round_keys_126_loc_load, i8 %round_keys_142_loc_load, i8 %round_keys_158_loc_load, i8 %round_keys_31_loc_load, i8 %round_keys_47_loc_load, i8 %round_keys_63_loc_load, i8 %round_keys_79_loc_load, i8 %round_keys_95_loc_load, i8 %round_keys_111_loc_load, i8 %round_keys_127_loc_load, i8 %round_keys_143_loc_load, i8 %round_keys_159_loc_load, i8 %p_loc, i8 %p_loc17, i8 %p_loc18, i8 %p_loc19, i8 %p_loc20, i8 %p_loc21, i8 %p_loc22, i8 %p_loc23, i8 %p_loc24, i8 %p_loc25, i8 %p_loc26, i8 %p_loc27, i8 %p_loc28, i8 %p_loc29, i8 %p_loc30, i8 %p_loc31, i8 %SBOX" [src/aes128.cpp:76]   --->   Operation 448 'call' 'call_ln76' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.30>
+ST_8 : Operation 449 [1/2] (1.30ns)   --->   "%call_ln76 = call void @aes128_encrypt_Pipeline_AES_ROUNDS_LOOP, i8 %state_23, i8 %state_22, i8 %state_21, i8 %state_20, i8 %state_19, i8 %state_18, i8 %state_17, i8 %state_16, i8 %state_15, i8 %state_14, i8 %state_13, i8 %state_12, i8 %state_11, i8 %state_10, i8 %state_9, i8 %state_8, i8 %round_keys_16_loc_load, i8 %round_keys_32_loc_load, i8 %round_keys_48_loc_load, i8 %round_keys_64_loc_load, i8 %round_keys_80_loc_load, i8 %round_keys_96_loc_load, i8 %round_keys_112_loc_load, i8 %round_keys_128_loc_load, i8 %round_keys_144_loc_load, i8 %round_keys_17_loc_load, i8 %round_keys_33_loc_load, i8 %round_keys_49_loc_load, i8 %round_keys_65_loc_load, i8 %round_keys_81_loc_load, i8 %round_keys_97_loc_load, i8 %round_keys_113_loc_load, i8 %round_keys_129_loc_load, i8 %round_keys_145_loc_load, i8 %round_keys_18_loc_load, i8 %round_keys_34_loc_load, i8 %round_keys_50_loc_load, i8 %round_keys_66_loc_load, i8 %round_keys_82_loc_load, i8 %round_keys_98_loc_load, i8 %round_keys_114_loc_load, i8 %round_keys_130_loc_load, i8 %round_keys_146_loc_load, i8 %round_keys_19_loc_load, i8 %round_keys_35_loc_load, i8 %round_keys_51_loc_load, i8 %round_keys_67_loc_load, i8 %round_keys_83_loc_load, i8 %round_keys_99_loc_load, i8 %round_keys_115_loc_load, i8 %round_keys_131_loc_load, i8 %round_keys_147_loc_load, i8 %round_keys_20_loc_load, i8 %round_keys_36_loc_load, i8 %round_keys_52_loc_load, i8 %round_keys_68_loc_load, i8 %round_keys_84_loc_load, i8 %round_keys_100_loc_load, i8 %round_keys_116_loc_load, i8 %round_keys_132_loc_load, i8 %round_keys_148_loc_load, i8 %round_keys_21_loc_load, i8 %round_keys_37_loc_load, i8 %round_keys_53_loc_load, i8 %round_keys_69_loc_load, i8 %round_keys_85_loc_load, i8 %round_keys_101_loc_load, i8 %round_keys_117_loc_load, i8 %round_keys_133_loc_load, i8 %round_keys_149_loc_load, i8 %round_keys_22_loc_load, i8 %round_keys_38_loc_load, i8 %round_keys_54_loc_load, i8 %round_keys_70_loc_load, i8 %round_keys_86_loc_load, i8 %round_keys_102_loc_load, i8 %round_keys_118_loc_load, i8 %round_keys_134_loc_load, i8 %round_keys_150_loc_load, i8 %round_keys_23_loc_load, i8 %round_keys_39_loc_load, i8 %round_keys_55_loc_load, i8 %round_keys_71_loc_load, i8 %round_keys_87_loc_load, i8 %round_keys_103_loc_load, i8 %round_keys_119_loc_load, i8 %round_keys_135_loc_load, i8 %round_keys_151_loc_load, i8 %round_keys_24_loc_load, i8 %round_keys_40_loc_load, i8 %round_keys_56_loc_load, i8 %round_keys_72_loc_load, i8 %round_keys_88_loc_load, i8 %round_keys_104_loc_load, i8 %round_keys_120_loc_load, i8 %round_keys_136_loc_load, i8 %round_keys_152_loc_load, i8 %round_keys_25_loc_load, i8 %round_keys_41_loc_load, i8 %round_keys_57_loc_load, i8 %round_keys_73_loc_load, i8 %round_keys_89_loc_load, i8 %round_keys_105_loc_load, i8 %round_keys_121_loc_load, i8 %round_keys_137_loc_load, i8 %round_keys_153_loc_load, i8 %round_keys_26_loc_load, i8 %round_keys_42_loc_load, i8 %round_keys_58_loc_load, i8 %round_keys_74_loc_load, i8 %round_keys_90_loc_load, i8 %round_keys_106_loc_load, i8 %round_keys_122_loc_load, i8 %round_keys_138_loc_load, i8 %round_keys_154_loc_load, i8 %round_keys_27_loc_load, i8 %round_keys_43_loc_load, i8 %round_keys_59_loc_load, i8 %round_keys_75_loc_load, i8 %round_keys_91_loc_load, i8 %round_keys_107_loc_load, i8 %round_keys_123_loc_load, i8 %round_keys_139_loc_load, i8 %round_keys_155_loc_load, i8 %round_keys_28_loc_load, i8 %round_keys_44_loc_load, i8 %round_keys_60_loc_load, i8 %round_keys_76_loc_load, i8 %round_keys_92_loc_load, i8 %round_keys_108_loc_load, i8 %round_keys_124_loc_load, i8 %round_keys_140_loc_load, i8 %round_keys_156_loc_load, i8 %round_keys_29_loc_load, i8 %round_keys_45_loc_load, i8 %round_keys_61_loc_load, i8 %round_keys_77_loc_load, i8 %round_keys_93_loc_load, i8 %round_keys_109_loc_load, i8 %round_keys_125_loc_load, i8 %round_keys_141_loc_load, i8 %round_keys_157_loc_load, i8 %round_keys_30_loc_load, i8 %round_keys_46_loc_load, i8 %round_keys_62_loc_load, i8 %round_keys_78_loc_load, i8 %round_keys_94_loc_load, i8 %round_keys_110_loc_load, i8 %round_keys_126_loc_load, i8 %round_keys_142_loc_load, i8 %round_keys_158_loc_load, i8 %round_keys_31_loc_load, i8 %round_keys_47_loc_load, i8 %round_keys_63_loc_load, i8 %round_keys_79_loc_load, i8 %round_keys_95_loc_load, i8 %round_keys_111_loc_load, i8 %round_keys_127_loc_load, i8 %round_keys_143_loc_load, i8 %round_keys_159_loc_load, i8 %p_loc, i8 %p_loc17, i8 %p_loc18, i8 %p_loc19, i8 %p_loc20, i8 %p_loc21, i8 %p_loc22, i8 %p_loc23, i8 %p_loc24, i8 %p_loc25, i8 %p_loc26, i8 %p_loc27, i8 %p_loc28, i8 %p_loc29, i8 %p_loc30, i8 %p_loc31, i8 %SBOX" [src/aes128.cpp:76]   --->   Operation 449 'call' 'call_ln76' <Predicate = true> <Delay = 1.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 450 [1/1] (0.00ns)   --->   "%p_loc_load = load i8 %p_loc"   --->   Operation 450 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 451 [1/1] (0.00ns)   --->   "%p_loc21_load = load i8 %p_loc21"   --->   Operation 451 'load' 'p_loc21_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 452 [1/1] (0.00ns)   --->   "%p_loc26_load = load i8 %p_loc26"   --->   Operation 452 'load' 'p_loc26_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 453 [1/1] (0.00ns)   --->   "%p_loc31_load = load i8 %p_loc31"   --->   Operation 453 'load' 'p_loc31_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 454 [1/1] (0.00ns)   --->   "%zext_ln87 = zext i8 %p_loc31_load" [src/aes128.cpp:87]   --->   Operation 454 'zext' 'zext_ln87' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 455 [1/1] (0.00ns)   --->   "%SBOX_addr_4 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87" [src/aes128.cpp:87]   --->   Operation 455 'getelementptr' 'SBOX_addr_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 456 [2/2] (3.25ns)   --->   "%SBOX_load = load i8 %SBOX_addr_4" [src/aes128.cpp:87]   --->   Operation 456 'load' 'SBOX_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 457 [1/1] (0.00ns)   --->   "%zext_ln87_5 = zext i8 %p_loc26_load" [src/aes128.cpp:87]   --->   Operation 457 'zext' 'zext_ln87_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 458 [1/1] (0.00ns)   --->   "%SBOX_addr_9 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_5" [src/aes128.cpp:87]   --->   Operation 458 'getelementptr' 'SBOX_addr_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 459 [2/2] (3.25ns)   --->   "%SBOX_load_5 = load i8 %SBOX_addr_9" [src/aes128.cpp:87]   --->   Operation 459 'load' 'SBOX_load_5' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 460 [1/1] (0.00ns)   --->   "%zext_ln87_10 = zext i8 %p_loc21_load" [src/aes128.cpp:87]   --->   Operation 460 'zext' 'zext_ln87_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 461 [1/1] (0.00ns)   --->   "%SBOX_addr_14 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_10" [src/aes128.cpp:87]   --->   Operation 461 'getelementptr' 'SBOX_addr_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 462 [2/2] (3.25ns)   --->   "%SBOX_load_10 = load i8 %SBOX_addr_14" [src/aes128.cpp:87]   --->   Operation 462 'load' 'SBOX_load_10' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 463 [1/1] (0.00ns)   --->   "%zext_ln87_15 = zext i8 %p_loc_load" [src/aes128.cpp:87]   --->   Operation 463 'zext' 'zext_ln87_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 464 [1/1] (0.00ns)   --->   "%SBOX_addr = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_15" [src/aes128.cpp:87]   --->   Operation 464 'getelementptr' 'SBOX_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 465 [2/2] (3.25ns)   --->   "%SBOX_load_15 = load i8 %SBOX_addr" [src/aes128.cpp:87]   --->   Operation 465 'load' 'SBOX_load_15' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 10 <SV = 9> <Delay = 6.56>
+ST_10 : Operation 466 [1/1] (0.00ns)   --->   "%round_keys_163_loc_load = load i8 %round_keys_163_loc"   --->   Operation 466 'load' 'round_keys_163_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 467 [1/1] (0.00ns)   --->   "%round_keys_162_loc_load = load i8 %round_keys_162_loc"   --->   Operation 467 'load' 'round_keys_162_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 468 [1/1] (0.00ns)   --->   "%round_keys_161_loc_load = load i8 %round_keys_161_loc"   --->   Operation 468 'load' 'round_keys_161_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 469 [1/1] (0.00ns)   --->   "%round_keys_160_loc_load = load i8 %round_keys_160_loc"   --->   Operation 469 'load' 'round_keys_160_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 470 [1/1] (0.00ns)   --->   "%p_loc17_load = load i8 %p_loc17"   --->   Operation 470 'load' 'p_loc17_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 471 [1/1] (0.00ns)   --->   "%p_loc22_load = load i8 %p_loc22"   --->   Operation 471 'load' 'p_loc22_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 472 [1/1] (0.00ns)   --->   "%p_loc27_load = load i8 %p_loc27"   --->   Operation 472 'load' 'p_loc27_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 473 [1/1] (0.00ns)   --->   "%p_loc28_load = load i8 %p_loc28"   --->   Operation 473 'load' 'p_loc28_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 474 [1/1] (0.00ns)   --->   "%ciphertext_0_addr = getelementptr i8 %ciphertext_0, i64 0, i64 0" [src/aes128.cpp:146]   --->   Operation 474 'getelementptr' 'ciphertext_0_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 475 [1/2] (3.25ns)   --->   "%SBOX_load = load i8 %SBOX_addr_4" [src/aes128.cpp:87]   --->   Operation 475 'load' 'SBOX_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 476 [1/1] (0.00ns)   --->   "%zext_ln87_3 = zext i8 %p_loc28_load" [src/aes128.cpp:87]   --->   Operation 476 'zext' 'zext_ln87_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 477 [1/1] (0.00ns)   --->   "%SBOX_addr_7 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_3" [src/aes128.cpp:87]   --->   Operation 477 'getelementptr' 'SBOX_addr_7' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 478 [2/2] (3.25ns)   --->   "%SBOX_load_3 = load i8 %SBOX_addr_7" [src/aes128.cpp:87]   --->   Operation 478 'load' 'SBOX_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 479 [1/1] (0.00ns)   --->   "%zext_ln87_4 = zext i8 %p_loc27_load" [src/aes128.cpp:87]   --->   Operation 479 'zext' 'zext_ln87_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 480 [1/1] (0.00ns)   --->   "%SBOX_addr_8 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_4" [src/aes128.cpp:87]   --->   Operation 480 'getelementptr' 'SBOX_addr_8' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 481 [2/2] (3.25ns)   --->   "%SBOX_load_4 = load i8 %SBOX_addr_8" [src/aes128.cpp:87]   --->   Operation 481 'load' 'SBOX_load_4' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 482 [1/2] (3.25ns)   --->   "%SBOX_load_5 = load i8 %SBOX_addr_9" [src/aes128.cpp:87]   --->   Operation 482 'load' 'SBOX_load_5' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 483 [1/1] (0.00ns)   --->   "%zext_ln87_9 = zext i8 %p_loc22_load" [src/aes128.cpp:87]   --->   Operation 483 'zext' 'zext_ln87_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 484 [1/1] (0.00ns)   --->   "%SBOX_addr_13 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_9" [src/aes128.cpp:87]   --->   Operation 484 'getelementptr' 'SBOX_addr_13' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 485 [2/2] (3.25ns)   --->   "%SBOX_load_9 = load i8 %SBOX_addr_13" [src/aes128.cpp:87]   --->   Operation 485 'load' 'SBOX_load_9' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 486 [1/2] (3.25ns)   --->   "%SBOX_load_10 = load i8 %SBOX_addr_14" [src/aes128.cpp:87]   --->   Operation 486 'load' 'SBOX_load_10' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 487 [1/1] (0.00ns)   --->   "%zext_ln87_14 = zext i8 %p_loc17_load" [src/aes128.cpp:87]   --->   Operation 487 'zext' 'zext_ln87_14' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 488 [1/1] (0.00ns)   --->   "%SBOX_addr_18 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_14" [src/aes128.cpp:87]   --->   Operation 488 'getelementptr' 'SBOX_addr_18' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 489 [2/2] (3.25ns)   --->   "%SBOX_load_14 = load i8 %SBOX_addr_18" [src/aes128.cpp:87]   --->   Operation 489 'load' 'SBOX_load_14' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 490 [1/2] (3.25ns)   --->   "%SBOX_load_15 = load i8 %SBOX_addr" [src/aes128.cpp:87]   --->   Operation 490 'load' 'SBOX_load_15' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 491 [1/1] (0.99ns)   --->   "%state_28 = xor i8 %SBOX_load, i8 %round_keys_160_loc_load" [src/aes128.cpp:76]   --->   Operation 491 'xor' 'state_28' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 492 [1/1] (0.99ns)   --->   "%state_29 = xor i8 %SBOX_load_5, i8 %round_keys_161_loc_load" [src/aes128.cpp:76]   --->   Operation 492 'xor' 'state_29' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 493 [1/1] (0.99ns)   --->   "%state_30 = xor i8 %SBOX_load_10, i8 %round_keys_162_loc_load" [src/aes128.cpp:76]   --->   Operation 493 'xor' 'state_30' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 494 [1/1] (0.99ns)   --->   "%state_31 = xor i8 %SBOX_load_15, i8 %round_keys_163_loc_load" [src/aes128.cpp:76]   --->   Operation 494 'xor' 'state_31' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 495 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_28, i3 %ciphertext_0_addr" [src/aes128.cpp:181]   --->   Operation 495 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_10 : Operation 496 [1/1] (0.00ns)   --->   "%ciphertext_1_addr = getelementptr i8 %ciphertext_1, i64 0, i64 0" [src/aes128.cpp:181]   --->   Operation 496 'getelementptr' 'ciphertext_1_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 497 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_29, i3 %ciphertext_1_addr" [src/aes128.cpp:181]   --->   Operation 497 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_10 : Operation 498 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_1 = getelementptr i8 %ciphertext_0, i64 0, i64 1" [src/aes128.cpp:181]   --->   Operation 498 'getelementptr' 'ciphertext_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 499 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_30, i3 %ciphertext_0_addr_1" [src/aes128.cpp:181]   --->   Operation 499 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_10 : Operation 500 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_1 = getelementptr i8 %ciphertext_1, i64 0, i64 1" [src/aes128.cpp:181]   --->   Operation 500 'getelementptr' 'ciphertext_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 501 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_31, i3 %ciphertext_1_addr_1" [src/aes128.cpp:181]   --->   Operation 501 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 11 <SV = 10> <Delay = 6.56>
+ST_11 : Operation 502 [1/1] (0.00ns)   --->   "%round_keys_167_loc_load = load i8 %round_keys_167_loc"   --->   Operation 502 'load' 'round_keys_167_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 503 [1/1] (0.00ns)   --->   "%round_keys_166_loc_load = load i8 %round_keys_166_loc"   --->   Operation 503 'load' 'round_keys_166_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 504 [1/1] (0.00ns)   --->   "%round_keys_165_loc_load = load i8 %round_keys_165_loc"   --->   Operation 504 'load' 'round_keys_165_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 505 [1/1] (0.00ns)   --->   "%round_keys_164_loc_load = load i8 %round_keys_164_loc"   --->   Operation 505 'load' 'round_keys_164_loc_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 506 [1/1] (0.00ns)   --->   "%p_loc18_load = load i8 %p_loc18"   --->   Operation 506 'load' 'p_loc18_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 507 [1/1] (0.00ns)   --->   "%p_loc23_load = load i8 %p_loc23"   --->   Operation 507 'load' 'p_loc23_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 508 [1/1] (0.00ns)   --->   "%p_loc24_load = load i8 %p_loc24"   --->   Operation 508 'load' 'p_loc24_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 509 [1/1] (0.00ns)   --->   "%p_loc29_load = load i8 %p_loc29"   --->   Operation 509 'load' 'p_loc29_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 510 [1/1] (0.00ns)   --->   "%zext_ln87_2 = zext i8 %p_loc29_load" [src/aes128.cpp:87]   --->   Operation 510 'zext' 'zext_ln87_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 511 [1/1] (0.00ns)   --->   "%SBOX_addr_6 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_2" [src/aes128.cpp:87]   --->   Operation 511 'getelementptr' 'SBOX_addr_6' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 512 [2/2] (3.25ns)   --->   "%SBOX_load_2 = load i8 %SBOX_addr_6" [src/aes128.cpp:87]   --->   Operation 512 'load' 'SBOX_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 513 [1/2] (3.25ns)   --->   "%SBOX_load_3 = load i8 %SBOX_addr_7" [src/aes128.cpp:87]   --->   Operation 513 'load' 'SBOX_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 514 [1/2] (3.25ns)   --->   "%SBOX_load_4 = load i8 %SBOX_addr_8" [src/aes128.cpp:87]   --->   Operation 514 'load' 'SBOX_load_4' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 515 [1/1] (0.00ns)   --->   "%zext_ln87_7 = zext i8 %p_loc24_load" [src/aes128.cpp:87]   --->   Operation 515 'zext' 'zext_ln87_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 516 [1/1] (0.00ns)   --->   "%SBOX_addr_11 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_7" [src/aes128.cpp:87]   --->   Operation 516 'getelementptr' 'SBOX_addr_11' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 517 [2/2] (3.25ns)   --->   "%SBOX_load_7 = load i8 %SBOX_addr_11" [src/aes128.cpp:87]   --->   Operation 517 'load' 'SBOX_load_7' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 518 [1/1] (0.00ns)   --->   "%zext_ln87_8 = zext i8 %p_loc23_load" [src/aes128.cpp:87]   --->   Operation 518 'zext' 'zext_ln87_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 519 [1/1] (0.00ns)   --->   "%SBOX_addr_12 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_8" [src/aes128.cpp:87]   --->   Operation 519 'getelementptr' 'SBOX_addr_12' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 520 [2/2] (3.25ns)   --->   "%SBOX_load_8 = load i8 %SBOX_addr_12" [src/aes128.cpp:87]   --->   Operation 520 'load' 'SBOX_load_8' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 521 [1/2] (3.25ns)   --->   "%SBOX_load_9 = load i8 %SBOX_addr_13" [src/aes128.cpp:87]   --->   Operation 521 'load' 'SBOX_load_9' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 522 [1/1] (0.00ns)   --->   "%zext_ln87_13 = zext i8 %p_loc18_load" [src/aes128.cpp:87]   --->   Operation 522 'zext' 'zext_ln87_13' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 523 [1/1] (0.00ns)   --->   "%SBOX_addr_17 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_13" [src/aes128.cpp:87]   --->   Operation 523 'getelementptr' 'SBOX_addr_17' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 524 [2/2] (3.25ns)   --->   "%SBOX_load_13 = load i8 %SBOX_addr_17" [src/aes128.cpp:87]   --->   Operation 524 'load' 'SBOX_load_13' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 525 [1/2] (3.25ns)   --->   "%SBOX_load_14 = load i8 %SBOX_addr_18" [src/aes128.cpp:87]   --->   Operation 525 'load' 'SBOX_load_14' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 526 [1/1] (0.99ns)   --->   "%state_32 = xor i8 %SBOX_load_4, i8 %round_keys_164_loc_load" [src/aes128.cpp:76]   --->   Operation 526 'xor' 'state_32' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 527 [1/1] (0.99ns)   --->   "%state_33 = xor i8 %SBOX_load_9, i8 %round_keys_165_loc_load" [src/aes128.cpp:76]   --->   Operation 527 'xor' 'state_33' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 528 [1/1] (0.99ns)   --->   "%state_34 = xor i8 %SBOX_load_14, i8 %round_keys_166_loc_load" [src/aes128.cpp:76]   --->   Operation 528 'xor' 'state_34' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 529 [1/1] (0.99ns)   --->   "%state_35 = xor i8 %SBOX_load_3, i8 %round_keys_167_loc_load" [src/aes128.cpp:76]   --->   Operation 529 'xor' 'state_35' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 530 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_2 = getelementptr i8 %ciphertext_0, i64 0, i64 2" [src/aes128.cpp:181]   --->   Operation 530 'getelementptr' 'ciphertext_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 531 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_32, i3 %ciphertext_0_addr_2" [src/aes128.cpp:181]   --->   Operation 531 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_11 : Operation 532 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_2 = getelementptr i8 %ciphertext_1, i64 0, i64 2" [src/aes128.cpp:181]   --->   Operation 532 'getelementptr' 'ciphertext_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 533 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_33, i3 %ciphertext_1_addr_2" [src/aes128.cpp:181]   --->   Operation 533 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_11 : Operation 534 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_3 = getelementptr i8 %ciphertext_0, i64 0, i64 3" [src/aes128.cpp:181]   --->   Operation 534 'getelementptr' 'ciphertext_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 535 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_34, i3 %ciphertext_0_addr_3" [src/aes128.cpp:181]   --->   Operation 535 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_11 : Operation 536 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_3 = getelementptr i8 %ciphertext_1, i64 0, i64 3" [src/aes128.cpp:181]   --->   Operation 536 'getelementptr' 'ciphertext_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 537 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_35, i3 %ciphertext_1_addr_3" [src/aes128.cpp:181]   --->   Operation 537 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 12 <SV = 11> <Delay = 6.56>
+ST_12 : Operation 538 [1/1] (0.00ns)   --->   "%round_keys_171_loc_load = load i8 %round_keys_171_loc"   --->   Operation 538 'load' 'round_keys_171_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 539 [1/1] (0.00ns)   --->   "%round_keys_170_loc_load = load i8 %round_keys_170_loc"   --->   Operation 539 'load' 'round_keys_170_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 540 [1/1] (0.00ns)   --->   "%round_keys_169_loc_load = load i8 %round_keys_169_loc"   --->   Operation 540 'load' 'round_keys_169_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 541 [1/1] (0.00ns)   --->   "%round_keys_168_loc_load = load i8 %round_keys_168_loc"   --->   Operation 541 'load' 'round_keys_168_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 542 [1/1] (0.00ns)   --->   "%p_loc19_load = load i8 %p_loc19"   --->   Operation 542 'load' 'p_loc19_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 543 [1/1] (0.00ns)   --->   "%p_loc20_load = load i8 %p_loc20"   --->   Operation 543 'load' 'p_loc20_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 544 [1/1] (0.00ns)   --->   "%p_loc25_load = load i8 %p_loc25"   --->   Operation 544 'load' 'p_loc25_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 545 [1/1] (0.00ns)   --->   "%p_loc30_load = load i8 %p_loc30"   --->   Operation 545 'load' 'p_loc30_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 546 [1/1] (0.00ns)   --->   "%zext_ln87_1 = zext i8 %p_loc30_load" [src/aes128.cpp:87]   --->   Operation 546 'zext' 'zext_ln87_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 547 [1/1] (0.00ns)   --->   "%SBOX_addr_5 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_1" [src/aes128.cpp:87]   --->   Operation 547 'getelementptr' 'SBOX_addr_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 548 [2/2] (3.25ns)   --->   "%state_25 = load i8 %SBOX_addr_5" [src/aes128.cpp:87]   --->   Operation 548 'load' 'state_25' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 549 [1/2] (3.25ns)   --->   "%SBOX_load_2 = load i8 %SBOX_addr_6" [src/aes128.cpp:87]   --->   Operation 549 'load' 'SBOX_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 550 [1/1] (0.00ns)   --->   "%zext_ln87_6 = zext i8 %p_loc25_load" [src/aes128.cpp:87]   --->   Operation 550 'zext' 'zext_ln87_6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 551 [1/1] (0.00ns)   --->   "%SBOX_addr_10 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_6" [src/aes128.cpp:87]   --->   Operation 551 'getelementptr' 'SBOX_addr_10' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 552 [2/2] (3.25ns)   --->   "%state_26 = load i8 %SBOX_addr_10" [src/aes128.cpp:87]   --->   Operation 552 'load' 'state_26' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 553 [1/2] (3.25ns)   --->   "%SBOX_load_7 = load i8 %SBOX_addr_11" [src/aes128.cpp:87]   --->   Operation 553 'load' 'SBOX_load_7' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 554 [1/2] (3.25ns)   --->   "%SBOX_load_8 = load i8 %SBOX_addr_12" [src/aes128.cpp:87]   --->   Operation 554 'load' 'SBOX_load_8' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 555 [1/1] (0.00ns)   --->   "%zext_ln87_11 = zext i8 %p_loc20_load" [src/aes128.cpp:87]   --->   Operation 555 'zext' 'zext_ln87_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 556 [1/1] (0.00ns)   --->   "%SBOX_addr_15 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_11" [src/aes128.cpp:87]   --->   Operation 556 'getelementptr' 'SBOX_addr_15' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 557 [2/2] (3.25ns)   --->   "%state_27 = load i8 %SBOX_addr_15" [src/aes128.cpp:87]   --->   Operation 557 'load' 'state_27' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 558 [1/1] (0.00ns)   --->   "%zext_ln87_12 = zext i8 %p_loc19_load" [src/aes128.cpp:87]   --->   Operation 558 'zext' 'zext_ln87_12' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 559 [1/1] (0.00ns)   --->   "%SBOX_addr_16 = getelementptr i8 %SBOX, i64 0, i64 %zext_ln87_12" [src/aes128.cpp:87]   --->   Operation 559 'getelementptr' 'SBOX_addr_16' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 560 [2/2] (3.25ns)   --->   "%state_24 = load i8 %SBOX_addr_16" [src/aes128.cpp:87]   --->   Operation 560 'load' 'state_24' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 561 [1/2] (3.25ns)   --->   "%SBOX_load_13 = load i8 %SBOX_addr_17" [src/aes128.cpp:87]   --->   Operation 561 'load' 'SBOX_load_13' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_12 : Operation 562 [1/1] (0.99ns)   --->   "%state_36 = xor i8 %SBOX_load_8, i8 %round_keys_168_loc_load" [src/aes128.cpp:76]   --->   Operation 562 'xor' 'state_36' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 563 [1/1] (0.99ns)   --->   "%state_37 = xor i8 %SBOX_load_13, i8 %round_keys_169_loc_load" [src/aes128.cpp:76]   --->   Operation 563 'xor' 'state_37' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 564 [1/1] (0.99ns)   --->   "%state_38 = xor i8 %SBOX_load_2, i8 %round_keys_170_loc_load" [src/aes128.cpp:76]   --->   Operation 564 'xor' 'state_38' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 565 [1/1] (0.99ns)   --->   "%state_39 = xor i8 %SBOX_load_7, i8 %round_keys_171_loc_load" [src/aes128.cpp:76]   --->   Operation 565 'xor' 'state_39' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 566 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_4 = getelementptr i8 %ciphertext_0, i64 0, i64 4" [src/aes128.cpp:181]   --->   Operation 566 'getelementptr' 'ciphertext_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 567 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_36, i3 %ciphertext_0_addr_4" [src/aes128.cpp:181]   --->   Operation 567 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_12 : Operation 568 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_4 = getelementptr i8 %ciphertext_1, i64 0, i64 4" [src/aes128.cpp:181]   --->   Operation 568 'getelementptr' 'ciphertext_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 569 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_37, i3 %ciphertext_1_addr_4" [src/aes128.cpp:181]   --->   Operation 569 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_12 : Operation 570 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_5 = getelementptr i8 %ciphertext_0, i64 0, i64 5" [src/aes128.cpp:181]   --->   Operation 570 'getelementptr' 'ciphertext_0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 571 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_38, i3 %ciphertext_0_addr_5" [src/aes128.cpp:181]   --->   Operation 571 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_12 : Operation 572 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_5 = getelementptr i8 %ciphertext_1, i64 0, i64 5" [src/aes128.cpp:181]   --->   Operation 572 'getelementptr' 'ciphertext_1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 573 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_39, i3 %ciphertext_1_addr_5" [src/aes128.cpp:181]   --->   Operation 573 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 13 <SV = 12> <Delay = 6.56>
+ST_13 : Operation 574 [1/1] (0.00ns)   --->   "%round_keys_175_loc_load = load i8 %round_keys_175_loc"   --->   Operation 574 'load' 'round_keys_175_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 575 [1/1] (0.00ns)   --->   "%round_keys_174_loc_load = load i8 %round_keys_174_loc"   --->   Operation 575 'load' 'round_keys_174_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 576 [1/1] (0.00ns)   --->   "%round_keys_173_loc_load = load i8 %round_keys_173_loc"   --->   Operation 576 'load' 'round_keys_173_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 577 [1/1] (0.00ns)   --->   "%round_keys_172_loc_load = load i8 %round_keys_172_loc"   --->   Operation 577 'load' 'round_keys_172_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 578 [1/2] (3.25ns)   --->   "%state_25 = load i8 %SBOX_addr_5" [src/aes128.cpp:87]   --->   Operation 578 'load' 'state_25' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_13 : Operation 579 [1/2] (3.25ns)   --->   "%state_26 = load i8 %SBOX_addr_10" [src/aes128.cpp:87]   --->   Operation 579 'load' 'state_26' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_13 : Operation 580 [1/2] (3.25ns)   --->   "%state_27 = load i8 %SBOX_addr_15" [src/aes128.cpp:87]   --->   Operation 580 'load' 'state_27' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_13 : Operation 581 [1/2] (3.25ns)   --->   "%state_24 = load i8 %SBOX_addr_16" [src/aes128.cpp:87]   --->   Operation 581 'load' 'state_24' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_13 : Operation 582 [1/1] (0.99ns)   --->   "%state_40 = xor i8 %state_24, i8 %round_keys_172_loc_load" [src/aes128.cpp:76]   --->   Operation 582 'xor' 'state_40' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 583 [1/1] (0.99ns)   --->   "%state_41 = xor i8 %state_25, i8 %round_keys_173_loc_load" [src/aes128.cpp:76]   --->   Operation 583 'xor' 'state_41' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 584 [1/1] (0.99ns)   --->   "%state_42 = xor i8 %state_26, i8 %round_keys_174_loc_load" [src/aes128.cpp:76]   --->   Operation 584 'xor' 'state_42' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 585 [1/1] (0.99ns)   --->   "%state_43 = xor i8 %state_27, i8 %round_keys_175_loc_load" [src/aes128.cpp:76]   --->   Operation 585 'xor' 'state_43' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 586 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_6 = getelementptr i8 %ciphertext_0, i64 0, i64 6" [src/aes128.cpp:181]   --->   Operation 586 'getelementptr' 'ciphertext_0_addr_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 587 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_40, i3 %ciphertext_0_addr_6" [src/aes128.cpp:181]   --->   Operation 587 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_13 : Operation 588 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_6 = getelementptr i8 %ciphertext_1, i64 0, i64 6" [src/aes128.cpp:181]   --->   Operation 588 'getelementptr' 'ciphertext_1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 589 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_41, i3 %ciphertext_1_addr_6" [src/aes128.cpp:181]   --->   Operation 589 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_13 : Operation 590 [1/1] (0.00ns)   --->   "%ciphertext_0_addr_7 = getelementptr i8 %ciphertext_0, i64 0, i64 7" [src/aes128.cpp:181]   --->   Operation 590 'getelementptr' 'ciphertext_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 591 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_42, i3 %ciphertext_0_addr_7" [src/aes128.cpp:181]   --->   Operation 591 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_13 : Operation 592 [1/1] (0.00ns)   --->   "%ciphertext_1_addr_7 = getelementptr i8 %ciphertext_1, i64 0, i64 7" [src/aes128.cpp:181]   --->   Operation 592 'getelementptr' 'ciphertext_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 593 [1/1] (2.32ns)   --->   "%store_ln181 = store i8 %state_43, i3 %ciphertext_1_addr_7" [src/aes128.cpp:181]   --->   Operation 593 'store' 'store_ln181' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_13 : Operation 594 [1/1] (0.00ns)   --->   "%ret_ln183 = ret" [src/aes128.cpp:183]   --->   Operation 594 'ret' 'ret_ln183' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('key_0_addr', src/aes128.cpp:146) [185]  (0 ns)
+	'load' operation ('round_keys', src/aes128.cpp:34) on array 'key_0' [186]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('round_keys', src/aes128.cpp:34) on array 'key_0' [186]  (2.32 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('round_keys', src/aes128.cpp:34) on array 'key_0' [194]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('round_keys', src/aes128.cpp:34) on array 'key_0' [202]  (2.32 ns)
+
+ <State 5>: 3.31ns
+The critical path consists of the following:
+	'load' operation ('plaintext_0_load_2', src/aes128.cpp:162) on array 'plaintext_0' [387]  (2.32 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [414]  (0.99 ns)
+
+ <State 6>: 3.31ns
+The critical path consists of the following:
+	'load' operation ('state', src/aes128.cpp:162) on array 'plaintext_0' [395]  (2.32 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [418]  (0.99 ns)
+
+ <State 7>: 4.9ns
+The critical path consists of the following:
+	'load' operation ('state', src/aes128.cpp:162) on array 'plaintext_0' [403]  (2.32 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [422]  (0.99 ns)
+	'call' operation ('call_ln76', src/aes128.cpp:76) to 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP' [426]  (1.59 ns)
+
+ <State 8>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln76', src/aes128.cpp:76) to 'aes128_encrypt_Pipeline_AES_ROUNDS_LOOP' [426]  (1.3 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('p_loc31_load') on local variable 'p_loc31' [442]  (0 ns)
+	'getelementptr' operation ('SBOX_addr_4', src/aes128.cpp:87) [445]  (0 ns)
+	'load' operation ('SBOX_load', src/aes128.cpp:87) on array 'SBOX' [446]  (3.25 ns)
+
+ <State 10>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('SBOX_load', src/aes128.cpp:87) on array 'SBOX' [446]  (3.25 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [492]  (0.99 ns)
+	'store' operation ('store_ln181', src/aes128.cpp:181) of variable 'state', src/aes128.cpp:76 on array 'ciphertext_0' [508]  (2.32 ns)
+
+ <State 11>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('SBOX_load_4', src/aes128.cpp:87) on array 'SBOX' [458]  (3.25 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [496]  (0.99 ns)
+	'store' operation ('store_ln181', src/aes128.cpp:181) of variable 'state', src/aes128.cpp:76 on array 'ciphertext_0' [516]  (2.32 ns)
+
+ <State 12>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('SBOX_load_8', src/aes128.cpp:87) on array 'SBOX' [470]  (3.25 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [500]  (0.99 ns)
+	'store' operation ('store_ln181', src/aes128.cpp:181) of variable 'state', src/aes128.cpp:76 on array 'ciphertext_0' [524]  (2.32 ns)
+
+ <State 13>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('state', src/aes128.cpp:87) on array 'SBOX' [482]  (3.25 ns)
+	'xor' operation ('state', src/aes128.cpp:76) [504]  (0.99 ns)
+	'store' operation ('store_ln181', src/aes128.cpp:181) of variable 'state', src/aes128.cpp:76 on array 'ciphertext_0' [532]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,30 @@
+<pragmas>
+<pragma file="src/aes128.cpp" line="150" pragmaType="inline" parentfunction="aes128_encrypt" off="1" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="180" pragmaType="unroll" parentfunction="aes128_encrypt" factor="-1" skip_exit_check="0"/>
+<pragma file="src/aes128.cpp" line="168" pragmaType="pipeline" parentfunction="aes128_encrypt" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/aes128.cpp" line="161" pragmaType="unroll" parentfunction="aes128_encrypt" factor="-1" skip_exit_check="0"/>
+<pragma file="src/aes128.cpp" line="153" pragmaType="array_partition" parentfunction="aes128_encrypt" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="src/aes128.cpp" line="158" pragmaType="array_partition" parentfunction="aes128_encrypt" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="src/aes128.cpp" line="21" pragmaType="inline" parentfunction="xtime" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128_top.cpp" line="78" pragmaType="pipeline" parentfunction="aes128_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/aes128_top.cpp" line="53" pragmaType="pipeline" parentfunction="aes128_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/aes128_top.cpp" line="44" pragmaType="pipeline" parentfunction="aes128_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/aes128_top.cpp" line="26" pragmaType="interface" parentfunction="aes128_top" mode="m_axi" port="data_in" bundle="DATA" offset="slave" name="" depth="4" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="src/aes128_top.cpp" line="27" pragmaType="interface" parentfunction="aes128_top" mode="m_axi" port="key_in" bundle="DATA" offset="slave" name="" depth="4" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="src/aes128_top.cpp" line="28" pragmaType="interface" parentfunction="aes128_top" mode="m_axi" port="data_out" bundle="DATA" offset="slave" name="" depth="4" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="src/aes128_top.cpp" line="29" pragmaType="interface" parentfunction="aes128_top" mode="s_axilite" port="data_in" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/aes128_top.cpp" line="30" pragmaType="interface" parentfunction="aes128_top" mode="s_axilite" port="key_in" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/aes128_top.cpp" line="31" pragmaType="interface" parentfunction="aes128_top" mode="s_axilite" port="data_out" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/aes128_top.cpp" line="32" pragmaType="interface" parentfunction="aes128_top" mode="s_axilite" port="encrypt" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/aes128_top.cpp" line="33" pragmaType="interface" parentfunction="aes128_top" mode="s_axilite" port="" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/aes128.cpp" line="84" pragmaType="inline" parentfunction="sub_bytes" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="86" pragmaType="unroll" parentfunction="sub_bytes" factor="-1" skip_exit_check="0"/>
+<pragma file="src/aes128.cpp" line="29" pragmaType="inline" parentfunction="key_expansion" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="39" pragmaType="pipeline" parentfunction="key_expansion" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/aes128.cpp" line="33" pragmaType="unroll" parentfunction="key_expansion" factor="-1" skip_exit_check="0"/>
+<pragma file="src/aes128.cpp" line="95" pragmaType="inline" parentfunction="shift_rows" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="73" pragmaType="inline" parentfunction="add_round_key" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="75" pragmaType="unroll" parentfunction="add_round_key" factor="-1" skip_exit_check="0"/>
+<pragma file="src/aes128.cpp" line="125" pragmaType="inline" parentfunction="mix_columns" off="0" region="0" recursive="0"/>
+<pragma file="src/aes128.cpp" line="127" pragmaType="unroll" parentfunction="mix_columns" factor="-1" skip_exit_check="0"/>
+</pragmas>

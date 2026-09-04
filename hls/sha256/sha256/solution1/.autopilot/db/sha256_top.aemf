@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1787469648851">
+  <ports id="1" name="DATA" type="PortType" coreId="1600414053" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="message" type="PortType" originalName="message" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="digest" type="PortType" originalName="digest" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="msg_len_words" type="PortType" originalName="msg_len_words" coreId="1953391988" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="114" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="117" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="119" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="150" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="164" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="171" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="172" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="178" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="186" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="195" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="200" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.39" sink_obj="//@blocks.0/@node_objs.40"/>
+  <edges id="207" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@blocks.0/@node_objs.41"/>
+  <edges id="210" source_obj="//@blocks.0/@node_objs.41" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.43"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.38" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="217" source_obj="//@blocks.0/@node_objs.42" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="218" source_obj="//@blocks.0/@node_objs.44" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="226" source_obj="//@blocks.0/@node_objs.46" sink_obj="//@blocks.0/@node_objs.47"/>
+  <edges id="228" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.48"/>
+  <edges id="231" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="232" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.50"/>
+  <edges id="233" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="234" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="235" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="236" source_obj="//@blocks.0/@node_objs.45" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="237" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="240" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="243" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="244" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="245" source_obj="//@blocks.0/@node_objs.47" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="246" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="249" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="250" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="251" source_obj="//@blocks.0/@node_objs.46" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="252" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="253" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="254" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="255" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="256" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="257" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="258" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="259" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="260" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="261" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="262" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="263" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="264" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="265" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="266" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="267" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="268" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="269" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="270" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="271" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="272" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="273" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="274" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="275" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="276" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="277" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="278" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="279" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="280" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="281" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="282" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="283" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="284" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="287" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="288" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="289" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="290" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="291" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="292" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="293" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="294" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="295" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="296" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="297" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="298" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="299" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="300" source_obj="//@blocks.2/@node_objs.18" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="301" source_obj="//@blocks.2/@node_objs.19" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="302" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="303" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="304" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="307" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="308" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="309" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="310" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="311" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="313" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="316" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="317" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="318" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="321" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="326" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="327" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="328" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="331" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="511" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="512" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="513" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="514" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="515" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="516" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="517" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="518" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="519" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="520" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="521" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="522" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="523" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="524" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="525" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="526" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="527" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="528" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="529" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="530" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="531" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="532" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="533" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="534" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="535" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="536" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="537" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.49" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="538" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="-249" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="-317" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="-326" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@ports.0"/>
+  <blocks id="67" name="entry" type="BlockType">
+    <controlOutputObjs>LOAD_BLOCK</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="b" coreId="0" bitwidth="28" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="msg_ptr" originalName="msg_ptr" coreId="21" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="msg_len_words_read" originalName="msg_len_words" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="32" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <dataInputObjs>msg_len_words</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="digest_read" originalName="digest" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <dataInputObjs>digest</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="message_read" originalName="message" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" bitwidth="64" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <dataInputObjs>message</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="block_loc" coreId="1008" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="block_1_loc" coreId="718" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="block_2_loc" coreId="859" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="block_3_loc" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="block_4_loc" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="block_5_loc" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="block_6_loc" coreId="998" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="block_7_loc" coreId="1117" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="block_8_loc" coreId="1022" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="block_9_loc" coreId="3980390311" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="block_10_loc" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="block_11_loc" coreId="4294967295" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="block_12_loc" coreId="4294967295" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="block_13_loc" coreId="4294967294" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="block_14_loc" coreId="749" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="block_15_loc" coreId="1547674060" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="H" lineNumber="36" originalName="H" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="H_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="82" contextFuncName="sha256_top" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="36" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="H_addr" lineNumber="37" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="4054262692" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="37" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="H_addr_write_ln37" lineNumber="37" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" m_display="0" m_delay="2.32" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="37" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="H_addr_1" lineNumber="38" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="38" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="H_addr_1_write_ln38" lineNumber="38" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" m_display="0" m_delay="2.32" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="38" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="H_addr_2" lineNumber="39" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="39" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="H_addr_2_write_ln39" lineNumber="39" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="39" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="H_addr_3" lineNumber="40" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="1914846280" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="40" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="H_addr_3_write_ln40" lineNumber="40" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="40" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="H_addr_4" lineNumber="41" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="41" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="H_addr_4_write_ln41" lineNumber="41" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="41" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="H_addr_5" lineNumber="42" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="42" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="H_addr_5_write_ln42" lineNumber="42" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="42" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="H_addr_6" lineNumber="43" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="4047056592" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="43" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="H_addr_6_write_ln43" lineNumber="43" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="3.0" m_display="0" m_delay="2.32" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="43" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="H_addr_7" lineNumber="44" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="4294967294" contextFuncName="sha256_top" bitwidth="3" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="44" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="H_addr_7_write_ln44" lineNumber="44" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="sha256_top" opcode="store" nodeLabel="3.0" m_display="0" m_delay="2.32" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="44" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="tmp_fu_369_p3" coreId="0" contextFuncName="sha256_top" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sub_ln49" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="sub_ln49_fu_377_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="sha256_top" bitwidth="32" opcode="sub" nodeLabel="3.0" m_display="0" m_delay="2.55" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln49_1" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="trunc_ln49_1_fu_383_p4" coreId="0" contextFuncName="sha256_top" bitwidth="28" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="zext_ln49" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="zext_ln49_fu_393_p1" coreId="0" contextFuncName="sha256_top" bitwidth="29" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="sub_ln49_1" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="sub_ln49_1_fu_397_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="sha256_top" bitwidth="29" opcode="sub" nodeLabel="3.0" m_display="0" m_delay="2.43" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="trunc_ln49_2" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="trunc_ln49_2_fu_403_p4" coreId="4294967295" contextFuncName="sha256_top" bitwidth="28" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="zext_ln49_1" lineNumber="49" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="zext_ln49_1_fu_413_p1" coreId="0" contextFuncName="sha256_top" bitwidth="29" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="num_blocks" lineNumber="49" originalName="num_blocks" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="num_blocks_fu_417_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="sha256_top" bitwidth="29" opcode="select" nodeLabel="3.0" m_display="0" m_delay="0.8" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="49" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="trunc_ln1" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="trunc_ln1_reg_688" coreId="4294967295" contextFuncName="sha256_top" bitwidth="62" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="sext_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="sext_ln52_fu_435_p1" coreId="0" contextFuncName="sha256_top" bitwidth="63" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="msg_ptr_write_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="b_write_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="br_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <controlInputObjs>LOAD_BLOCK</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/sha256_top.cpp">
+      <validLinenumbers>36</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>40</validLinenumbers>
+      <validLinenumbers>41</validLinenumbers>
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+      <validLinenumbers>44</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="73" name="LOAD_BLOCK" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>LOAD_BLOCK.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>LOAD_BLOCK.split</controlOutputObjs>
+    <controlOutputObjs>STORE_DIGEST.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="b_load" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="28" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln52_1" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="zext_ln52_1_fu_442_p1" coreId="0" contextFuncName="sha256_top" bitwidth="29" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="icmp_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="icmp_ln52_fu_446_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="sha256_top" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="2.46" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="add_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="add_ln52_fu_451_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256_top" bitwidth="28" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.43" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>STORE_DIGEST.loopexit</controlInputObjs>
+      <controlInputObjs>LOAD_BLOCK.split</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/sha256_top.cpp">
+      <validLinenumbers>52</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="100" name="LOAD_BLOCK.split" type="BlockType">
+    <controlInputObjs>LOAD_BLOCK</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>LOAD_BLOCK</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="msg_ptr_load" lineNumber="64" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="32" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="64" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="zext_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="zext_ln52_fu_460_p1" coreId="0" contextFuncName="sha256_top" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln60" lineNumber="60" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="add_ln60_fu_464_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256_top" bitwidth="63" opcode="add" nodeLabel="4.0" m_display="0" m_delay="3.46" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="60" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln60" lineNumber="60" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="grp_sha256_top_Pipeline_LOAD_BLOCK_fu_305" coreId="0" contextFuncName="sha256_top" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="8.75" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="60" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>DATA</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>DATA</dataOutputObjs>
+      <constName>sha256_top_Pipeline_LOAD_BLOCK</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="block_15_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="block_14_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="block_13_loc_load" coreId="543649385" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="block_12_loc_load" coreId="4294967294" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="block_11_loc_load" coreId="4294967294" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="block_10_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="block_9_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="block_8_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="block_7_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="block_6_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="block_5_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="block_4_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="block_3_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="block_2_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="block_1_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="block_loc_load" coreId="0" bitwidth="32" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="_ln64" lineNumber="64" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="grp_sha256_process_block_fu_330" coreId="0" contextFuncName="sha256_top" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="5.68" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="64" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>sha256_process_block</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="add_ln64" lineNumber="64" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="add_ln64_fu_469_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="sha256_top" bitwidth="32" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.55" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="64" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="msg_ptr_write_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="4294967294" contextFuncName="sha256_top" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="b_write_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="br_ln52" lineNumber="52" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="52" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <controlInputObjs>LOAD_BLOCK</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/sha256_top.cpp">
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>60</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="108" name="STORE_DIGEST.loopexit" type="BlockType">
+    <controlInputObjs>LOAD_BLOCK</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="trunc_ln2" lineNumber="70" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="trunc_ln2_reg_711" coreId="0" contextFuncName="sha256_top" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="70" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sext_ln70" lineNumber="70" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="sext_ln70_fu_558_p1" coreId="0" contextFuncName="sha256_top" bitwidth="64" opcode="sext" nodeLabel="9.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="70" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="DATA_addr" lineNumber="70" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" bitwidth="32" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="70" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>DATA</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>writereq</dataOutputObjs>
+      <dataOutputObjs>writeresp</dataOutputObjs>
+      <dataOutputObjs>DATA</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="empty" lineNumber="70" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="sha256_top" bitwidth="1" opcode="writereq" nodeLabel="9.0" m_display="0" m_delay="8.75" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="70" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln70" lineNumber="70" fileName="src/sha256_top.cpp" fileDirectory=".." rtlName="grp_sha256_top_Pipeline_STORE_DIGEST_fu_351" coreId="0" contextFuncName="sha256_top" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="70" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>DATA</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>DATA</dataOutputObjs>
+      <constName>sha256_top_Pipeline_STORE_DIGEST</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="empty_25" lineNumber="74" fileName="src/sha256_top.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="sha256_top" bitwidth="1" opcode="writeresp" nodeLabel="12.0" nodeLatency="4" m_display="0" m_delay="8.75" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="74" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln74" lineNumber="74" fileName="src/sha256_top.cpp" fileDirectory=".." coreId="0" contextFuncName="sha256_top" opcode="ret" nodeLabel="16.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/sha256_top.cpp" linenumber="74" fileDirectory="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256" functionName="sha256_top"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/sha256_top.cpp">
+      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>74</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <regnodes realName="block_6_loc_reg_618">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln2_reg_711">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="block_15_loc_reg_672">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="block_5_loc_reg_612">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="block_2_loc_reg_594">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="block_12_loc_reg_654">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="block_8_loc_reg_630">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="num_blocks_reg_683">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="block_11_loc_reg_648">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="b_reg_568">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="block_14_loc_reg_666">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="msg_ptr_load_reg_701">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="DATA_addr_reg_765">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <regnodes realName="msg_ptr_reg_575">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln60_reg_706">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="block_1_loc_reg_588">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="block_4_loc_reg_606">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="block_7_loc_reg_624">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="block_loc_reg_582">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln1_reg_688">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="block_13_loc_reg_660">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="block_10_loc_reg_642">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="block_9_loc_reg_636">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln52_reg_693">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="digest_read_reg_678">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="block_3_loc_reg_600">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="H_addr_3_gep_fu_260">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_15_loc_fu_188">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln52_fu_446">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_4_loc_fu_144">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_6_loc_fu_152">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_4_gep_fu_269">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln52_fu_451">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_5_loc_fu_148">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_8_loc_fu_160">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_6_gep_fu_287">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln52_1_fu_442">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_2_gep_fu_251">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="msg_ptr_fu_124">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln49_1_fu_383">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="DATA_addr_fu_561">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_1_loc_fu_132">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_3_loc_fu_140">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_5_gep_fu_278">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln49_2_fu_403">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_10_loc_fu_168">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln49_1_fu_397">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln2_fu_485">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="num_blocks_fu_417">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_alloca_fu_192">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_13_loc_fu_180">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_gep_fu_222">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_9_loc_fu_164">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_369">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln52_fu_460">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln60_fu_464">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_11_loc_fu_172">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_loc_fu_128">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln1_fu_425">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln49_fu_377">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_14_loc_fu_184">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln52_fu_435">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln70_fu_558">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_fu_120">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_2_loc_fu_136">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_7_loc_fu_156">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln49_fu_393">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_1_gep_fu_241">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_7_gep_fu_296">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln64_fu_469">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln49_1_fu_413">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="block_12_loc_fu_176">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_sha256_process_block_fu_330">
+    <nodeIds>95</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sha256_top_Pipeline_STORE_DIGEST_fu_351">
+    <nodeIds>105</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sha256_top_Pipeline_LOAD_BLOCK_fu_305">
+    <nodeIds>78</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln52_store_fu_359">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_load_load_fu_439">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln52_store_fu_475">
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_loc_load_load_fu_554">
+    <nodeIds>94</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_13_loc_load_load_fu_502">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_15_loc_load_load_fu_494">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_3_loc_load_load_fu_542">
+    <nodeIds>91</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_9_loc_load_load_fu_518">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_1_loc_load_load_fu_550">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <ioNodes realName="message_read_read_fu_208">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_10_loc_load_load_fu_514">
+    <nodeIds>84</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_6_loc_load_load_fu_530">
+    <nodeIds>88</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln52_store_fu_480">
+    <nodeIds>98</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_4_loc_load_load_fu_538">
+    <nodeIds>90</nodeIds>
+  </ioNodes>
+  <ioNodes realName="msg_ptr_load_load_fu_457">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_12_loc_load_load_fu_506">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_11_loc_load_load_fu_510">
+    <nodeIds>83</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln52_store_fu_364">
+    <nodeIds>65</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_7_loc_load_load_fu_526">
+    <nodeIds>87</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_2_loc_load_load_fu_546">
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <ioNodes realName="msg_len_words_read_read_fu_196">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_8_loc_load_load_fu_522">
+    <nodeIds>86</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_14_loc_load_load_fu_498">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_214">
+    <nodeIds>104</nodeIds>
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="digest_read_read_fu_202">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="block_5_loc_load_load_fu_534">
+    <nodeIds>89</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="H">
+    <nodeIds>41</nodeIds>
+    <nodeIds>45</nodeIds>
+    <nodeIds>49</nodeIds>
+    <nodeIds>53</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="H" portID="1">
+    <nodeIds>39</nodeIds>
+    <nodeIds>43</nodeIds>
+    <nodeIds>47</nodeIds>
+    <nodeIds>51</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="H" portID="100">
+    <nodeIds>95</nodeIds>
+    <nodeIds>105</nodeIds>
+  </memoryPorts>
+  <ioPorts name="DATA">
+    <contents name="call">
+      <nodeIds>78</nodeIds>
+      <nodeIds>105</nodeIds>
+    </contents>
+    <contents name="writereq">
+      <nodeIds>104</nodeIds>
+    </contents>
+    <contents name="writeresp">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="digest">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="message">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="msg_len_words">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="78" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="78" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="2"/>
+      <operations id="99" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="105" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="105" stage="1" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="106" stage="5" latency="5"/>
+    </states>
+    <states id="14">
+      <operations id="106" stage="4" latency="5"/>
+    </states>
+    <states id="15">
+      <operations id="106" stage="3" latency="5"/>
+    </states>
+    <states id="16">
+      <operations id="106" stage="2" latency="5"/>
+    </states>
+    <states id="17">
+      <operations id="106" stage="1" latency="5"/>
+      <operations id="107" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sha256_top" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3" mMaxLatency="3">
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="HASH_BLOCKS" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>73</basicBlocks>
+      <basicBlocks>100</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="19" mMaxLatency="19">
+      <basicBlocks>108</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

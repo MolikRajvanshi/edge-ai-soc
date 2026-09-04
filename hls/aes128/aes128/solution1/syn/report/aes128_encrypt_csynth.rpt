@@ -1,0 +1,286 @@
+
+
+================================================================
+== Vitis HLS Report for 'aes128_encrypt'
+================================================================
+* Date:           Sun Aug 23 13:00:58 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        aes128
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.702 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                     |                                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                       Instance                      |                  Module                 |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371  |aes128_encrypt_Pipeline_VITIS_LOOP_38_2  |       43|       43|  0.430 us|  0.430 us|   43|   43|       no|
+        |grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559  |aes128_encrypt_Pipeline_AES_ROUNDS_LOOP  |       11|       11|  0.110 us|  0.110 us|   11|   11|       no|
+        +-----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    256|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|    1644|  22094|    -|
+|Memory           |       15|    -|       0|      0|    -|
+|Multiplexer      |        -|    -|       -|    801|    -|
+|Register         |        -|    -|     303|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       15|    0|    1947|  23151|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        5|    0|       1|     43|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------+-----------------------------------------+---------+----+------+-------+-----+
+    |                       Instance                      |                  Module                 | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-----------------------------------------------------+-----------------------------------------+---------+----+------+-------+-----+
+    |grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559  |aes128_encrypt_Pipeline_AES_ROUNDS_LOOP  |        0|   0|   264|  13540|    0|
+    |grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371  |aes128_encrypt_Pipeline_VITIS_LOOP_38_2  |        0|   0|  1380|   8554|    0|
+    +-----------------------------------------------------+-----------------------------------------+---------+----+------+-------+-----+
+    |Total                                                |                                         |        0|   0|  1644|  22094|    0|
+    +-----------------------------------------------------+-----------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    | Memory |              Module             | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |SBOX_U  |aes128_encrypt_SBOX_ROM_AUTO_1R  |       15|  0|   0|    0|   256|    8|     1|         2048|
+    +--------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total   |                                 |       15|  0|   0|    0|   256|    8|     1|         2048|
+    +--------+---------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |state_10_fu_1749_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_11_fu_1753_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_12_fu_1757_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_13_fu_1762_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_14_fu_1767_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_15_fu_1772_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_16_fu_1777_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_17_fu_1782_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_18_fu_1787_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_19_fu_1792_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_20_fu_2373_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_21_fu_2379_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_22_fu_2385_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_23_fu_2391_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_28_fu_2473_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_29_fu_2480_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_30_fu_2487_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_31_fu_2494_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_32_fu_2545_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_33_fu_2552_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_34_fu_2559_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_35_fu_2566_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_36_fu_2617_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_37_fu_2624_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_38_fu_2631_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_39_fu_2638_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_40_fu_2657_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_41_fu_2664_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_42_fu_2671_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_43_fu_2678_p2  |       xor|   0|  0|   8|           8|           8|
+    |state_8_fu_1741_p2   |       xor|   0|  0|   8|           8|           8|
+    |state_9_fu_1745_p2   |       xor|   0|  0|   8|           8|           8|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0| 256|         256|         256|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |SBOX_address0          |  37|          7|    8|         56|
+    |SBOX_address1          |  37|          7|    8|         56|
+    |SBOX_address2          |  37|          7|    8|         56|
+    |SBOX_address3          |  37|          7|    8|         56|
+    |SBOX_ce0               |  20|          4|    1|          4|
+    |SBOX_ce1               |  20|          4|    1|          4|
+    |SBOX_ce10              |   9|          2|    1|          2|
+    |SBOX_ce11              |   9|          2|    1|          2|
+    |SBOX_ce12              |   9|          2|    1|          2|
+    |SBOX_ce13              |   9|          2|    1|          2|
+    |SBOX_ce14              |   9|          2|    1|          2|
+    |SBOX_ce15              |   9|          2|    1|          2|
+    |SBOX_ce2               |  20|          4|    1|          4|
+    |SBOX_ce3               |  20|          4|    1|          4|
+    |SBOX_ce4               |   9|          2|    1|          2|
+    |SBOX_ce5               |   9|          2|    1|          2|
+    |SBOX_ce6               |   9|          2|    1|          2|
+    |SBOX_ce7               |   9|          2|    1|          2|
+    |SBOX_ce8               |   9|          2|    1|          2|
+    |SBOX_ce9               |   9|          2|    1|          2|
+    |ap_NS_fsm              |  65|         14|    1|         14|
+    |ciphertext_0_address0  |  25|          5|    3|         15|
+    |ciphertext_0_address1  |  25|          5|    3|         15|
+    |ciphertext_0_d0        |  25|          5|    8|         40|
+    |ciphertext_0_d1        |  25|          5|    8|         40|
+    |ciphertext_1_address0  |  25|          5|    3|         15|
+    |ciphertext_1_address1  |  25|          5|    3|         15|
+    |ciphertext_1_d0        |  25|          5|    8|         40|
+    |ciphertext_1_d1        |  25|          5|    8|         40|
+    |key_0_address0         |  25|          5|    3|         15|
+    |key_0_address1         |  25|          5|    3|         15|
+    |key_1_address0         |  25|          5|    3|         15|
+    |key_1_address1         |  25|          5|    3|         15|
+    |plaintext_0_address0   |  25|          5|    3|         15|
+    |plaintext_0_address1   |  25|          5|    3|         15|
+    |plaintext_1_address0   |  25|          5|    3|         15|
+    |plaintext_1_address1   |  25|          5|    3|         15|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 801|        162|  117|        618|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                               | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                         |  13|   0|   13|          0|
+    |grp_aes128_encrypt_Pipeline_AES_ROUNDS_LOOP_fu_1559_ap_start_reg  |   1|   0|    1|          0|
+    |grp_aes128_encrypt_Pipeline_VITIS_LOOP_38_2_fu_1371_ap_start_reg  |   1|   0|    1|          0|
+    |plaintext_0_load_1_reg_3923                                       |   8|   0|    8|          0|
+    |plaintext_0_load_reg_3913                                         |   8|   0|    8|          0|
+    |plaintext_1_load_1_reg_3928                                       |   8|   0|    8|          0|
+    |plaintext_1_load_reg_3918                                         |   8|   0|    8|          0|
+    |round_keys_180_reg_3767                                           |   8|   0|    8|          0|
+    |round_keys_181_reg_3773                                           |   8|   0|    8|          0|
+    |round_keys_182_reg_3779                                           |   8|   0|    8|          0|
+    |round_keys_183_reg_3805                                           |   8|   0|    8|          0|
+    |round_keys_184_reg_3811                                           |   8|   0|    8|          0|
+    |round_keys_185_reg_3817                                           |   8|   0|    8|          0|
+    |round_keys_186_reg_3823                                           |   8|   0|    8|          0|
+    |round_keys_187_reg_3869                                           |   8|   0|    8|          0|
+    |round_keys_188_reg_3875                                           |   8|   0|    8|          0|
+    |round_keys_189_reg_3881                                           |   8|   0|    8|          0|
+    |round_keys_190_reg_3887                                           |   8|   0|    8|          0|
+    |round_keys_191_reg_3953                                           |   8|   0|    8|          0|
+    |round_keys_192_reg_3959                                           |   8|   0|    8|          0|
+    |round_keys_193_reg_3965                                           |   8|   0|    8|          0|
+    |round_keys_194_reg_3971                                           |   8|   0|    8|          0|
+    |round_keys_reg_3761                                               |   8|   0|    8|          0|
+    |state_10_reg_4007                                                 |   8|   0|    8|          0|
+    |state_11_reg_4012                                                 |   8|   0|    8|          0|
+    |state_12_reg_4017                                                 |   8|   0|    8|          0|
+    |state_13_reg_4022                                                 |   8|   0|    8|          0|
+    |state_14_reg_4027                                                 |   8|   0|    8|          0|
+    |state_15_reg_4032                                                 |   8|   0|    8|          0|
+    |state_16_reg_4057                                                 |   8|   0|    8|          0|
+    |state_17_reg_4062                                                 |   8|   0|    8|          0|
+    |state_18_reg_4067                                                 |   8|   0|    8|          0|
+    |state_19_reg_4072                                                 |   8|   0|    8|          0|
+    |state_20_reg_4509                                                 |   8|   0|    8|          0|
+    |state_21_reg_4514                                                 |   8|   0|    8|          0|
+    |state_22_reg_4519                                                 |   8|   0|    8|          0|
+    |state_23_reg_4524                                                 |   8|   0|    8|          0|
+    |state_8_reg_3997                                                  |   8|   0|    8|          0|
+    |state_9_reg_4002                                                  |   8|   0|    8|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                             | 303|   0|  303|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-----------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  aes128_encrypt|  return value|
+|plaintext_0_address0   |  out|    3|   ap_memory|     plaintext_0|         array|
+|plaintext_0_ce0        |  out|    1|   ap_memory|     plaintext_0|         array|
+|plaintext_0_q0         |   in|    8|   ap_memory|     plaintext_0|         array|
+|plaintext_0_address1   |  out|    3|   ap_memory|     plaintext_0|         array|
+|plaintext_0_ce1        |  out|    1|   ap_memory|     plaintext_0|         array|
+|plaintext_0_q1         |   in|    8|   ap_memory|     plaintext_0|         array|
+|plaintext_1_address0   |  out|    3|   ap_memory|     plaintext_1|         array|
+|plaintext_1_ce0        |  out|    1|   ap_memory|     plaintext_1|         array|
+|plaintext_1_q0         |   in|    8|   ap_memory|     plaintext_1|         array|
+|plaintext_1_address1   |  out|    3|   ap_memory|     plaintext_1|         array|
+|plaintext_1_ce1        |  out|    1|   ap_memory|     plaintext_1|         array|
+|plaintext_1_q1         |   in|    8|   ap_memory|     plaintext_1|         array|
+|key_0_address0         |  out|    3|   ap_memory|           key_0|         array|
+|key_0_ce0              |  out|    1|   ap_memory|           key_0|         array|
+|key_0_q0               |   in|    8|   ap_memory|           key_0|         array|
+|key_0_address1         |  out|    3|   ap_memory|           key_0|         array|
+|key_0_ce1              |  out|    1|   ap_memory|           key_0|         array|
+|key_0_q1               |   in|    8|   ap_memory|           key_0|         array|
+|key_1_address0         |  out|    3|   ap_memory|           key_1|         array|
+|key_1_ce0              |  out|    1|   ap_memory|           key_1|         array|
+|key_1_q0               |   in|    8|   ap_memory|           key_1|         array|
+|key_1_address1         |  out|    3|   ap_memory|           key_1|         array|
+|key_1_ce1              |  out|    1|   ap_memory|           key_1|         array|
+|key_1_q1               |   in|    8|   ap_memory|           key_1|         array|
+|ciphertext_0_address0  |  out|    3|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_ce0       |  out|    1|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_we0       |  out|    1|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_d0        |  out|    8|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_address1  |  out|    3|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_ce1       |  out|    1|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_we1       |  out|    1|   ap_memory|    ciphertext_0|         array|
+|ciphertext_0_d1        |  out|    8|   ap_memory|    ciphertext_0|         array|
+|ciphertext_1_address0  |  out|    3|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_ce0       |  out|    1|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_we0       |  out|    1|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_d0        |  out|    8|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_address1  |  out|    3|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_ce1       |  out|    1|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_we1       |  out|    1|   ap_memory|    ciphertext_1|         array|
+|ciphertext_1_d1        |  out|    8|   ap_memory|    ciphertext_1|         array|
++-----------------------+-----+-----+------------+----------------+--------------+
+

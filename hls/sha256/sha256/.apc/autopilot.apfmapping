@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sha256_top.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256\src\sha256_top.cpp"/>
+    <originFiles name="sha256.h" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256\src\sha256.h"/>
+    <originFiles name="sha256.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256\src\sha256.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_sha256.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\sha256\testbench\tb_sha256.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

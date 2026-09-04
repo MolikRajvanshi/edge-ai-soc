@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aes128.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\aes128\src\aes128.cpp"/>
+    <originFiles name="aes128.h" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\aes128\src\aes128.h"/>
+    <originFiles name="aes128_top.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\aes128\src\aes128_top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_aes128.cpp" path="C:\Users\PC-CST-A3\Desktop\edge-ai-soc\hls\aes128\testbench\tb_aes128.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
