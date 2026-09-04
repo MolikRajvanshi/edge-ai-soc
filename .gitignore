@@ -1,0 +1,63 @@
+# ==============================================================================
+# Edge AI SoC — .gitignore
+# ==============================================================================
+
+# ---- Vivado generated files ----
+*.jou
+*.log
+*.str
+*.pb
+*.dcp
+*.wdb
+*.wcfg
+vivado_pid*.str
+.Xil/
+
+# Vivado project internals (keep .xpr and .xsa, ignore the rest)
+vivado/edge_ai_soc/edge_ai_soc.cache/
+vivado/edge_ai_soc/edge_ai_soc.gen/
+vivado/edge_ai_soc/edge_ai_soc.hw/
+vivado/edge_ai_soc/edge_ai_soc.ip_user_files/
+vivado/edge_ai_soc/edge_ai_soc.runs/
+vivado/edge_ai_soc/edge_ai_soc.sim/
+
+# ---- Vitis HLS generated files ----
+**/solution1/csim/
+**/solution1/.autopilot/
+**/solution1/.debug/
+**/solution1/.tcls/
+**/solution1/*.log
+**/solution1/*.aps
+
+# ---- Vitis IDE workspace ----
+vitis_workspace/.metadata/
+vitis_workspace/.analytics
+vitis_workspace/IDE.log
+vitis_workspace/RemoteSystemsTempFiles/
+vitis_workspace/zedboard_platform/export/
+vitis_workspace/zedboard_platform/.log/
+vitis_workspace/zedboard_platform/logs/
+**/Debug/
+**/Release/
+**/_ide/
+*.o
+*.elf
+*.d
+
+# ---- OS files ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# ---- IDE files ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- Personal documents & reports ----
+*.pdf
+*.html
