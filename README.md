@@ -310,7 +310,7 @@ The AES-128 core secures proprietary model weight tensors stored in DDR3 and enc
             ├─► 6. PHASE 3: Trigger AES-128 Encryption Engine
             │        - Program Plaintext & Key DDR Pointers (0x43C20010..0x43C2001C)
             │        - Assert AP_START -> Poll AP_DONE -> Validate NIST Ciphertext (PASS)
-            │
+            │ 
             └─► 7. Direct MMIO Hardware UART1 FIFO Output (0xE0001030) -> PC PuTTY @ 115200 Baud
 ```
 
